@@ -1,0 +1,75 @@
+.g-btn {
+  padding: 6px 10px;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  transition: all 0.25s ease;
+  user-select: none;
+  font-size: 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: white;
+  color: #2c3e50;
+  border: 2px solid transparent;
+}
+.g-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -10px #2c3e50;
+}
+.g-btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.g-btn.primary {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-btn.primary:hover {
+  box-shadow: 0 10px 20px -10px #1a5cff;
+}
+.g-btn.secondary {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-btn.secondary:hover {
+  box-shadow: 0 10px 20px -10px #7d33ff;
+}
+.g-btn.success {
+  background-color: #46c93a;
+  color: white;
+}
+.g-btn.success:hover {
+  box-shadow: 0 10px 20px -10px #46c93a;
+}
+.g-btn.info {
+  background-color: #40d3f7;
+  color: white;
+}
+.g-btn.info:hover {
+  box-shadow: 0 10px 20px -10px #40d3f7;
+}
+.g-btn.warning {
+  background-color: #ffba00;
+  color: white;
+}
+.g-btn.warning:hover {
+  box-shadow: 0 10px 20px -10px #ffba00;
+}
+.g-btn.danger {
+  background-color: #ff4757;
+  color: white;
+}
+.g-btn.danger:hover {
+  box-shadow: 0 10px 20px -10px #ff4757;
+}
+.g-btn.square {
+  border-radius: 0;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,26 @@
+$font-colors: ('primary-font-color','secondary-font-color', 'success-font-color', 'info-font-color', 'warning-font-color', 'danger-font-color');
+$white: rgb(255,255,255);
+$primary: rgb(26,92,255);
+$secondary: rgb(125,51,255);
+$success: rgb(70,201,58);
+$warning: rgb(255,186,0);
+$info: rgb(64, 211, 247);
+$danger: rgb(255,71,87);
+$font-color: rgb(44,62,80);
+
+$primary-font-color: $white;
+$secondary-font-color: $white;
+$success-font-color: $white;
+$warning-font-color: $white;
+$info-font-color: $white;
+
+$colors: (
+	'primary': $primary,
+	'secondary': $secondary, 
+	'success': $success,
+	'info': $info,
+	'warning': $warning,
+	'danger': $danger
+);
+
+$default-border-radius: 12px;
