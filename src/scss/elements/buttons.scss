@@ -88,6 +88,7 @@
 				background-color: transparent;
 				color: $value;
 				border-color: transparent;
+				transition: background 0.5s ease, color 0.6s ease;
 
 				&:before {
 					content: "";
@@ -114,6 +115,29 @@
 						opacity: 1;
 						transform: scale(1);
 					}
+				}
+
+				&:active {
+					transform: none;
+					box-shadow: none;
+					color: get-contrast($value);
+					background: $value;
+					background-size: 100%;
+					transition: background 0s;
+				}
+			}
+
+			&.floating {
+				transform: translateY(-3px);
+				box-shadow: 0 10px 20px -10px $value;
+				transition: transform .3s ease-in-out;
+
+				&:hover {
+					transform: translateY(-6px);
+				}
+
+				&:active {
+					transform: none;
 				}
 			}
 		}
