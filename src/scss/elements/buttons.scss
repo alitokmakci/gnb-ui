@@ -5,7 +5,7 @@
 	align-items: center;
 	justify-content: center;
 	-webkit-box-pack: center;
-	transition: transform .25s ease, background 0.15s ease-in-out;
+	transition: all .25s ease-in-out;
 	user-select: none;
 	font-size: 0.8rem;
 	border-radius: $default-border-radius;
@@ -23,7 +23,7 @@
 
 	&:active {
 		background-color: rgba(255,255,255,.25);
-		transform: translateY(-3px);
+		transform: translateY(0);
 		background-size: 100%;
 		transition: background 0s;
 	}
@@ -35,6 +35,39 @@
 
 	&.pill {
 		border-radius: 25px;
+	}
+
+	&.square {
+		border-radius: 0;
+	}
+
+	&.block {
+		display: block;
+		width: 100%;
+	}
+
+	&.xl {
+		padding: 15px 20px;
+		font-size: 1.1rem;
+		border-radius: 20px;
+	}
+
+	&.lg {
+		padding: 10px 15px;
+		font-size: 1rem;
+		border-radius: 15px;
+	}
+
+	&.sm {
+		padding: 5px 10px;
+		font-size: .75rem;
+		border-radius: 9px;
+	}
+
+	&.mini {
+		padding: 3px 8px;
+		font-size: .6rem;
+		border-radius: 7px;
 	}
 
 	@each $color, $value in $colors {
@@ -62,6 +95,8 @@
 					background: $value;
 					background-size: 100%;
 					transition: background 0s;
+					transform: none;
+					box-shadow: none;
 				}
 			}
 
@@ -80,6 +115,8 @@
 				&:active {
 					color: get-contrast($value);
 					background-color: $value;
+					transform: none;
+					box-shadow: none;
 				}
 			}
 
@@ -140,10 +177,28 @@
 					transform: none;
 				}
 			}
-		}
-	}
 
-	&.square {
-		border-radius: 0;
+			&.loading {
+				position: relative;
+				color: transparent !important;
+				pointer-events: none;
+
+				&::after {
+					content: "";
+					position: absolute;
+					width: 16px;
+					height: 16px;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					margin: auto;
+					border: 4px solid transparent;
+					border-top-color: #ffffff;
+					border-radius: 50%;
+					animation: loading-spinner 1s ease infinite;
+				}
+			}
+		}
 	}
 }

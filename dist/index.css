@@ -1,3 +1,11 @@
+@keyframes loading-spinner {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
 .g-btn {
   padding: 6px 10px;
   display: inline-flex;
@@ -5,7 +13,7 @@
   align-items: center;
   justify-content: center;
   -webkit-box-pack: center;
-  transition: transform 0.25s ease, background 0.15s ease-in-out;
+  transition: all 0.25s ease-in-out;
   user-select: none;
   font-size: 0.8rem;
   border-radius: 12px;
@@ -22,7 +30,7 @@
 }
 .g-btn:active {
   background-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-3px);
+  transform: translateY(0);
   background-size: 100%;
   transition: background 0s;
 }
@@ -32,6 +40,33 @@
 }
 .g-btn.pill {
   border-radius: 25px;
+}
+.g-btn.square {
+  border-radius: 0;
+}
+.g-btn.block {
+  display: block;
+  width: 100%;
+}
+.g-btn.xl {
+  padding: 15px 20px;
+  font-size: 1.1rem;
+  border-radius: 20px;
+}
+.g-btn.lg {
+  padding: 10px 15px;
+  font-size: 1rem;
+  border-radius: 15px;
+}
+.g-btn.sm {
+  padding: 5px 10px;
+  font-size: 0.75rem;
+  border-radius: 9px;
+}
+.g-btn.mini {
+  padding: 3px 8px;
+  font-size: 0.6rem;
+  border-radius: 7px;
 }
 .g-btn.primary {
   background-color: #1a5cff;
@@ -55,6 +90,8 @@
   background: #1a5cff;
   background-size: 100%;
   transition: background 0s;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.primary.bordered {
   background-color: white;
@@ -70,6 +107,8 @@
 .g-btn.primary.bordered:active {
   color: white;
   background-color: #1a5cff;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.primary.link {
   position: relative;
@@ -121,6 +160,26 @@
 .g-btn.primary.floating:active {
   transform: none;
 }
+.g-btn.primary.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.g-btn.primary.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
+}
 .g-btn.secondary {
   background-color: #7d33ff;
   color: white;
@@ -143,6 +202,8 @@
   background: #7d33ff;
   background-size: 100%;
   transition: background 0s;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.secondary.bordered {
   background-color: white;
@@ -158,6 +219,8 @@
 .g-btn.secondary.bordered:active {
   color: white;
   background-color: #7d33ff;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.secondary.link {
   position: relative;
@@ -209,6 +272,26 @@
 .g-btn.secondary.floating:active {
   transform: none;
 }
+.g-btn.secondary.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.g-btn.secondary.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
+}
 .g-btn.success {
   background-color: #46c93a;
   color: white;
@@ -231,6 +314,8 @@
   background: #46c93a;
   background-size: 100%;
   transition: background 0s;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.success.bordered {
   background-color: white;
@@ -246,6 +331,8 @@
 .g-btn.success.bordered:active {
   color: white;
   background-color: #46c93a;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.success.link {
   position: relative;
@@ -297,6 +384,26 @@
 .g-btn.success.floating:active {
   transform: none;
 }
+.g-btn.success.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.g-btn.success.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
+}
 .g-btn.info {
   background-color: #00aff0;
   color: white;
@@ -319,6 +426,8 @@
   background: #00aff0;
   background-size: 100%;
   transition: background 0s;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.info.bordered {
   background-color: white;
@@ -334,6 +443,8 @@
 .g-btn.info.bordered:active {
   color: white;
   background-color: #00aff0;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.info.link {
   position: relative;
@@ -385,6 +496,26 @@
 .g-btn.info.floating:active {
   transform: none;
 }
+.g-btn.info.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.g-btn.info.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
+}
 .g-btn.warning {
   background-color: #ffba00;
   color: white;
@@ -407,6 +538,8 @@
   background: #ffba00;
   background-size: 100%;
   transition: background 0s;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.warning.bordered {
   background-color: white;
@@ -422,6 +555,8 @@
 .g-btn.warning.bordered:active {
   color: white;
   background-color: #ffba00;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.warning.link {
   position: relative;
@@ -473,6 +608,26 @@
 .g-btn.warning.floating:active {
   transform: none;
 }
+.g-btn.warning.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.g-btn.warning.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
+}
 .g-btn.danger {
   background-color: #ff4757;
   color: white;
@@ -495,6 +650,8 @@
   background: #ff4757;
   background-size: 100%;
   transition: background 0s;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.danger.bordered {
   background-color: white;
@@ -510,6 +667,8 @@
 .g-btn.danger.bordered:active {
   color: white;
   background-color: #ff4757;
+  transform: none;
+  box-shadow: none;
 }
 .g-btn.danger.link {
   position: relative;
@@ -561,8 +720,25 @@
 .g-btn.danger.floating:active {
   transform: none;
 }
-.g-btn.square {
-  border-radius: 0;
+.g-btn.danger.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.g-btn.danger.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
 }
 
 div {
