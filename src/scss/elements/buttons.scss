@@ -82,6 +82,40 @@
 					background-color: $value;
 				}
 			}
+
+			&.link {
+				position: relative;
+				background-color: transparent;
+				color: $value;
+				border-color: transparent;
+
+				&:before {
+					content: "";
+					background: rgba($value,.1);
+					position: absolute;
+					bottom: -2px;
+					left: -2px;
+					top: -2px;
+					right: -2px;
+					border-radius: inherit;
+					pointer-events: none;
+					transition: all .25s ease;
+					z-index: -1;
+					transform: scale(.5);
+					opacity: 0;
+					box-sizing: border-box;
+				}
+
+				&:hover {
+					transform: translateY(0);
+					box-shadow: none;
+
+					&:before {
+						opacity: 1;
+						transform: scale(1);
+					}
+				}
+			}
 		}
 	}
 
