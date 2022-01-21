@@ -17,12 +17,12 @@
 
 	&:hover {
 		transform: translateY(-3px);
-  		box-shadow:  0 8px 25px 0 rgba(0,0,0,.1);
-		background: rgba(255,255,255,.25) radial-gradient(circle, transparent 1%, rgba(255,255,255,.25) 1%) center/15000%;
+		box-shadow: 0 8px 25px 0 rgba(0, 0, 0, .1);
+		background: rgba(255, 255, 255, .25) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, .25) 1%) center/15000%;
 	}
 
 	&:active {
-		background-color: rgba(255,255,255,.25);
+		background-color: rgba(255, 255, 255, .25);
 		transform: translateY(0);
 		background-size: 100%;
 		transition: background 0s;
@@ -75,7 +75,7 @@
 			background-color: $value;
 			color: get-contrast($value);
 
-			&:hover,&:active {
+			&:hover, &:active {
 				box-shadow: 0 10px 20px -10px $value;
 			}
 
@@ -85,7 +85,7 @@
 				transition: background 0.5s ease, color 0.6s ease;
 
 				&:hover {
-					background: rgba($value,.25);
+					background: rgba($value, .25);
 					transform: none;
 					box-shadow: none;
 				}
@@ -129,7 +129,8 @@
 
 				&:before {
 					content: "";
-					background: rgba($value,.1);
+					background: rgba($value, .1);
+					border-color: rgba($value, .1);
 					position: absolute;
 					bottom: -2px;
 					left: -2px;
