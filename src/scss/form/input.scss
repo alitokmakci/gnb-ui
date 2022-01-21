@@ -1,0 +1,99 @@
+$input-background-color: rgb(244, 247, 248);
+$placeholder-opacity: .4;
+$input-width: 200px;
+$input-border-radius: 12px;
+
+.g-form-element {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: .75rem;
+	position: relative;
+
+	&.has-icon-before {
+		.g-input-icon {
+			box-shadow: 12px 0 10px -10px rgba(0, 0, 0, .05);
+		}
+
+		.g-input {
+			padding-left: 39px;
+
+			&:focus {
+				padding-left: 44px;
+
+				& ~ .g-input-icon {
+					transform: translate(-6px, -6px);
+					background-color: rgb(249, 252, 253);
+					box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, .05);
+				}
+			}
+		}
+	}
+
+	&.has-icon-after {
+		.g-input-icon {
+			right: 0;
+			box-shadow: -12px 0 10px -10px rgba(0, 0, 0, .05);
+		}
+
+		.g-input {
+			padding-right: 40px;
+
+			&:focus ~ .g-input-icon {
+				transform: translate(6px, -6px);
+				background-color: rgb(249, 252, 253);
+				box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, .05);
+			}
+		}
+	}
+}
+
+.g-input-icon {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: $input-background-color;
+	border-radius: $input-border-radius;
+	width: 36px;
+	height: 36px;
+	transition: all .25s ease;
+}
+
+.g-label {
+	font-size: .75rem;
+	margin-left: 10px;
+	margin-bottom: 2px;
+}
+
+.g-input {
+	border: 2px solid transparent;
+	background: $input-background-color;
+	color: $font-color;
+	border-radius: $input-border-radius;
+	-webkit-transition: all .25s ease;
+	transition: all .25s ease;
+	padding: 7px 13px 7px 10px;
+	width: $input-width;
+	height: 36px;
+
+	&::placeholder {
+		opacity: $placeholder-opacity;
+	}
+
+	&:focus, &:focus-visible, &:focus-within {
+		outline: none;
+	}
+
+	&:focus {
+		padding-left: 15px;
+	}
+
+	@each $color, $value in $colors {
+		&.#{$color} {
+			&:active, &:focus {
+				border-bottom-color: $value;
+			}
+		}
+	}
+}

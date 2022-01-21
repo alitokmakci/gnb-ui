@@ -1,10 +1,10 @@
 @import "variables";
 @import "functions";
+@import "reset";
 @import "animations";
 @import "./elements/buttons";
+@import "./form/input";
 
 
 // TODO delete bottom lines in production
-div {
-	margin-bottom: 10px;
-}
+
