@@ -3,13 +3,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  color: #2c3e50;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 * {
   outline: none !important;
   box-sizing: border-box;
-  color: #2c3e50;
 }
 
 a {
@@ -884,6 +884,16 @@ a {
   margin-bottom: 0.75rem;
   position: relative;
 }
+.g-form-element.horizontal {
+  flex-direction: row;
+}
+.g-form-element.horizontal .g-label {
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 6px;
+  display: flex;
+  align-items: center;
+}
 .g-form-element.has-icon-before .g-input-icon {
   box-shadow: 12px 0 10px -10px rgba(0, 0, 0, 0.05);
 }
@@ -922,6 +932,7 @@ a {
   width: 36px;
   height: 36px;
   transition: all 0.25s ease;
+  color: inherit;
 }
 
 .g-label {
@@ -953,23 +964,404 @@ a {
 .g-input.primary:active, .g-input.primary:focus {
   border-bottom-color: #1a5cff;
 }
+.g-input.primary:focus ~ .g-input-icon {
+  color: #1a5cff;
+}
 .g-input.secondary:active, .g-input.secondary:focus {
   border-bottom-color: #7d33ff;
+}
+.g-input.secondary:focus ~ .g-input-icon {
+  color: #7d33ff;
 }
 .g-input.success:active, .g-input.success:focus {
   border-bottom-color: #46c93a;
 }
+.g-input.success:focus ~ .g-input-icon {
+  color: #46c93a;
+}
 .g-input.info:active, .g-input.info:focus {
   border-bottom-color: #00aff0;
+}
+.g-input.info:focus ~ .g-input-icon {
+  color: #00aff0;
 }
 .g-input.warning:active, .g-input.warning:focus {
   border-bottom-color: #ffba00;
 }
+.g-input.warning:focus ~ .g-input-icon {
+  color: #ffba00;
+}
 .g-input.danger:active, .g-input.danger:focus {
   border-bottom-color: #ff4757;
 }
+.g-input.danger:focus ~ .g-input-icon {
+  color: #ff4757;
+}
 .g-input.dark:active, .g-input.dark:focus {
   border-bottom-color: black;
+}
+.g-input.dark:focus ~ .g-input-icon {
+  color: black;
+}
+
+.g-form-element .g-checkbox-group {
+  display: flex;
+}
+.g-form-element .g-checkbox-group .g-label {
+  font-size: 0.8rem;
+  transition: all 0.25s ease;
+  margin: 0;
+}
+.g-form-element .g-checkbox-group .g-label:before {
+  content: "";
+  transition: all 0.25s ease;
+  display: flex;
+  border: 2px solid #e6e9ea;
+  border-radius: 32%;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+}
+.g-form-element .g-checkbox-group .g-label:after {
+  transition: all 0.25s ease;
+  position: absolute;
+  left: 18px;
+  top: -2px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "L";
+  -ms-transform: scaleX(-1) rotate(-35deg);
+  /* IE 9 */
+  -webkit-transform: scaleX(-1) rotate(-35deg);
+  /* Chrome, Safari, Opera */
+  transform: scaleX(-1) rotate(-35deg);
+  opacity: 0;
+  color: #2c3e50;
+}
+.g-form-element.horizontal .g-checkbox-group .g-label:after {
+  left: 8px;
+  top: -2px;
+}
+
+.g-checkbox {
+  transition: all 0.25s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+.g-checkbox:hover ~ .g-label:before {
+  background-color: #e6e9ea;
+}
+.g-checkbox:checked ~ .g-label:after {
+  opacity: 1;
+}
+.g-checkbox:checked ~ .g-label:before {
+  background-color: #e6e9ea;
+}
+.g-checkbox.primary:checked ~ .g-label:after {
+  color: white;
+}
+.g-checkbox.primary:checked ~ .g-label:before {
+  background-color: #1a5cff;
+  border-color: #1a5cff;
+}
+.g-checkbox.primary:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(26, 92, 255, 0.35);
+}
+.g-checkbox.primary.flat:checked ~ .g-label:after {
+  color: #1a5cff;
+}
+.g-checkbox.primary.flat:checked ~ .g-label:before {
+  background-color: rgba(26, 92, 255, 0.15);
+  border-color: rgba(26, 92, 255, 0.15);
+}
+.g-checkbox.primary.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(26, 92, 255, 0.35);
+}
+.g-checkbox.primary.flat:hover ~ .g-label:before {
+  background-color: rgba(26, 92, 255, 0.25);
+  border-color: rgba(26, 92, 255, 0.25);
+}
+.g-checkbox.primary.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 rgba(26, 92, 255, 0.35);
+}
+.g-checkbox.primary.bordered:checked ~ .g-label:after {
+  color: #1a5cff;
+}
+.g-checkbox.primary.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #1a5cff;
+}
+.g-checkbox.primary.bordered ~ .g-label:before {
+  border-color: #1a5cff;
+}
+.g-checkbox.primary.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: rgba(26, 92, 255, 0.25);
+  border-color: rgba(26, 92, 255, 0.25);
+}
+.g-checkbox.secondary:checked ~ .g-label:after {
+  color: white;
+}
+.g-checkbox.secondary:checked ~ .g-label:before {
+  background-color: #7d33ff;
+  border-color: #7d33ff;
+}
+.g-checkbox.secondary:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(125, 51, 255, 0.35);
+}
+.g-checkbox.secondary.flat:checked ~ .g-label:after {
+  color: #7d33ff;
+}
+.g-checkbox.secondary.flat:checked ~ .g-label:before {
+  background-color: rgba(125, 51, 255, 0.15);
+  border-color: rgba(125, 51, 255, 0.15);
+}
+.g-checkbox.secondary.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(125, 51, 255, 0.35);
+}
+.g-checkbox.secondary.flat:hover ~ .g-label:before {
+  background-color: rgba(125, 51, 255, 0.25);
+  border-color: rgba(125, 51, 255, 0.25);
+}
+.g-checkbox.secondary.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 rgba(125, 51, 255, 0.35);
+}
+.g-checkbox.secondary.bordered:checked ~ .g-label:after {
+  color: #7d33ff;
+}
+.g-checkbox.secondary.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #7d33ff;
+}
+.g-checkbox.secondary.bordered ~ .g-label:before {
+  border-color: #7d33ff;
+}
+.g-checkbox.secondary.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: rgba(125, 51, 255, 0.25);
+  border-color: rgba(125, 51, 255, 0.25);
+}
+.g-checkbox.success:checked ~ .g-label:after {
+  color: white;
+}
+.g-checkbox.success:checked ~ .g-label:before {
+  background-color: #46c93a;
+  border-color: #46c93a;
+}
+.g-checkbox.success:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(70, 201, 58, 0.35);
+}
+.g-checkbox.success.flat:checked ~ .g-label:after {
+  color: #46c93a;
+}
+.g-checkbox.success.flat:checked ~ .g-label:before {
+  background-color: rgba(70, 201, 58, 0.15);
+  border-color: rgba(70, 201, 58, 0.15);
+}
+.g-checkbox.success.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(70, 201, 58, 0.35);
+}
+.g-checkbox.success.flat:hover ~ .g-label:before {
+  background-color: rgba(70, 201, 58, 0.25);
+  border-color: rgba(70, 201, 58, 0.25);
+}
+.g-checkbox.success.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 rgba(70, 201, 58, 0.35);
+}
+.g-checkbox.success.bordered:checked ~ .g-label:after {
+  color: #46c93a;
+}
+.g-checkbox.success.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #46c93a;
+}
+.g-checkbox.success.bordered ~ .g-label:before {
+  border-color: #46c93a;
+}
+.g-checkbox.success.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: rgba(70, 201, 58, 0.25);
+  border-color: rgba(70, 201, 58, 0.25);
+}
+.g-checkbox.info:checked ~ .g-label:after {
+  color: white;
+}
+.g-checkbox.info:checked ~ .g-label:before {
+  background-color: #00aff0;
+  border-color: #00aff0;
+}
+.g-checkbox.info:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(0, 175, 240, 0.35);
+}
+.g-checkbox.info.flat:checked ~ .g-label:after {
+  color: #00aff0;
+}
+.g-checkbox.info.flat:checked ~ .g-label:before {
+  background-color: rgba(0, 175, 240, 0.15);
+  border-color: rgba(0, 175, 240, 0.15);
+}
+.g-checkbox.info.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(0, 175, 240, 0.35);
+}
+.g-checkbox.info.flat:hover ~ .g-label:before {
+  background-color: rgba(0, 175, 240, 0.25);
+  border-color: rgba(0, 175, 240, 0.25);
+}
+.g-checkbox.info.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 rgba(0, 175, 240, 0.35);
+}
+.g-checkbox.info.bordered:checked ~ .g-label:after {
+  color: #00aff0;
+}
+.g-checkbox.info.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #00aff0;
+}
+.g-checkbox.info.bordered ~ .g-label:before {
+  border-color: #00aff0;
+}
+.g-checkbox.info.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: rgba(0, 175, 240, 0.25);
+  border-color: rgba(0, 175, 240, 0.25);
+}
+.g-checkbox.warning:checked ~ .g-label:after {
+  color: white;
+}
+.g-checkbox.warning:checked ~ .g-label:before {
+  background-color: #ffba00;
+  border-color: #ffba00;
+}
+.g-checkbox.warning:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(255, 186, 0, 0.35);
+}
+.g-checkbox.warning.flat:checked ~ .g-label:after {
+  color: #ffba00;
+}
+.g-checkbox.warning.flat:checked ~ .g-label:before {
+  background-color: rgba(255, 186, 0, 0.15);
+  border-color: rgba(255, 186, 0, 0.15);
+}
+.g-checkbox.warning.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(255, 186, 0, 0.35);
+}
+.g-checkbox.warning.flat:hover ~ .g-label:before {
+  background-color: rgba(255, 186, 0, 0.25);
+  border-color: rgba(255, 186, 0, 0.25);
+}
+.g-checkbox.warning.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 rgba(255, 186, 0, 0.35);
+}
+.g-checkbox.warning.bordered:checked ~ .g-label:after {
+  color: #ffba00;
+}
+.g-checkbox.warning.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #ffba00;
+}
+.g-checkbox.warning.bordered ~ .g-label:before {
+  border-color: #ffba00;
+}
+.g-checkbox.warning.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: rgba(255, 186, 0, 0.25);
+  border-color: rgba(255, 186, 0, 0.25);
+}
+.g-checkbox.danger:checked ~ .g-label:after {
+  color: white;
+}
+.g-checkbox.danger:checked ~ .g-label:before {
+  background-color: #ff4757;
+  border-color: #ff4757;
+}
+.g-checkbox.danger:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(255, 71, 87, 0.35);
+}
+.g-checkbox.danger.flat:checked ~ .g-label:after {
+  color: #ff4757;
+}
+.g-checkbox.danger.flat:checked ~ .g-label:before {
+  background-color: rgba(255, 71, 87, 0.15);
+  border-color: rgba(255, 71, 87, 0.15);
+}
+.g-checkbox.danger.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(255, 71, 87, 0.35);
+}
+.g-checkbox.danger.flat:hover ~ .g-label:before {
+  background-color: rgba(255, 71, 87, 0.25);
+  border-color: rgba(255, 71, 87, 0.25);
+}
+.g-checkbox.danger.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 rgba(255, 71, 87, 0.35);
+}
+.g-checkbox.danger.bordered:checked ~ .g-label:after {
+  color: #ff4757;
+}
+.g-checkbox.danger.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #ff4757;
+}
+.g-checkbox.danger.bordered ~ .g-label:before {
+  border-color: #ff4757;
+}
+.g-checkbox.danger.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: rgba(255, 71, 87, 0.25);
+  border-color: rgba(255, 71, 87, 0.25);
+}
+.g-checkbox.dark:checked ~ .g-label:after {
+  color: white;
+}
+.g-checkbox.dark:checked ~ .g-label:before {
+  background-color: black;
+  border-color: black;
+}
+.g-checkbox.dark:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.35);
+}
+.g-checkbox.dark.flat:checked ~ .g-label:after {
+  color: black;
+}
+.g-checkbox.dark.flat:checked ~ .g-label:before {
+  background-color: rgba(0, 0, 0, 0.15);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+.g-checkbox.dark.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.35);
+}
+.g-checkbox.dark.flat:hover ~ .g-label:before {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.25);
+}
+.g-checkbox.dark.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 rgba(0, 0, 0, 0.35);
+}
+.g-checkbox.dark.bordered:checked ~ .g-label:after {
+  color: black;
+}
+.g-checkbox.dark.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: black;
+}
+.g-checkbox.dark.bordered ~ .g-label:before {
+  border-color: black;
+}
+.g-checkbox.dark.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: rgba(0, 0, 0, 0.25);
+  border-color: rgba(0, 0, 0, 0.25);
 }
 
 /*# sourceMappingURL=index.css.map */

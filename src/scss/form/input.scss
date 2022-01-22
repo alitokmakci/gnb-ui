@@ -9,6 +9,18 @@ $input-border-radius: 12px;
 	margin-bottom: .75rem;
 	position: relative;
 
+	&.horizontal {
+		flex-direction: row;
+
+		.g-label {
+			margin-bottom: 0;
+			margin-left: 0;
+			margin-right: 6px;
+			display: flex;
+			align-items: center;
+		}
+	}
+
 	&.has-icon-before {
 		.g-input-icon {
 			box-shadow: 12px 0 10px -10px rgba(0, 0, 0, .05);
@@ -58,6 +70,7 @@ $input-border-radius: 12px;
 	width: 36px;
 	height: 36px;
 	transition: all .25s ease;
+	color: inherit;
 }
 
 .g-label {
@@ -93,6 +106,10 @@ $input-border-radius: 12px;
 		&.#{$color} {
 			&:active, &:focus {
 				border-bottom-color: $value;
+			}
+
+			&:focus ~ .g-input-icon {
+				color: $value;
 			}
 		}
 	}

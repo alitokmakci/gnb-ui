@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
-<div style="display: flex; justify-content: space-between;">
+<div style="display: flex; justify-content: space-around;">
     <div>
         <h5>Default Input</h5>
         <div class="g-form-element">
@@ -21,6 +21,12 @@
         <h5>Default Input with Label</h5>
         <div class="g-form-element">
             <label class="g-label">Label:</label>
+            <input type="text" class="g-input" placeholder="Name">
+        </div>
+
+
+        <div class="g-form-element horizontal">
+            <label class="g-label">Horizontal Label:</label>
             <input type="text" class="g-input" placeholder="Name">
         </div>
     </div>
@@ -59,14 +65,14 @@
         <h5>Default Input with Icons</h5>
         <div class="g-form-element has-icon-before">
             <label class="g-label">Icon Before:</label>
-            <input type="text" class="g-input" placeholder="Name">
-            <div class="g-input-icon before">
+            <input type="text" class="g-input primary" placeholder="Name">
+            <div class="g-input-icon">
                 <i class="ri-user-follow-line"></i>
             </div>
         </div>
         <div class="g-form-element has-icon-after">
             <label class="g-label">Icon After:</label>
-            <input type="text" class="g-input" placeholder="Name">
+            <input type="text" class="g-input success " placeholder="Name">
             <div class="g-input-icon">
                 <i class="ri-user-follow-line"></i>
             </div>
