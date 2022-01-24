@@ -2,9 +2,10 @@
 @import "functions";
 @import "reset";
 @import "animations";
-@import "./elements/buttons";
-@import "./form/input";
-@import "./form/checkbox";
+@import "elements/button";
+@import "elements/tag";
+@import "form/input";
+@import "form/checkbox";
 
 
 // TODO delete bottom lines in production

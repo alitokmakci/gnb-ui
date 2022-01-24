@@ -1,0 +1,80 @@
+.g-tag {
+	display: inline-block;
+	font-size: .5rem;
+	border-radius: 5px;
+	padding: 2px 5px;
+	color: $font-color;
+	background-color: $gray-1;
+	cursor: default;
+	pointer-events: none;
+	user-select: none;
+	font-weight: 600;
+
+	@each $color, $value in $colors {
+		&.#{$color} {
+			background-color: $value;
+			color: get-contrast($value);
+
+			@if($color == 'dark'){
+				.close {
+					background-color: rgba($white, .3);
+				}
+			}
+
+			&.flat {
+				background-color: rgba($value, .15);
+				color: $value;
+
+				.close {
+					background-color: rgba($value, .7) !important;
+				}
+			}
+		}
+	}
+
+	.close {
+		user-select: none;
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		background-color: rgba($dark, .3);
+		border: none;
+		border-radius: 9999px;
+		cursor: pointer;
+		pointer-events: auto;
+		display: inline-block;
+		flex-grow: 0;
+		flex-shrink: 0;
+		font-size: 0;
+		height: 12px;
+		max-height: 12px;
+		max-width: 12px;
+		min-height: 12px;
+		min-width: 12px;
+		width: 12px;
+		outline: 0;
+		position: relative;
+		vertical-align: top;
+		margin-left: 4px;
+
+		&:before, &:after {
+			background-color: #fff;
+			content: "";
+			display: block;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%) rotate(45deg);
+			transform-origin: center center;
+		}
+
+		&:before {
+			height: 1px;
+			width: 50%;
+		}
+
+		&:after {
+			height: 50%;
+			width: 1px;
+		}
+	}
+}

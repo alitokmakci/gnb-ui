@@ -878,6 +878,141 @@ a {
   animation: loading-spinner 1s ease infinite;
 }
 
+.g-tag {
+  display: inline-block;
+  font-size: 0.5rem;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: #2c3e50;
+  background-color: #e6e9ea;
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 600;
+}
+.g-tag.primary {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-tag.primary.flat {
+  background-color: rgba(26, 92, 255, 0.15);
+  color: #1a5cff;
+}
+.g-tag.primary.flat .close {
+  background-color: rgba(26, 92, 255, 0.7) !important;
+}
+.g-tag.secondary {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-tag.secondary.flat {
+  background-color: rgba(125, 51, 255, 0.15);
+  color: #7d33ff;
+}
+.g-tag.secondary.flat .close {
+  background-color: rgba(125, 51, 255, 0.7) !important;
+}
+.g-tag.success {
+  background-color: #46c93a;
+  color: white;
+}
+.g-tag.success.flat {
+  background-color: rgba(70, 201, 58, 0.15);
+  color: #46c93a;
+}
+.g-tag.success.flat .close {
+  background-color: rgba(70, 201, 58, 0.7) !important;
+}
+.g-tag.info {
+  background-color: #00aff0;
+  color: white;
+}
+.g-tag.info.flat {
+  background-color: rgba(0, 175, 240, 0.15);
+  color: #00aff0;
+}
+.g-tag.info.flat .close {
+  background-color: rgba(0, 175, 240, 0.7) !important;
+}
+.g-tag.warning {
+  background-color: #ffba00;
+  color: white;
+}
+.g-tag.warning.flat {
+  background-color: rgba(255, 186, 0, 0.15);
+  color: #ffba00;
+}
+.g-tag.warning.flat .close {
+  background-color: rgba(255, 186, 0, 0.7) !important;
+}
+.g-tag.danger {
+  background-color: #ff4757;
+  color: white;
+}
+.g-tag.danger.flat {
+  background-color: rgba(255, 71, 87, 0.15);
+  color: #ff4757;
+}
+.g-tag.danger.flat .close {
+  background-color: rgba(255, 71, 87, 0.7) !important;
+}
+.g-tag.dark {
+  background-color: black;
+  color: white;
+}
+.g-tag.dark .close {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.g-tag.dark.flat {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: black;
+}
+.g-tag.dark.flat .close {
+  background-color: rgba(0, 0, 0, 0.7) !important;
+}
+.g-tag .close {
+  user-select: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: none;
+  border-radius: 9999px;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 12px;
+  max-height: 12px;
+  max-width: 12px;
+  min-height: 12px;
+  min-width: 12px;
+  width: 12px;
+  outline: 0;
+  position: relative;
+  vertical-align: top;
+  margin-left: 4px;
+}
+.g-tag .close:before, .g-tag .close:after {
+  background-color: #fff;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
+}
+.g-tag .close:before {
+  height: 1px;
+  width: 50%;
+}
+.g-tag .close:after {
+  height: 50%;
+  width: 1px;
+}
+
 .g-form-element {
   display: flex;
   flex-direction: column;
