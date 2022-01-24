@@ -14,7 +14,7 @@ Elements:
 - [ ] Image
 - [ ] Table
 - [ ] Progress bar
-- [ ] Tag
+- [x] Tag
 - [ ] Tooltip
 
 Form Elements:
