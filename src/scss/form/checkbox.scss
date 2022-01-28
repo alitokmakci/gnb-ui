@@ -24,7 +24,7 @@
 			&:after {
 				transition: all .25s ease;
 				position: absolute;
-				left: 18px;
+				left: 8px;
 				top: -2px;
 				font-size: 1.1rem;
 				display: flex;
@@ -36,19 +36,6 @@
 				transform: scaleX(-1) rotate(-35deg);
 				opacity: 0;
 				color: $font-color;
-			}
-		}
-	}
-
-	&.horizontal {
-		.g-checkbox-group {
-
-			.g-label {
-
-				&:after {
-					left: 8px;
-					top: -2px;
-				}
 			}
 		}
 	}

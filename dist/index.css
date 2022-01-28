@@ -1162,7 +1162,7 @@ a {
 .g-form-element .g-checkbox-group .g-label:after {
   transition: all 0.25s ease;
   position: absolute;
-  left: 18px;
+  left: 8px;
   top: -2px;
   font-size: 1.1rem;
   display: flex;
@@ -1176,10 +1176,6 @@ a {
   transform: scaleX(-1) rotate(-35deg);
   opacity: 0;
   color: #2c3e50;
-}
-.g-form-element.horizontal .g-checkbox-group .g-label:after {
-  left: 8px;
-  top: -2px;
 }
 
 .g-checkbox {
