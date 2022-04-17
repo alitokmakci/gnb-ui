@@ -86,6 +86,12 @@ a {
   font-size: 0.6rem;
   border-radius: 7px;
 }
+.g-btn.no-float {
+  transform: none;
+}
+.g-btn.no-float:hover {
+  transform: none;
+}
 .g-btn.primary {
   background-color: #1a5cff;
   color: white;
@@ -174,7 +180,7 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 .g-btn.primary.floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 .g-btn.primary.floating:active {
   transform: none;
@@ -287,7 +293,7 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 .g-btn.secondary.floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 .g-btn.secondary.floating:active {
   transform: none;
@@ -400,7 +406,7 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 .g-btn.success.floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 .g-btn.success.floating:active {
   transform: none;
@@ -513,7 +519,7 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 .g-btn.info.floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 .g-btn.info.floating:active {
   transform: none;
@@ -626,7 +632,7 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 .g-btn.warning.floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 .g-btn.warning.floating:active {
   transform: none;
@@ -739,7 +745,7 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 .g-btn.danger.floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 .g-btn.danger.floating:active {
   transform: none;
@@ -852,7 +858,7 @@ a {
   transition: transform 0.3s ease-in-out;
 }
 .g-btn.dark.floating:hover {
-  transform: translateY(-6px);
+  transform: translateY(-3px);
 }
 .g-btn.dark.floating:active {
   transform: none;
