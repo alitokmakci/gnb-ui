@@ -2104,7 +2104,7 @@ a {
   height: 42px;
 }
 .g-switch.lg + label:active:after {
-  width: 70px;
+  width: 90px;
 }
 .g-switch.xl + label {
   width: 120px;
@@ -2118,7 +2118,7 @@ a {
   border-radius: 52px;
 }
 .g-switch.xl + label:active:after {
-  width: 70px;
+  width: 110px;
 }
 .g-switch.mini + label {
   width: 40px;
@@ -2132,7 +2132,7 @@ a {
   border-radius: 12px;
 }
 .g-switch.mini + label:active:after {
-  width: 18px;
+  width: 30px;
 }
 .g-switch.sm + label {
   width: 60px;
@@ -2146,12 +2146,12 @@ a {
   border-radius: 22px;
 }
 .g-switch.sm + label:active:after {
-  width: 26px;
+  width: 50px;
 }
 .g-switch + label {
   cursor: pointer;
-  width: 80px;
-  height: 40px;
+  width: 70px;
+  height: 35px;
   background: #e6e9ea;
   display: block;
   border-radius: 200px;
@@ -2163,10 +2163,10 @@ a {
   position: absolute;
   top: 4px;
   left: 4px;
-  width: 32px;
-  height: 32px;
+  width: 27px;
+  height: 27px;
   background: #fff;
-  border-radius: 32px;
+  border-radius: 27px;
   transition: 0.3s;
 }
 .g-switch.primary:checked + label {
@@ -2195,7 +2195,7 @@ a {
   transform: translateX(-100%);
 }
 .g-switch + label:active:after {
-  width: 40px;
+  width: 60px;
 }
 
 /*# sourceMappingURL=index.css.map */

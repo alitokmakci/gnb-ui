@@ -17,7 +17,7 @@
     }
 
     & + label:active:after {
-      width: 70px;
+      width: 90px;
     }
   }
 
@@ -36,7 +36,7 @@
     }
 
     & + label:active:after {
-      width: 70px;
+      width: 110px;
     }
   }
 
@@ -55,7 +55,7 @@
     }
 
     & + label:active:after {
-      width: 18px;
+      width: 30px;
     }
   }
 
@@ -74,14 +74,14 @@
     }
 
     & + label:active:after {
-      width: 26px;
+      width: 50px;
     }
   }
 
   & + label {
     cursor: pointer;
-    width: 80px;
-    height: 40px;
+    width: 70px;
+    height: 35px;
     background: $gray-1;
     display: block;
     border-radius: 200px;
@@ -94,10 +94,10 @@
     position: absolute;
     top: 4px;
     left: 4px;
-    width: 32px;
-    height: 32px;
+    width: 27px;
+    height: 27px;
     background: #fff;
-    border-radius: 32px;
+    border-radius: 27px;
     transition: 0.3s;
   }
 
@@ -115,6 +115,6 @@
   }
 
   & + label:active:after {
-    width: 40px;
+    width: 60px;
   }
 }
