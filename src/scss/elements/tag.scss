@@ -1,8 +1,8 @@
 .g-tag {
 	display: inline-block;
-	font-size: .5rem;
-	border-radius: 5px;
-	padding: 2px 5px;
+	font-size: .6rem;
+	border-radius: 7px;
+	padding: 4px 7px;
 	color: $font-color;
 	background-color: $gray-1;
 	cursor: default;
@@ -76,5 +76,23 @@
 			height: 50%;
 			width: 1px;
 		}
+	}
+}
+
+.g-tag-group {
+	display: flex;
+
+	.g-tag:first-child {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.g-tag:not(:first-child,:last-child) {
+		border-radius: 0;
+	}
+
+	.g-tag:last-child {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
 	}
 }
