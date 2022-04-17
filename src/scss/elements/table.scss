@@ -1,0 +1,54 @@
+.g-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+  min-width: 500px;
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      thead {
+        background-color: $value;
+        color: get-contrast($value);
+      }
+    }
+  }
+
+  thead {
+    background-color: $gray-2;
+
+    tr {
+      th:first-child {
+        border-top-left-radius: 12px;
+      }
+
+      th:last-child {
+        border-top-right-radius: 12px;
+      }
+    }
+  }
+
+  th {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  td {
+    padding: 10px 12px;
+    font-size: 0.8rem;
+  }
+
+  &.striped {
+    tr:nth-child(2n) {
+      background-color: $gray-3;
+    }
+  }
+
+  &.bordered {
+    tr {
+      td {
+        border: 1px dashed $gray-1;
+      }
+    }
+  }
+}

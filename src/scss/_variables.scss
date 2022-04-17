@@ -8,15 +8,16 @@ $danger: rgb(255, 71, 87);
 $dark: rgb(0, 0, 0);
 $font-color: rgb(44, 62, 80);
 $gray-1: rgba(230, 233, 234, 1);
-
+$gray-2: rgba(244, 247, 248, 1);
+$gray-3: rgba(249, 252, 253, 1);
 $colors: (
-		'primary': $primary,
-		'secondary': $secondary,
-		'success': $success,
-		'info': $info,
-		'warning': $warning,
-		'danger': $danger,
-		'dark': $dark
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "dark": $dark,
 );
 
 $default-border-radius: 12px;

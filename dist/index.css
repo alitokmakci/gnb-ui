@@ -1606,6 +1606,65 @@ a {
   border-bottom-left-radius: 0;
 }
 
+.g-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  text-align: left;
+  width: 100%;
+  min-width: 500px;
+}
+.g-table.primary thead {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-table.secondary thead {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-table.success thead {
+  background-color: #46c93a;
+  color: white;
+}
+.g-table.info thead {
+  background-color: #00aff0;
+  color: white;
+}
+.g-table.warning thead {
+  background-color: #ffba00;
+  color: white;
+}
+.g-table.danger thead {
+  background-color: #ff4757;
+  color: white;
+}
+.g-table.dark thead {
+  background-color: black;
+  color: white;
+}
+.g-table thead {
+  background-color: #f4f7f8;
+}
+.g-table thead tr th:first-child {
+  border-top-left-radius: 12px;
+}
+.g-table thead tr th:last-child {
+  border-top-right-radius: 12px;
+}
+.g-table th {
+  padding: 10px 12px;
+  font-size: 0.8rem;
+}
+.g-table td {
+  padding: 10px 12px;
+  font-size: 0.8rem;
+}
+.g-table.striped tr:nth-child(2n) {
+  background-color: #f9fcfd;
+}
+.g-table.bordered tr td {
+  border: 1px dashed #e6e9ea;
+}
+
 .g-form-element {
   display: flex;
   flex-direction: column;

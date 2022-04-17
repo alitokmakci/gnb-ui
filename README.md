@@ -12,7 +12,7 @@ Elements:
 
 - [x] Button
 - [ ] Image
-- [ ] Table
+- [x] Table
 - [ ] Progress bar
 - [x] Tag
 - [ ] Tooltip
