@@ -1669,28 +1669,26 @@ a {
   position: relative;
 }
 .has-tooltip:hover .g-tooltip {
-  opacity: 1;
+  display: block;
 }
 
 .g-tooltip {
-  opacity: 0;
+  display: none;
   position: absolute;
   background-color: #2c3e50;
+  color: white;
   top: 0;
   right: auto;
   bottom: auto;
   left: 50%;
-  top: 0;
-  margin-top: -5px;
-  margin-bottom: auto;
-  transform: translate(-50%, -100%);
+  transform: translate(-50%, -120%);
   border-radius: 12px;
   text-overflow: ellipsis;
   white-space: pre;
   font-size: 0.75rem;
   z-index: 1020;
   padding: 0.5rem 1rem;
-  transition: opacity ease-in-out 0.5s;
+  border: none;
 }
 .g-tooltip:after {
   position: absolute;
@@ -1700,24 +1698,46 @@ a {
   bottom: 0;
   right: auto;
   left: 50%;
-  margin-top: -5px;
-  margin-right: auto;
-  margin-bottom: auto;
-  margin-left: -5px;
   border-color: #2c3e50 transparent transparent transparent;
-  transform: translate(-50%, 100%);
-  transition: opacity ease-in-out 0.3s;
+  transform: translate(-50%, 90%);
+  z-index: 1020;
 }
 .g-tooltip.always-active {
-  opacity: 1 !important;
+  display: block !important;
 }
-.g-tooltip.multiline {
-  height: auto;
-  width: 15rem;
-  max-width: 15rem;
-  text-overflow: clip;
-  white-space: normal;
-  word-break: keep-all;
+.g-tooltip.bottom {
+  transform: translate(-50%, 110%);
+}
+.g-tooltip.bottom:after {
+  transform: translate(-50%, -245%);
+  border-color: transparent transparent #2c3e50 transparent;
+}
+.g-tooltip.right {
+  left: auto;
+  top: 50%;
+  transform: translate(90%, -50%);
+}
+.g-tooltip.right:after {
+  bottom: inherit;
+  top: 50%;
+  left: 0;
+  border-color: transparent #2c3e50 transparent transparent;
+  transform: translate(-90%, -50%);
+  border-width: 8px;
+}
+.g-tooltip.left {
+  left: auto;
+  top: 50%;
+  transform: translate(-90%, -50%);
+}
+.g-tooltip.left:after {
+  bottom: inherit;
+  top: 50%;
+  left: inherit;
+  right: 0;
+  border-color: transparent transparent transparent #2c3e50;
+  transform: translate(90%, -50%);
+  border-width: 8px;
 }
 .g-tooltip.primary {
   background-color: #1a5cff;
