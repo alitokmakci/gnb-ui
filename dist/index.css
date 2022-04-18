@@ -1665,6 +1665,110 @@ a {
   border: 1px dashed #e6e9ea;
 }
 
+.has-tooltip {
+  position: relative;
+}
+.has-tooltip:hover .g-tooltip {
+  opacity: 1;
+}
+
+.g-tooltip {
+  opacity: 0;
+  position: absolute;
+  background-color: #2c3e50;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  top: 0;
+  margin-top: -5px;
+  margin-bottom: auto;
+  transform: translate(-50%, -100%);
+  border-radius: 12px;
+  text-overflow: ellipsis;
+  white-space: pre;
+  font-size: 0.75rem;
+  z-index: 1020;
+  padding: 0.5rem 1rem;
+  transition: opacity ease-in-out 0.5s;
+}
+.g-tooltip:after {
+  position: absolute;
+  content: "";
+  border-style: solid;
+  border-width: 6px;
+  bottom: 0;
+  right: auto;
+  left: 50%;
+  margin-top: -5px;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-left: -5px;
+  border-color: #2c3e50 transparent transparent transparent;
+  transform: translate(-50%, 100%);
+  transition: opacity ease-in-out 0.3s;
+}
+.g-tooltip.always-active {
+  opacity: 1 !important;
+}
+.g-tooltip.multiline {
+  height: auto;
+  width: 15rem;
+  max-width: 15rem;
+  text-overflow: clip;
+  white-space: normal;
+  word-break: keep-all;
+}
+.g-tooltip.primary {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-tooltip.primary::after {
+  border-color: #1a5cff transparent transparent transparent;
+}
+.g-tooltip.secondary {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-tooltip.secondary::after {
+  border-color: #7d33ff transparent transparent transparent;
+}
+.g-tooltip.success {
+  background-color: #46c93a;
+  color: white;
+}
+.g-tooltip.success::after {
+  border-color: #46c93a transparent transparent transparent;
+}
+.g-tooltip.info {
+  background-color: #00aff0;
+  color: white;
+}
+.g-tooltip.info::after {
+  border-color: #00aff0 transparent transparent transparent;
+}
+.g-tooltip.warning {
+  background-color: #ffba00;
+  color: white;
+}
+.g-tooltip.warning::after {
+  border-color: #ffba00 transparent transparent transparent;
+}
+.g-tooltip.danger {
+  background-color: #ff4757;
+  color: white;
+}
+.g-tooltip.danger::after {
+  border-color: #ff4757 transparent transparent transparent;
+}
+.g-tooltip.dark {
+  background-color: black;
+  color: white;
+}
+.g-tooltip.dark::after {
+  border-color: black transparent transparent transparent;
+}
+
 .g-form-element {
   display: flex;
   flex-direction: column;

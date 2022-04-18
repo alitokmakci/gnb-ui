@@ -1,0 +1,71 @@
+.has-tooltip {
+  position: relative;
+
+  &:hover {
+    .g-tooltip {
+      opacity: 1;
+    }
+  }
+}
+
+.g-tooltip {
+  opacity: 0;
+  position: absolute;
+  background-color: $font-color;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  top: 0;
+  margin-top: -5px;
+  margin-bottom: auto;
+  transform: translate(-50%, -100%);
+  border-radius: 12px;
+  text-overflow: ellipsis;
+  white-space: pre;
+  font-size: 0.75rem;
+  z-index: 1020;
+  padding: 0.5rem 1rem;
+  transition: opacity ease-in-out 0.5s;
+
+  &:after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 6px;
+    bottom: 0;
+    right: auto;
+    left: 50%;
+    margin-top: -5px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: -5px;
+    border-color: $font-color transparent transparent transparent;
+    transform: translate(-50%, 100%);
+    transition: opacity ease-in-out 0.3s;
+  }
+
+  &.always-active {
+    opacity: 1 !important;
+  }
+
+  &.multiline {
+    height: auto;
+    width: 15rem;
+    max-width: 15rem;
+    text-overflow: clip;
+    white-space: normal;
+    word-break: keep-all;
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: get-contrast($value);
+
+      &::after {
+        border-color: $value transparent transparent transparent;
+      }
+    }
+  }
+}
