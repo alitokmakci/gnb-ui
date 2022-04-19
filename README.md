@@ -21,7 +21,7 @@ Form Elements:
 
 - [x] Input
 - [x] Select
-- [ ] Textarea
+- [x] Textarea
 - [x] Checkbox
 - [x] Switch
 - [ ] Radio

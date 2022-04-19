@@ -1,0 +1,35 @@
+$textarea-background-color: $gray-2;
+$placeholder-opacity: .4;
+$textarea-width: 200px;
+$textarea-border-radius: 12px;
+
+.g-textarea {
+	border: 2px solid transparent;
+    color: $font-color;
+    background-color: $textarea-background-color;
+    border-radius: $textarea-border-radius;
+	padding: 7px 13px 7px 10px;
+    width: $textarea-width;
+	-webkit-transition: all .25s ease;
+	transition: all .25s ease;
+
+    &::placeholder {
+		opacity: $placeholder-opacity;
+	}
+
+    &:focus, &:focus-visible, &:focus-within {
+		outline: none;
+	}
+
+	&:focus {
+		padding-left: 15px;
+	}
+
+    @each $color, $value in $colors {
+		&.#{$color} {
+			&:active, &:focus {
+				border-bottom-color: $value;
+			}
+		}
+	}
+}
