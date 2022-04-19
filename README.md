@@ -39,7 +39,7 @@ Components:
 - [ ] Modal
 - [ ] Dropdown
 - [ ] Pagination
-- [ ] Loading
+- [ ] Spinner
 - [ ] Collapse
 - [ ] Breadcrumb
 
