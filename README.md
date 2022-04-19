@@ -20,7 +20,7 @@ Elements:
 Form Elements:
 
 - [x] Input
-- [ ] Select
+- [x] Select
 - [ ] Textarea
 - [x] Checkbox
 - [x] Switch

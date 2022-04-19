@@ -2381,4 +2381,44 @@ a {
   width: 60px;
 }
 
+.g-select {
+  padding: 7px 30px 7px 13px;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  background-color: #f4f7f8;
+  color: #2c3e50;
+}
+.g-select.primary {
+  background-color: rgba(26, 92, 255, 0.15);
+  color: #1a5cff;
+}
+.g-select.secondary {
+  background-color: rgba(125, 51, 255, 0.15);
+  color: #7d33ff;
+}
+.g-select.success {
+  background-color: rgba(70, 201, 58, 0.15);
+  color: #46c93a;
+}
+.g-select.info {
+  background-color: rgba(0, 175, 240, 0.15);
+  color: #00aff0;
+}
+.g-select.warning {
+  background-color: rgba(255, 186, 0, 0.15);
+  color: #ffba00;
+}
+.g-select.danger {
+  background-color: rgba(255, 71, 87, 0.15);
+  color: #ff4757;
+}
+.g-select.dark {
+  background-color: rgba(0, 0, 0, 0.15);
+  color: black;
+}
+.g-select option {
+  background-color: white;
+  color: #2c3e50;
+}
+
 /*# sourceMappingURL=index.css.map */
