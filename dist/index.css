@@ -2472,7 +2472,7 @@ a {
   height: 25px;
   margin: auto;
   border: 4px solid transparent;
-  border-top-color: #2c3e50;
+  border-top-color: white;
   border-radius: 50%;
   animation: loading-spinner 1s ease infinite;
 }
@@ -2528,6 +2528,152 @@ a {
 .g-spinner.xl::after {
   width: 35px;
   height: 35px;
+}
+
+.g-avatar {
+  width: 50px;
+  height: 50px;
+  background-color: #e6e9ea;
+  color: #2c3e50;
+  border-radius: 35%;
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+}
+.g-avatar .g-avatar-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  font-weight: 500;
+}
+.g-avatar .g-avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  object-fit: cover;
+}
+.g-avatar .g-avatar-badge {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background-color: #e6e9ea;
+  z-index: 200;
+  top: -4px;
+  right: -4px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  border: 2px solid white;
+  color: #2c3e50;
+}
+.g-avatar .g-avatar-badge.primary {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-avatar .g-avatar-badge.secondary {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-avatar .g-avatar-badge.success {
+  background-color: #46c93a;
+  color: white;
+}
+.g-avatar .g-avatar-badge.info {
+  background-color: #00aff0;
+  color: white;
+}
+.g-avatar .g-avatar-badge.warning {
+  background-color: #ffba00;
+  color: white;
+}
+.g-avatar .g-avatar-badge.danger {
+  background-color: #ff4757;
+  color: white;
+}
+.g-avatar .g-avatar-badge.dark {
+  background-color: black;
+  color: white;
+}
+.g-avatar .g-avatar-badge.top-left {
+  top: -4px;
+  left: -4px;
+}
+.g-avatar .g-avatar-badge.bottom-right {
+  top: inherit;
+  bottom: -4px;
+  right: -4px;
+}
+.g-avatar .g-avatar-badge.bottom-left {
+  top: inherit;
+  bottom: -4px;
+  left: -4px;
+}
+.g-avatar .g-avatar-badge.has-content {
+  width: auto;
+  height: auto;
+  border-radius: 7px;
+  min-width: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.9rem;
+  padding: 0 3px;
+  min-height: 18px;
+  font-size: 0.6rem;
+  font-weight: 700;
+}
+.g-avatar.primary {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-avatar.secondary {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-avatar.success {
+  background-color: #46c93a;
+  color: white;
+}
+.g-avatar.info {
+  background-color: #00aff0;
+  color: white;
+}
+.g-avatar.warning {
+  background-color: #ffba00;
+  color: white;
+}
+.g-avatar.danger {
+  background-color: #ff4757;
+  color: white;
+}
+.g-avatar.dark {
+  background-color: black;
+  color: white;
+}
+.g-avatar.circle {
+  border-radius: 50%;
+}
+.g-avatar.square {
+  border-radius: 0;
+}
+.g-avatar.mini {
+  width: 30px;
+  height: 30px;
+}
+.g-avatar.sm {
+  width: 40px;
+  height: 40px;
+}
+.g-avatar.lg {
+  width: 60px;
+  height: 60px;
+}
+.g-avatar.xl {
+  width: 70px;
+  height: 70px;
 }
 
 /*# sourceMappingURL=index.css.map */
