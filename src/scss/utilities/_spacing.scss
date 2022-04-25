@@ -2,6 +2,16 @@ $spaceamounts: (10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
 $sides: (top, bottom, left, right, x, y);
 
 @each $space in $spaceamounts {
+    .p-#{$space} {
+        padding: #{$space}px !important;
+    }
+
+    .m-#{$space} {
+        margin: #{$space}px !important;
+    }
+}
+
+@each $space in $spaceamounts {
     @each $side in $sides {
         @if $side == x {
             .m#{$side}-#{$space} {

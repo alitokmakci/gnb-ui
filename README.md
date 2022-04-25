@@ -13,7 +13,7 @@ Elements:
 - [x] Button
 - [ ] Image
 - [x] Table
-- [ ] Progress bar
+- [x] Progress bar
 - [x] Tag
 - [x] Tooltip
 
@@ -34,7 +34,7 @@ Components:
 - [ ] Navbar
 - [ ] Tabs
 - [ ] Alert
-- [ ] Avatar
+- [x] Avatar
 - [ ] Sidebar
 - [ ] Modal
 - [ ] Dropdown

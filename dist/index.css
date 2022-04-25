@@ -24,6 +24,116 @@ a {
     transform: rotate(1turn);
   }
 }
+@keyframes infinite-progress {
+  0% {
+    left: 0%;
+    right: 100%;
+    width: 0%;
+  }
+  10% {
+    left: 0%;
+    right: 75%;
+    width: 35%;
+  }
+  90% {
+    right: 0%;
+    left: 75%;
+    width: 35%;
+  }
+  100% {
+    left: 100%;
+    right: 0%;
+    width: 0%;
+  }
+}
+.p-10 {
+  padding: 10px !important;
+}
+
+.m-10 {
+  margin: 10px !important;
+}
+
+.p-15 {
+  padding: 15px !important;
+}
+
+.m-15 {
+  margin: 15px !important;
+}
+
+.p-20 {
+  padding: 20px !important;
+}
+
+.m-20 {
+  margin: 20px !important;
+}
+
+.p-25 {
+  padding: 25px !important;
+}
+
+.m-25 {
+  margin: 25px !important;
+}
+
+.p-30 {
+  padding: 30px !important;
+}
+
+.m-30 {
+  margin: 30px !important;
+}
+
+.p-35 {
+  padding: 35px !important;
+}
+
+.m-35 {
+  margin: 35px !important;
+}
+
+.p-40 {
+  padding: 40px !important;
+}
+
+.m-40 {
+  margin: 40px !important;
+}
+
+.p-45 {
+  padding: 45px !important;
+}
+
+.m-45 {
+  margin: 45px !important;
+}
+
+.p-50 {
+  padding: 50px !important;
+}
+
+.m-50 {
+  margin: 50px !important;
+}
+
+.p-75 {
+  padding: 75px !important;
+}
+
+.m-75 {
+  margin: 75px !important;
+}
+
+.p-100 {
+  padding: 100px !important;
+}
+
+.m-100 {
+  margin: 100px !important;
+}
+
 .mt-10 {
   margin-top: 10px !important;
 }
@@ -1787,6 +1897,84 @@ a {
 }
 .g-tooltip.dark::after {
   border-color: black transparent transparent transparent;
+}
+
+.g-progress {
+  width: 100%;
+  height: 5px;
+  border-radius: 18px;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background-color: #e6e9ea;
+}
+.g-progress .g-progressbar {
+  height: 100%;
+  background-color: #f9fcfd;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 0.75rem;
+}
+.g-progress.primary {
+  background-color: rgba(26, 92, 255, 0.15);
+}
+.g-progress.primary .g-progressbar {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-progress.secondary {
+  background-color: rgba(125, 51, 255, 0.15);
+}
+.g-progress.secondary .g-progressbar {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-progress.success {
+  background-color: rgba(70, 201, 58, 0.15);
+}
+.g-progress.success .g-progressbar {
+  background-color: #46c93a;
+  color: white;
+}
+.g-progress.info {
+  background-color: rgba(0, 175, 240, 0.15);
+}
+.g-progress.info .g-progressbar {
+  background-color: #00aff0;
+  color: white;
+}
+.g-progress.warning {
+  background-color: rgba(255, 186, 0, 0.15);
+}
+.g-progress.warning .g-progressbar {
+  background-color: #ffba00;
+  color: white;
+}
+.g-progress.danger {
+  background-color: rgba(255, 71, 87, 0.15);
+}
+.g-progress.danger .g-progressbar {
+  background-color: #ff4757;
+  color: white;
+}
+.g-progress.dark {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.g-progress.dark .g-progressbar {
+  background-color: black;
+  color: white;
+}
+.g-progress.infinite .g-progressbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  animation: infinite-progress 1.5s linear infinite;
 }
 
 .g-form-element {
