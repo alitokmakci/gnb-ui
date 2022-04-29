@@ -78,6 +78,44 @@
 		}
 	}
 
+	&.bordered {
+		background-color: transparent;
+		color: white;
+		border-color: white;
+		transition: border-color .25s ease, background-color 0.25s ease, color 0.25s ease;
+
+		&:hover {
+			transform: none;
+			box-shadow: none;
+		}
+
+		&:active {
+			transform: none;
+			box-shadow: none;
+		}
+	}
+
+	&.flat {
+		background-color: rgba(white, .15);
+		color: white;
+		transition: background 0.5s ease, color 0.6s ease;
+
+		&:hover {
+			background: rgba(white, .25);
+			transform: none;
+			box-shadow: none;
+		}
+
+		&:active {
+			color: get-contrast(white);
+			background: white;
+			background-size: 100%;
+			transition: background 0s;
+			transform: none;
+			box-shadow: none;
+		}
+	}
+
 	@each $color, $value in $colors {
 		&.#{$color} {
 			background-color: $value;
@@ -112,19 +150,14 @@
 				background-color: get-contrast($value);
 				color: $value;
 				border-color: $value;
-				transition: border-color .25s ease, background-color 0.25s ease, color 0.25s ease;;
 
 				&:hover {
 					border-color: rgba($value, .5);
-					transform: none;
-					box-shadow: none;
 				}
 
 				&:active {
 					color: get-contrast($value);
 					background-color: $value;
-					transform: none;
-					box-shadow: none;
 				}
 			}
 

@@ -36,8 +36,8 @@ a {
     width: 35%;
   }
   90% {
-    right: 0%;
     left: 75%;
+    right: 0%;
     width: 35%;
   }
   100% {
@@ -774,6 +774,38 @@ a {
 .g-btn.no-float:hover {
   transform: none;
 }
+.g-btn.bordered {
+  background-color: transparent;
+  color: white;
+  border-color: white;
+  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+.g-btn.bordered:hover {
+  transform: none;
+  box-shadow: none;
+}
+.g-btn.bordered:active {
+  transform: none;
+  box-shadow: none;
+}
+.g-btn.flat {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  transition: background 0.5s ease, color 0.6s ease;
+}
+.g-btn.flat:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: none;
+  box-shadow: none;
+}
+.g-btn.flat:active {
+  color: #2c3e50;
+  background: white;
+  background-size: 100%;
+  transition: background 0s;
+  transform: none;
+  box-shadow: none;
+}
 .g-btn.primary {
   background-color: #1a5cff;
   color: white;
@@ -803,18 +835,13 @@ a {
   background-color: white;
   color: #1a5cff;
   border-color: #1a5cff;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .g-btn.primary.bordered:hover {
   border-color: rgba(26, 92, 255, 0.5);
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.primary.bordered:active {
   color: white;
   background-color: #1a5cff;
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.primary.link {
   position: relative;
@@ -916,18 +943,13 @@ a {
   background-color: white;
   color: #7d33ff;
   border-color: #7d33ff;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .g-btn.secondary.bordered:hover {
   border-color: rgba(125, 51, 255, 0.5);
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.secondary.bordered:active {
   color: white;
   background-color: #7d33ff;
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.secondary.link {
   position: relative;
@@ -1029,18 +1051,13 @@ a {
   background-color: white;
   color: #46c93a;
   border-color: #46c93a;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .g-btn.success.bordered:hover {
   border-color: rgba(70, 201, 58, 0.5);
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.success.bordered:active {
   color: white;
   background-color: #46c93a;
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.success.link {
   position: relative;
@@ -1142,18 +1159,13 @@ a {
   background-color: white;
   color: #00aff0;
   border-color: #00aff0;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .g-btn.info.bordered:hover {
   border-color: rgba(0, 175, 240, 0.5);
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.info.bordered:active {
   color: white;
   background-color: #00aff0;
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.info.link {
   position: relative;
@@ -1255,18 +1267,13 @@ a {
   background-color: white;
   color: #ffba00;
   border-color: #ffba00;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .g-btn.warning.bordered:hover {
   border-color: rgba(255, 186, 0, 0.5);
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.warning.bordered:active {
   color: white;
   background-color: #ffba00;
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.warning.link {
   position: relative;
@@ -1368,18 +1375,13 @@ a {
   background-color: white;
   color: #ff4757;
   border-color: #ff4757;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .g-btn.danger.bordered:hover {
   border-color: rgba(255, 71, 87, 0.5);
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.danger.bordered:active {
   color: white;
   background-color: #ff4757;
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.danger.link {
   position: relative;
@@ -1481,18 +1483,13 @@ a {
   background-color: white;
   color: black;
   border-color: black;
-  transition: border-color 0.25s ease, background-color 0.25s ease, color 0.25s ease;
 }
 .g-btn.dark.bordered:hover {
   border-color: rgba(0, 0, 0, 0.5);
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.dark.bordered:active {
   color: white;
   background-color: black;
-  transform: none;
-  box-shadow: none;
 }
 .g-btn.dark.link {
   position: relative;
@@ -2862,6 +2859,71 @@ a {
 .g-avatar.xl {
   width: 70px;
   height: 70px;
+}
+
+.g-navbar {
+  width: 100%;
+  position: relative;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: white;
+  color: #2c3e50;
+  border-radius: 0 0 15px 15px;
+  z-index: 9000;
+}
+.g-navbar.primary {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-navbar.secondary {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-navbar.success {
+  background-color: #46c93a;
+  color: white;
+}
+.g-navbar.info {
+  background-color: #00aff0;
+  color: white;
+}
+.g-navbar.warning {
+  background-color: #ffba00;
+  color: white;
+}
+.g-navbar.danger {
+  background-color: #ff4757;
+  color: white;
+}
+.g-navbar.dark {
+  background-color: black;
+  color: white;
+}
+.g-navbar .navbar-brand {
+  font-size: 1.15rem;
+  color: inherit;
+  font-weight: 600;
+}
+.g-navbar .navbar-item {
+  color: inherit;
+  padding: 10px 15px;
+  font-weight: 500;
+  transition: all 0.25s ease, color 0s;
+  opacity: 0.7;
+}
+.g-navbar .navbar-item:hover {
+  opacity: 1;
 }
 
 /*# sourceMappingURL=index.css.map */
