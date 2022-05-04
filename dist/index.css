@@ -2151,11 +2151,23 @@ a {
 .g-input.primary:focus ~ .g-input-icon {
   color: #1a5cff;
 }
+.g-input.primary.flat {
+  background-color: #dde7ff;
+}
+.g-input.primary.bordered {
+  border-bottom-color: #1a5cff;
+}
 .g-input.secondary:active, .g-input.secondary:focus {
   border-bottom-color: #7d33ff;
 }
 .g-input.secondary:focus ~ .g-input-icon {
   color: #7d33ff;
+}
+.g-input.secondary.flat {
+  background-color: #ece0ff;
+}
+.g-input.secondary.bordered {
+  border-bottom-color: #7d33ff;
 }
 .g-input.success:active, .g-input.success:focus {
   border-bottom-color: #46c93a;
@@ -2163,11 +2175,23 @@ a {
 .g-input.success:focus ~ .g-input-icon {
   color: #46c93a;
 }
+.g-input.success.flat {
+  background-color: #e3f7e1;
+}
+.g-input.success.bordered {
+  border-bottom-color: #46c93a;
+}
 .g-input.info:active, .g-input.info:focus {
   border-bottom-color: #00aff0;
 }
 .g-input.info:focus ~ .g-input-icon {
   color: #00aff0;
+}
+.g-input.info.flat {
+  background-color: #d9f3fd;
+}
+.g-input.info.bordered {
+  border-bottom-color: #00aff0;
 }
 .g-input.warning:active, .g-input.warning:focus {
   border-bottom-color: #ffba00;
@@ -2175,17 +2199,38 @@ a {
 .g-input.warning:focus ~ .g-input-icon {
   color: #ffba00;
 }
+.g-input.warning.flat {
+  background-color: #fff5d9;
+}
+.g-input.warning.bordered {
+  border-bottom-color: #ffba00;
+}
 .g-input.danger:active, .g-input.danger:focus {
   border-bottom-color: #ff4757;
 }
 .g-input.danger:focus ~ .g-input-icon {
   color: #ff4757;
 }
+.g-input.danger.flat {
+  background-color: #ffe3e6;
+}
+.g-input.danger.bordered {
+  border-bottom-color: #ff4757;
+}
 .g-input.dark:active, .g-input.dark:focus {
   border-bottom-color: black;
 }
 .g-input.dark:focus ~ .g-input-icon {
   color: black;
+}
+.g-input.dark.flat {
+  background-color: #d9d9d9;
+}
+.g-input.dark.bordered {
+  border-bottom-color: black;
+}
+.g-input.square {
+  border-radius: 0;
 }
 
 .g-form-element .g-checkbox-group {

@@ -55,6 +55,18 @@ $input-border-radius: 12px;
 			&:focus ~ .g-input-icon {
 				color: $value;
 			}
+
+			&.flat {
+				background-color: tint($value, 85%);
+			}
+
+			&.bordered {
+				border-bottom-color: $value;
+			}
 		}
+	}
+
+	&.square {
+		border-radius: 0;
 	}
 }
