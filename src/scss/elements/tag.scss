@@ -22,11 +22,11 @@
 			}
 
 			&.flat {
-				background-color: rgba($value, .15);
+				background-color: tint($value, 85%);
 				color: $value;
 
 				.close {
-					background-color: rgba($value, .7) !important;
+					background-color: tint($value, 30%) !important;
 				}
 			}
 		}

@@ -91,6 +91,15 @@
       &::after {
         border-color: $value transparent transparent transparent;
       }
+
+      &.flat {
+        background-color: tint($value, 85);
+        color: $value;
+
+        &::after {
+          border-color: tint($value, 85) transparent transparent transparent;
+        }
+      }
     }
   }
 }

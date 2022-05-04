@@ -85,7 +85,7 @@
 			&:checked {
 				&:hover ~ .g-label {
 					&:before {
-						box-shadow: 0 3px 15px 0 rgba($value, .35);
+						box-shadow: 0 3px 15px 0 tint($value, 65%);
 					}
 				}
 			}
@@ -98,29 +98,29 @@
 					}
 
 					&:before {
-						background-color: rgba($value, .15);
-						border-color: rgba($value, .15);
+						background-color: tint($value, 85%);
+						border-color: tint($value, 85%);
 					}
 				}
 
 				&:checked {
 					&:hover ~ .g-label {
 						&:before {
-							box-shadow: 0 3px 15px 0 rgba($value, .35);
+							box-shadow: 0 3px 15px 0 tint($value, 65%);
 						}
 					}
 				}
 
 				&:hover ~ .g-label:before {
-					background-color: rgba($value, .25);
-					border-color: rgba($value, .25);
+					background-color: tint($value, 75%);
+					border-color: tint($value, 75%);
 				}
 			}
 
 			&.bordered {
 				&:hover ~ .g-label:before {
 					background-color: transparent;
-					box-shadow: 0 3px 15px 0 rgba($value, .35);
+					box-shadow: 0 3px 15px 0 tint($value, 65%);
 				}
 
 				&:checked ~ .g-label {
@@ -141,8 +141,8 @@
 
 			&.hover-color {
 				&:not(:checked):hover ~ .g-label:before {
-					background-color: rgba($value, .25);
-					border-color: rgba($value, .25);
+					background-color: tint($value, 75%);
+					border-color: tint($value, 75%);
 				}
 			}
 		}
