@@ -30,6 +30,14 @@ $textarea-border-radius: 12px;
 			&:active, &:focus {
 				border-bottom-color: $value;
 			}
+
+			&.flat {
+				background-color: tint($value, 85%);
+			}
+
+			&.bordered {
+				border-bottom-color: $value;
+			}
 		}
 	}
 }
