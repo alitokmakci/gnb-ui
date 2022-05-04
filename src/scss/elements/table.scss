@@ -11,6 +11,13 @@
         background-color: $value;
         color: get-contrast($value);
       }
+      
+
+      &.flat {
+        tr {
+          background-color: rgba($value, .15) !important;
+        }
+      }
     }
   }
 
@@ -48,6 +55,22 @@
     tr {
       td {
         border: 1px dashed $gray-1;
+      }
+    }
+  }
+
+  &.pill {
+    thead {
+      tr {
+        th:first-child {
+          border-top-left-radius: 9999px;
+          border-bottom-left-radius: 9999px;
+        }
+  
+        th:last-child {
+          border-top-right-radius: 9999px;
+          border-bottom-right-radius: 9999px;
+        }
       }
     }
   }

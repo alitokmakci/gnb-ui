@@ -1724,29 +1724,50 @@ a {
   background-color: #1a5cff;
   color: white;
 }
+.g-table.primary.flat tr {
+  background-color: rgba(26, 92, 255, 0.15) !important;
+}
 .g-table.secondary thead {
   background-color: #7d33ff;
   color: white;
+}
+.g-table.secondary.flat tr {
+  background-color: rgba(125, 51, 255, 0.15) !important;
 }
 .g-table.success thead {
   background-color: #46c93a;
   color: white;
 }
+.g-table.success.flat tr {
+  background-color: rgba(70, 201, 58, 0.15) !important;
+}
 .g-table.info thead {
   background-color: #00aff0;
   color: white;
+}
+.g-table.info.flat tr {
+  background-color: rgba(0, 175, 240, 0.15) !important;
 }
 .g-table.warning thead {
   background-color: #ffba00;
   color: white;
 }
+.g-table.warning.flat tr {
+  background-color: rgba(255, 186, 0, 0.15) !important;
+}
 .g-table.danger thead {
   background-color: #ff4757;
   color: white;
 }
+.g-table.danger.flat tr {
+  background-color: rgba(255, 71, 87, 0.15) !important;
+}
 .g-table.dark thead {
   background-color: black;
   color: white;
+}
+.g-table.dark.flat tr {
+  background-color: rgba(0, 0, 0, 0.15) !important;
 }
 .g-table thead {
   background-color: #f4f7f8;
@@ -1770,6 +1791,14 @@ a {
 }
 .g-table.bordered tr td {
   border: 1px dashed #e6e9ea;
+}
+.g-table.pill thead tr th:first-child {
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+}
+.g-table.pill thead tr th:last-child {
+  border-top-right-radius: 9999px;
+  border-bottom-right-radius: 9999px;
 }
 
 .has-tooltip {

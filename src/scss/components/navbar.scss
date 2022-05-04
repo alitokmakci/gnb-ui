@@ -1,0 +1,51 @@
+$navbar-min-height: 44px;
+$navbar-padding: 0 15px;
+$navbar-border-radius: 0 0 15px 15px;
+$navbar-z-index: 9000;
+
+.g-navbar {
+    width: 100%;
+    position: relative;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: $navbar-padding;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: $navbar-min-height;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: white;
+    color: $font-color;
+    border-radius: $navbar-border-radius;
+    z-index: $navbar-z-index;
+
+    @each $color, $value in $colors {
+		&.#{$color} {
+            background-color: $value;
+            color: get-contrast($value);
+		}
+	}
+
+    .navbar-brand {
+        font-size: 1.15rem;
+        color: inherit;
+        font-weight: 600;
+    }
+
+    .navbar-item {
+        color: inherit;
+        padding: 10px 15px;
+        font-weight: 500;
+        transition: all .25s ease,color 0s;
+        opacity: .7;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
