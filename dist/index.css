@@ -1787,7 +1787,7 @@ a {
   font-size: 0.8rem;
 }
 .g-table.striped tr:nth-child(2n) {
-  background-color: #f9fcfd;
+  background-color: #f4f7f8;
 }
 .g-table.bordered tr td {
   border: 1px dashed #e6e9ea;
