@@ -2769,6 +2769,9 @@ a {
 .g-textarea.dark.bordered {
   border-bottom-color: black;
 }
+.g-textarea.square {
+  border-radius: 0;
+}
 
 .g-spinner {
   position: relative;

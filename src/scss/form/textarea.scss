@@ -40,4 +40,8 @@ $textarea-border-radius: 12px;
 			}
 		}
 	}
+
+	&.square {
+		border-radius: 0;
+	}
 }
