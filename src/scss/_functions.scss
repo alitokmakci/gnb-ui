@@ -1,3 +1,7 @@
 @function get-contrast ($color) {
 	@return if(lightness($color) < 65%, $white, $font-color); 
 }
+
+@function tint ($color, $amount) {
+	@return mix(white, $color, $amount);
+}

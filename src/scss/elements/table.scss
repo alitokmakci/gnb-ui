@@ -14,8 +14,10 @@
       
 
       &.flat {
-        tr {
-          background-color: rgba($value, .15) !important;
+        :not(thead) {
+          tr {
+            background-color: tint($value, 85%) !important;
+          }
         }
       }
     }
@@ -45,6 +47,14 @@
     font-size: 0.8rem;
   }
 
+  tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 12px;
+  }
+
+  tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 12px;
+  }
+
   &.striped {
     tr:nth-child(2n) {
       background-color: $gray-2;
@@ -59,18 +69,23 @@
     }
   }
 
-  &.pill {
-    thead {
-      tr {
-        th:first-child {
-          border-top-left-radius: 9999px;
-          border-bottom-left-radius: 9999px;
-        }
+
+  &.square {
+    tr:last-of-type td:first-of-type {
+      border-bottom-left-radius: 0;
+    }
   
-        th:last-child {
-          border-top-right-radius: 9999px;
-          border-bottom-right-radius: 9999px;
-        }
+    tr:last-of-type td:last-of-type {
+      border-bottom-right-radius: 0;
+    }
+
+    tr {
+      th:first-child {
+        border-top-left-radius: 0;
+      }
+
+      th:last-child {
+        border-top-right-radius: 0;
       }
     }
   }

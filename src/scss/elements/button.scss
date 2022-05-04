@@ -126,12 +126,12 @@
 			}
 
 			&.flat {
-				background-color: rgba($value, .15);
+				background-color: tint($value, 85%);
 				color: $value;
 				transition: background 0.5s ease, color 0.6s ease;
 
 				&:hover {
-					background: rgba($value, .25);
+					background: tint($value, 75%);
 					transform: none;
 					box-shadow: none;
 				}
@@ -170,8 +170,8 @@
 
 				&:before {
 					content: "";
-					background: rgba($value, .1);
-					border-color: rgba($value, .1);
+					background: tint($value, 90%);
+					border-color: tint($value, 90%);
 					position: absolute;
 					bottom: -2px;
 					left: -2px;
