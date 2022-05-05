@@ -3200,6 +3200,65 @@ a {
 .g-dropdown.to-up.right .g-dropdown-menu {
   border-radius: 18px 18px 5px 18px;
 }
+.g-dropdown.square .g-dropdown-menu {
+  border-radius: 0 !important;
+}
+.g-dropdown.primary .g-dropdown-menu {
+  background-color: #1a5cff;
+  color: white;
+}
+.g-dropdown.primary.flat .g-dropdown-menu {
+  background-color: #dde7ff;
+  color: #1a5cff;
+}
+.g-dropdown.secondary .g-dropdown-menu {
+  background-color: #7d33ff;
+  color: white;
+}
+.g-dropdown.secondary.flat .g-dropdown-menu {
+  background-color: #ece0ff;
+  color: #7d33ff;
+}
+.g-dropdown.success .g-dropdown-menu {
+  background-color: #46c93a;
+  color: white;
+}
+.g-dropdown.success.flat .g-dropdown-menu {
+  background-color: #e3f7e1;
+  color: #46c93a;
+}
+.g-dropdown.info .g-dropdown-menu {
+  background-color: #00aff0;
+  color: white;
+}
+.g-dropdown.info.flat .g-dropdown-menu {
+  background-color: #d9f3fd;
+  color: #00aff0;
+}
+.g-dropdown.warning .g-dropdown-menu {
+  background-color: #ffba00;
+  color: white;
+}
+.g-dropdown.warning.flat .g-dropdown-menu {
+  background-color: #fff5d9;
+  color: #ffba00;
+}
+.g-dropdown.danger .g-dropdown-menu {
+  background-color: #ff4757;
+  color: white;
+}
+.g-dropdown.danger.flat .g-dropdown-menu {
+  background-color: #ffe3e6;
+  color: #ff4757;
+}
+.g-dropdown.dark .g-dropdown-menu {
+  background-color: black;
+  color: white;
+}
+.g-dropdown.dark.flat .g-dropdown-menu {
+  background-color: #d9d9d9;
+  color: black;
+}
 
 .g-navbar {
   width: 100%;
