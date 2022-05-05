@@ -37,7 +37,7 @@ Components:
 - [x] Avatar
 - [ ] Sidebar
 - [ ] Modal
-- [ ] Dropdown
+- [x] Dropdown
 - [ ] Pagination
 - [x] Spinner
 - [ ] Collapse
