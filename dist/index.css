@@ -2594,65 +2594,65 @@ a {
   width: 0;
   visibility: hidden;
 }
-.g-switch.lg + label {
-  width: 100px;
-  height: 50px;
-}
-.g-switch.lg + label:after {
-  top: 4px;
-  left: 4px;
-  width: 42px;
-  height: 42px;
-}
-.g-switch.lg + label:active:after {
-  width: 90px;
-}
-.g-switch.xl + label {
-  width: 120px;
-  height: 60px;
-}
-.g-switch.xl + label:after {
-  top: 4px;
-  left: 4px;
-  width: 52px;
-  height: 52px;
-  border-radius: 52px;
-}
-.g-switch.xl + label:active:after {
-  width: 110px;
-}
 .g-switch.mini + label {
-  width: 40px;
-  height: 20px;
+  width: 30px;
+  height: 15px;
 }
 .g-switch.mini + label:after {
   top: 4px;
   left: 4px;
-  width: 12px;
-  height: 12px;
+  width: 7px;
+  height: 7px;
   border-radius: 12px;
 }
 .g-switch.mini + label:active:after {
-  width: 30px;
+  width: 20px;
 }
 .g-switch.sm + label {
-  width: 60px;
-  height: 30px;
+  width: 40px;
+  height: 20px;
 }
 .g-switch.sm + label:after {
   top: 4px;
   left: 4px;
-  width: 22px;
-  height: 22px;
+  width: 12px;
+  height: 12px;
   border-radius: 22px;
 }
 .g-switch.sm + label:active:after {
-  width: 50px;
+  width: 30px;
+}
+.g-switch.lg + label {
+  width: 70px;
+  height: 35px;
+}
+.g-switch.lg + label:after {
+  top: 4px;
+  left: 4px;
+  width: 27px;
+  height: 27px;
+}
+.g-switch.lg + label:active:after {
+  width: 60px;
+}
+.g-switch.xl + label {
+  width: 80px;
+  height: 40px;
+}
+.g-switch.xl + label:after {
+  top: 4px;
+  left: 4px;
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+}
+.g-switch.xl + label:active:after {
+  width: 70px;
 }
 .g-switch + label {
   cursor: pointer;
-  width: 70px;
-  height: 35px;
+  width: 50px;
+  height: 25px;
   background: #e6e9ea;
   display: block;
   border-radius: 200px;
@@ -2664,8 +2664,8 @@ a {
   position: absolute;
   top: 4px;
   left: 4px;
-  width: 27px;
-  height: 27px;
+  width: 17px;
+  height: 17px;
   background: #fff;
   border-radius: 27px;
   transition: 0.3s;
@@ -2696,7 +2696,13 @@ a {
   transform: translateX(-100%);
 }
 .g-switch + label:active:after {
-  width: 60px;
+  width: 40px;
+}
+.g-switch.square + label {
+  border-radius: 4px;
+}
+.g-switch.square + label:after {
+  border-radius: 2px;
 }
 
 .g-select {
@@ -2705,31 +2711,77 @@ a {
   border-radius: 12px;
   background-color: #f4f7f8;
   color: #2c3e50;
+  width: 200px;
 }
-.g-select.primary {
+.g-select.primary:active, .g-select.primary:focus {
   border-bottom-color: #1a5cff;
 }
-.g-select.secondary {
+.g-select.primary.flat {
+  background-color: #dde7ff;
+}
+.g-select.primary.bordered {
+  border-bottom-color: #1a5cff;
+}
+.g-select.secondary:active, .g-select.secondary:focus {
   border-bottom-color: #7d33ff;
 }
-.g-select.success {
+.g-select.secondary.flat {
+  background-color: #ece0ff;
+}
+.g-select.secondary.bordered {
+  border-bottom-color: #7d33ff;
+}
+.g-select.success:active, .g-select.success:focus {
   border-bottom-color: #46c93a;
 }
-.g-select.info {
+.g-select.success.flat {
+  background-color: #e3f7e1;
+}
+.g-select.success.bordered {
+  border-bottom-color: #46c93a;
+}
+.g-select.info:active, .g-select.info:focus {
   border-bottom-color: #00aff0;
 }
-.g-select.warning {
+.g-select.info.flat {
+  background-color: #d9f3fd;
+}
+.g-select.info.bordered {
+  border-bottom-color: #00aff0;
+}
+.g-select.warning:active, .g-select.warning:focus {
   border-bottom-color: #ffba00;
 }
-.g-select.danger {
+.g-select.warning.flat {
+  background-color: #fff5d9;
+}
+.g-select.warning.bordered {
+  border-bottom-color: #ffba00;
+}
+.g-select.danger:active, .g-select.danger:focus {
   border-bottom-color: #ff4757;
 }
-.g-select.dark {
+.g-select.danger.flat {
+  background-color: #ffe3e6;
+}
+.g-select.danger.bordered {
+  border-bottom-color: #ff4757;
+}
+.g-select.dark:active, .g-select.dark:focus {
+  border-bottom-color: black;
+}
+.g-select.dark.flat {
+  background-color: #d9d9d9;
+}
+.g-select.dark.bordered {
   border-bottom-color: black;
 }
 .g-select option {
   background-color: white;
   color: #2c3e50;
+}
+.g-select.square {
+  border-radius: 0;
 }
 
 .g-textarea {

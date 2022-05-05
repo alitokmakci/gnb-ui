@@ -3,44 +3,26 @@
   width: 0;
   visibility: hidden;
 
-  &.lg {
-    & + label {
-      width: 100px;
-      height: 50px;
-    }
-
-    & + label:after {
-      top: 4px;
-      left: 4px;
-      width: 42px;
-      height: 42px;
-    }
-
-    & + label:active:after {
-      width: 90px;
-    }
-  }
-
-  &.xl {
-    & + label {
-      width: 120px;
-      height: 60px;
-    }
-
-    & + label:after {
-      top: 4px;
-      left: 4px;
-      width: 52px;
-      height: 52px;
-      border-radius: 52px;
-    }
-
-    & + label:active:after {
-      width: 110px;
-    }
-  }
-
   &.mini {
+    & + label {
+      width: 30px;
+      height: 15px;
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 12px;
+    }
+
+    & + label:active:after {
+      width: 20px;
+    }
+  }
+
+  &.sm {
     & + label {
       width: 40px;
       height: 20px;
@@ -51,7 +33,7 @@
       left: 4px;
       width: 12px;
       height: 12px;
-      border-radius: 12px;
+      border-radius: 22px;
     }
 
     & + label:active:after {
@@ -59,29 +41,47 @@
     }
   }
 
-  &.sm {
+  &.lg {
     & + label {
-      width: 60px;
-      height: 30px;
+      width: 70px;
+      height: 35px;
     }
 
     & + label:after {
       top: 4px;
       left: 4px;
-      width: 22px;
-      height: 22px;
-      border-radius: 22px;
+      width: 27px;
+      height: 27px;
     }
 
     & + label:active:after {
-      width: 50px;
+      width: 60px;
+    }
+  }
+
+  &.xl {
+    & + label {
+      width: 80px;
+      height: 40px;
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+    }
+
+    & + label:active:after {
+      width: 70px;
     }
   }
 
   & + label {
     cursor: pointer;
-    width: 70px;
-    height: 35px;
+    width: 50px;
+    height: 25px;
     background: $gray-1;
     display: block;
     border-radius: 200px;
@@ -94,8 +94,8 @@
     position: absolute;
     top: 4px;
     left: 4px;
-    width: 27px;
-    height: 27px;
+    width: 17px;
+    height: 17px;
     background: #fff;
     border-radius: 27px;
     transition: 0.3s;
@@ -115,6 +115,16 @@
   }
 
   & + label:active:after {
-    width: 60px;
+    width: 40px;
+  }
+
+  &.square {
+    & + label {
+      border-radius: 4px;
+    }
+
+    & + label:after {
+      border-radius: 2px;
+    }
   }
 }
