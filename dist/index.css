@@ -5,6 +5,7 @@ body {
   font-size: 16px;
   color: #2c3e50;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #f0f0f0;
 }
 
 * {
@@ -787,6 +788,8 @@ a {
 .g-btn.bordered:active {
   transform: none;
   box-shadow: none;
+  color: #2c3e50;
+  background-color: white;
 }
 .g-btn.flat {
   background-color: rgba(255, 255, 255, 0.15);
@@ -805,6 +808,78 @@ a {
   transition: background 0s;
   transform: none;
   box-shadow: none;
+}
+.g-btn.floating {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+.g-btn.floating:hover {
+  transform: translateY(-3px);
+}
+.g-btn.floating:active {
+  transform: none;
+}
+.g-btn.link {
+  position: relative;
+  background-color: transparent;
+  color: white;
+  border-color: transparent;
+  transition: background 0.5s ease, color 0.6s ease;
+}
+.g-btn.link:before {
+  content: "";
+  background: white;
+  border-color: white;
+  position: absolute;
+  bottom: -2px;
+  left: -2px;
+  top: -2px;
+  right: -2px;
+  border-radius: inherit;
+  pointer-events: none;
+  transition: all 0.25s ease;
+  z-index: -1;
+  transform: scale(0.5);
+  opacity: 0;
+  box-sizing: border-box;
+}
+.g-btn.link:hover {
+  transform: translateY(0);
+  box-shadow: none;
+  color: #2c3e50;
+}
+.g-btn.link:hover:before {
+  opacity: 1;
+  transform: scale(1);
+}
+.g-btn.link:active {
+  transform: none;
+  box-shadow: none;
+  color: #2c3e50;
+  background: white;
+  background-size: 100%;
+  transition: background 0s;
+}
+.g-btn.loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.g-btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 4px solid transparent;
+  border-top-color: #2c3e50;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
 }
 .g-btn.primary {
   background-color: #1a5cff;
@@ -832,87 +907,38 @@ a {
   box-shadow: none;
 }
 .g-btn.primary.bordered {
-  background-color: white;
+  background-color: transparent;
   color: #1a5cff;
   border-color: #1a5cff;
 }
 .g-btn.primary.bordered:hover {
-  border-color: rgba(26, 92, 255, 0.5);
+  border-color: #8daeff;
 }
 .g-btn.primary.bordered:active {
   color: white;
   background-color: #1a5cff;
 }
 .g-btn.primary.link {
-  position: relative;
   background-color: transparent;
   color: #1a5cff;
-  border-color: transparent;
-  transition: background 0.5s ease, color 0.6s ease;
 }
 .g-btn.primary.link:before {
-  content: "";
   background: #e8efff;
   border-color: #e8efff;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  top: -2px;
-  right: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  z-index: -1;
-  transform: scale(0.5);
-  opacity: 0;
-  box-sizing: border-box;
 }
 .g-btn.primary.link:hover {
-  transform: translateY(0);
   box-shadow: none;
-}
-.g-btn.primary.link:hover:before {
-  opacity: 1;
-  transform: scale(1);
 }
 .g-btn.primary.link:active {
   transform: none;
-  box-shadow: none;
   color: white;
   background: #1a5cff;
-  background-size: 100%;
-  transition: background 0s;
 }
 .g-btn.primary.floating {
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px #1a5cff;
-  transition: transform 0.3s ease-in-out;
-}
-.g-btn.primary.floating:hover {
-  transform: translateY(-3px);
-}
-.g-btn.primary.floating:active {
-  transform: none;
-}
-.g-btn.primary.loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
 }
 .g-btn.primary.loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: loading-spinner 1s ease infinite;
+  border-top-color: white;
 }
 .g-btn.secondary {
   background-color: #7d33ff;
@@ -940,87 +966,38 @@ a {
   box-shadow: none;
 }
 .g-btn.secondary.bordered {
-  background-color: white;
+  background-color: transparent;
   color: #7d33ff;
   border-color: #7d33ff;
 }
 .g-btn.secondary.bordered:hover {
-  border-color: rgba(125, 51, 255, 0.5);
+  border-color: #be99ff;
 }
 .g-btn.secondary.bordered:active {
   color: white;
   background-color: #7d33ff;
 }
 .g-btn.secondary.link {
-  position: relative;
   background-color: transparent;
   color: #7d33ff;
-  border-color: transparent;
-  transition: background 0.5s ease, color 0.6s ease;
 }
 .g-btn.secondary.link:before {
-  content: "";
   background: #f2ebff;
   border-color: #f2ebff;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  top: -2px;
-  right: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  z-index: -1;
-  transform: scale(0.5);
-  opacity: 0;
-  box-sizing: border-box;
 }
 .g-btn.secondary.link:hover {
-  transform: translateY(0);
   box-shadow: none;
-}
-.g-btn.secondary.link:hover:before {
-  opacity: 1;
-  transform: scale(1);
 }
 .g-btn.secondary.link:active {
   transform: none;
-  box-shadow: none;
   color: white;
   background: #7d33ff;
-  background-size: 100%;
-  transition: background 0s;
 }
 .g-btn.secondary.floating {
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px #7d33ff;
-  transition: transform 0.3s ease-in-out;
-}
-.g-btn.secondary.floating:hover {
-  transform: translateY(-3px);
-}
-.g-btn.secondary.floating:active {
-  transform: none;
-}
-.g-btn.secondary.loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
 }
 .g-btn.secondary.loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: loading-spinner 1s ease infinite;
+  border-top-color: white;
 }
 .g-btn.success {
   background-color: #46c93a;
@@ -1048,87 +1025,38 @@ a {
   box-shadow: none;
 }
 .g-btn.success.bordered {
-  background-color: white;
+  background-color: transparent;
   color: #46c93a;
   border-color: #46c93a;
 }
 .g-btn.success.bordered:hover {
-  border-color: rgba(70, 201, 58, 0.5);
+  border-color: #a3e49d;
 }
 .g-btn.success.bordered:active {
   color: white;
   background-color: #46c93a;
 }
 .g-btn.success.link {
-  position: relative;
   background-color: transparent;
   color: #46c93a;
-  border-color: transparent;
-  transition: background 0.5s ease, color 0.6s ease;
 }
 .g-btn.success.link:before {
-  content: "";
   background: #edfaeb;
   border-color: #edfaeb;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  top: -2px;
-  right: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  z-index: -1;
-  transform: scale(0.5);
-  opacity: 0;
-  box-sizing: border-box;
 }
 .g-btn.success.link:hover {
-  transform: translateY(0);
   box-shadow: none;
-}
-.g-btn.success.link:hover:before {
-  opacity: 1;
-  transform: scale(1);
 }
 .g-btn.success.link:active {
   transform: none;
-  box-shadow: none;
   color: white;
   background: #46c93a;
-  background-size: 100%;
-  transition: background 0s;
 }
 .g-btn.success.floating {
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px #46c93a;
-  transition: transform 0.3s ease-in-out;
-}
-.g-btn.success.floating:hover {
-  transform: translateY(-3px);
-}
-.g-btn.success.floating:active {
-  transform: none;
-}
-.g-btn.success.loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
 }
 .g-btn.success.loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: loading-spinner 1s ease infinite;
+  border-top-color: white;
 }
 .g-btn.info {
   background-color: #00aff0;
@@ -1156,87 +1084,38 @@ a {
   box-shadow: none;
 }
 .g-btn.info.bordered {
-  background-color: white;
+  background-color: transparent;
   color: #00aff0;
   border-color: #00aff0;
 }
 .g-btn.info.bordered:hover {
-  border-color: rgba(0, 175, 240, 0.5);
+  border-color: #80d7f8;
 }
 .g-btn.info.bordered:active {
   color: white;
   background-color: #00aff0;
 }
 .g-btn.info.link {
-  position: relative;
   background-color: transparent;
   color: #00aff0;
-  border-color: transparent;
-  transition: background 0.5s ease, color 0.6s ease;
 }
 .g-btn.info.link:before {
-  content: "";
   background: #e6f7fe;
   border-color: #e6f7fe;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  top: -2px;
-  right: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  z-index: -1;
-  transform: scale(0.5);
-  opacity: 0;
-  box-sizing: border-box;
 }
 .g-btn.info.link:hover {
-  transform: translateY(0);
   box-shadow: none;
-}
-.g-btn.info.link:hover:before {
-  opacity: 1;
-  transform: scale(1);
 }
 .g-btn.info.link:active {
   transform: none;
-  box-shadow: none;
   color: white;
   background: #00aff0;
-  background-size: 100%;
-  transition: background 0s;
 }
 .g-btn.info.floating {
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px #00aff0;
-  transition: transform 0.3s ease-in-out;
-}
-.g-btn.info.floating:hover {
-  transform: translateY(-3px);
-}
-.g-btn.info.floating:active {
-  transform: none;
-}
-.g-btn.info.loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
 }
 .g-btn.info.loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: loading-spinner 1s ease infinite;
+  border-top-color: white;
 }
 .g-btn.warning {
   background-color: #ffba00;
@@ -1264,87 +1143,38 @@ a {
   box-shadow: none;
 }
 .g-btn.warning.bordered {
-  background-color: white;
+  background-color: transparent;
   color: #ffba00;
   border-color: #ffba00;
 }
 .g-btn.warning.bordered:hover {
-  border-color: rgba(255, 186, 0, 0.5);
+  border-color: #ffdd80;
 }
 .g-btn.warning.bordered:active {
   color: white;
   background-color: #ffba00;
 }
 .g-btn.warning.link {
-  position: relative;
   background-color: transparent;
   color: #ffba00;
-  border-color: transparent;
-  transition: background 0.5s ease, color 0.6s ease;
 }
 .g-btn.warning.link:before {
-  content: "";
   background: #fff8e6;
   border-color: #fff8e6;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  top: -2px;
-  right: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  z-index: -1;
-  transform: scale(0.5);
-  opacity: 0;
-  box-sizing: border-box;
 }
 .g-btn.warning.link:hover {
-  transform: translateY(0);
   box-shadow: none;
-}
-.g-btn.warning.link:hover:before {
-  opacity: 1;
-  transform: scale(1);
 }
 .g-btn.warning.link:active {
   transform: none;
-  box-shadow: none;
   color: white;
   background: #ffba00;
-  background-size: 100%;
-  transition: background 0s;
 }
 .g-btn.warning.floating {
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px #ffba00;
-  transition: transform 0.3s ease-in-out;
-}
-.g-btn.warning.floating:hover {
-  transform: translateY(-3px);
-}
-.g-btn.warning.floating:active {
-  transform: none;
-}
-.g-btn.warning.loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
 }
 .g-btn.warning.loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: loading-spinner 1s ease infinite;
+  border-top-color: white;
 }
 .g-btn.danger {
   background-color: #ff4757;
@@ -1372,87 +1202,38 @@ a {
   box-shadow: none;
 }
 .g-btn.danger.bordered {
-  background-color: white;
+  background-color: transparent;
   color: #ff4757;
   border-color: #ff4757;
 }
 .g-btn.danger.bordered:hover {
-  border-color: rgba(255, 71, 87, 0.5);
+  border-color: #ffa3ab;
 }
 .g-btn.danger.bordered:active {
   color: white;
   background-color: #ff4757;
 }
 .g-btn.danger.link {
-  position: relative;
   background-color: transparent;
   color: #ff4757;
-  border-color: transparent;
-  transition: background 0.5s ease, color 0.6s ease;
 }
 .g-btn.danger.link:before {
-  content: "";
   background: #ffedee;
   border-color: #ffedee;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  top: -2px;
-  right: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  z-index: -1;
-  transform: scale(0.5);
-  opacity: 0;
-  box-sizing: border-box;
 }
 .g-btn.danger.link:hover {
-  transform: translateY(0);
   box-shadow: none;
-}
-.g-btn.danger.link:hover:before {
-  opacity: 1;
-  transform: scale(1);
 }
 .g-btn.danger.link:active {
   transform: none;
-  box-shadow: none;
   color: white;
   background: #ff4757;
-  background-size: 100%;
-  transition: background 0s;
 }
 .g-btn.danger.floating {
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px #ff4757;
-  transition: transform 0.3s ease-in-out;
-}
-.g-btn.danger.floating:hover {
-  transform: translateY(-3px);
-}
-.g-btn.danger.floating:active {
-  transform: none;
-}
-.g-btn.danger.loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
 }
 .g-btn.danger.loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: loading-spinner 1s ease infinite;
+  border-top-color: white;
 }
 .g-btn.dark {
   background-color: black;
@@ -1480,87 +1261,53 @@ a {
   box-shadow: none;
 }
 .g-btn.dark.bordered {
-  background-color: white;
+  background-color: transparent;
   color: black;
   border-color: black;
 }
 .g-btn.dark.bordered:hover {
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: gray;
 }
 .g-btn.dark.bordered:active {
   color: white;
   background-color: black;
 }
 .g-btn.dark.link {
-  position: relative;
   background-color: transparent;
   color: black;
-  border-color: transparent;
-  transition: background 0.5s ease, color 0.6s ease;
 }
 .g-btn.dark.link:before {
-  content: "";
   background: #e6e6e6;
   border-color: #e6e6e6;
-  position: absolute;
-  bottom: -2px;
-  left: -2px;
-  top: -2px;
-  right: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  transition: all 0.25s ease;
-  z-index: -1;
-  transform: scale(0.5);
-  opacity: 0;
-  box-sizing: border-box;
 }
 .g-btn.dark.link:hover {
-  transform: translateY(0);
   box-shadow: none;
-}
-.g-btn.dark.link:hover:before {
-  opacity: 1;
-  transform: scale(1);
 }
 .g-btn.dark.link:active {
   transform: none;
-  box-shadow: none;
   color: white;
   background: black;
-  background-size: 100%;
-  transition: background 0s;
 }
 .g-btn.dark.floating {
-  transform: translateY(-3px);
   box-shadow: 0 10px 20px -10px black;
-  transition: transform 0.3s ease-in-out;
-}
-.g-btn.dark.floating:hover {
-  transform: translateY(-3px);
-}
-.g-btn.dark.floating:active {
-  transform: none;
-}
-.g-btn.dark.loading {
-  position: relative;
-  color: transparent !important;
-  pointer-events: none;
 }
 .g-btn.dark.loading::after {
-  content: "";
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
-  border: 4px solid transparent;
-  border-top-color: #ffffff;
-  border-radius: 50%;
-  animation: loading-spinner 1s ease infinite;
+  border-top-color: white;
+}
+
+.g-btn-group {
+  display: flex;
+}
+.g-btn-group .g-btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.g-btn-group .g-btn:not(:first-child, :last-child) {
+  border-radius: 0;
+}
+.g-btn-group .g-btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .g-tag {
@@ -3285,29 +3032,92 @@ a {
   background-color: #1a5cff;
   color: white;
 }
+.g-navbar.primary.shadow {
+  box-shadow: 0 5px 20px 0 rgba(26, 92, 255, 0.25);
+}
+.g-navbar.primary .navbar-item.active {
+  border-bottom-color: white;
+}
+.g-navbar.line-primary .navbar-item.active {
+  border-bottom-color: #1a5cff;
+}
 .g-navbar.secondary {
   background-color: #7d33ff;
   color: white;
+}
+.g-navbar.secondary.shadow {
+  box-shadow: 0 5px 20px 0 rgba(125, 51, 255, 0.25);
+}
+.g-navbar.secondary .navbar-item.active {
+  border-bottom-color: white;
+}
+.g-navbar.line-secondary .navbar-item.active {
+  border-bottom-color: #7d33ff;
 }
 .g-navbar.success {
   background-color: #46c93a;
   color: white;
 }
+.g-navbar.success.shadow {
+  box-shadow: 0 5px 20px 0 rgba(70, 201, 58, 0.25);
+}
+.g-navbar.success .navbar-item.active {
+  border-bottom-color: white;
+}
+.g-navbar.line-success .navbar-item.active {
+  border-bottom-color: #46c93a;
+}
 .g-navbar.info {
   background-color: #00aff0;
   color: white;
+}
+.g-navbar.info.shadow {
+  box-shadow: 0 5px 20px 0 rgba(0, 175, 240, 0.25);
+}
+.g-navbar.info .navbar-item.active {
+  border-bottom-color: white;
+}
+.g-navbar.line-info .navbar-item.active {
+  border-bottom-color: #00aff0;
 }
 .g-navbar.warning {
   background-color: #ffba00;
   color: white;
 }
+.g-navbar.warning.shadow {
+  box-shadow: 0 5px 20px 0 rgba(255, 186, 0, 0.25);
+}
+.g-navbar.warning .navbar-item.active {
+  border-bottom-color: white;
+}
+.g-navbar.line-warning .navbar-item.active {
+  border-bottom-color: #ffba00;
+}
 .g-navbar.danger {
   background-color: #ff4757;
   color: white;
 }
+.g-navbar.danger.shadow {
+  box-shadow: 0 5px 20px 0 rgba(255, 71, 87, 0.25);
+}
+.g-navbar.danger .navbar-item.active {
+  border-bottom-color: white;
+}
+.g-navbar.line-danger .navbar-item.active {
+  border-bottom-color: #ff4757;
+}
 .g-navbar.dark {
   background-color: black;
   color: white;
+}
+.g-navbar.dark.shadow {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+}
+.g-navbar.dark .navbar-item.active {
+  border-bottom-color: white;
+}
+.g-navbar.line-dark .navbar-item.active {
+  border-bottom-color: black;
 }
 .g-navbar .navbar-brand {
   font-size: 1.15rem;
@@ -3316,13 +3126,31 @@ a {
 }
 .g-navbar .navbar-item {
   color: inherit;
-  padding: 10px 15px;
+  padding: 11px 15px;
   font-weight: 500;
   transition: all 0.25s ease, color 0s;
   opacity: 0.7;
+  border-bottom: 3px solid transparent;
+  border-top: 3px solid transparent;
 }
 .g-navbar .navbar-item:hover {
   opacity: 1;
+}
+.g-navbar .navbar-item.active {
+  opacity: 1;
+  border-bottom-color: black;
+}
+.g-navbar.square {
+  border-radius: 0 !important;
+}
+.g-navbar.not-line .navbar-item {
+  border: none;
+}
+.g-navbar.not-line .navbar-item.active {
+  border: none;
+}
+.g-navbar.shadow {
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
 }
 
 /*# sourceMappingURL=index.css.map */

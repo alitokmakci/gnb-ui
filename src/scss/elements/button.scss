@@ -1,246 +1,301 @@
 .g-btn {
-	padding: 6px 10px;
-	display: inline-flex;
-	-webkit-box-align: center;
-	align-items: center;
-	justify-content: center;
-	-webkit-box-pack: center;
-	transition: all .25s ease-in-out;
-	user-select: none;
-	font-size: 0.8rem;
-	border-radius: $default-border-radius;
-	cursor: pointer;
-	background-color: $white;
-	color: get-contrast($white);
-	border: 2px solid transparent;
-	background-position: center;
+  padding: 6px 10px;
+  display: inline-flex;
+  -webkit-box-align: center;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  transition: all 0.25s ease-in-out;
+  user-select: none;
+  font-size: 0.8rem;
+  border-radius: $default-border-radius;
+  cursor: pointer;
+  background-color: $white;
+  color: get-contrast($white);
+  border: 2px solid transparent;
+  background-position: center;
 
-	&:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 8px 25px 0 rgba(0, 0, 0, .1);
-		background: rgba(255, 255, 255, .25) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, .25) 1%) center/15000%;
-	}
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.25)
+      radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.25) 1%)
+      center/15000%;
+  }
 
-	&:active {
-		background-color: rgba(255, 255, 255, .25);
-		transform: translateY(0);
-		background-size: 100%;
-		transition: background 0s;
-	}
+  &:active {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(0);
+    background-size: 100%;
+    transition: background 0s;
+  }
 
-	&:disabled {
-		pointer-events: none;
-		opacity: .5;
-	}
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
+  }
 
-	&.pill {
-		border-radius: 25px;
-	}
+  &.pill {
+    border-radius: 25px;
+  }
 
-	&.square {
-		border-radius: 0;
-	}
+  &.square {
+    border-radius: 0;
+  }
 
-	&.block {
-		display: block;
-		width: 100%;
-	}
+  &.block {
+    display: block;
+    width: 100%;
+  }
 
-	&.xl {
-		padding: 15px 20px;
-		font-size: 1.1rem;
-		border-radius: 20px;
-	}
+  &.xl {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-radius: 20px;
+  }
 
-	&.lg {
-		padding: 10px 15px;
-		font-size: 1rem;
-		border-radius: 15px;
-	}
+  &.lg {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 15px;
+  }
 
-	&.sm {
-		padding: 5px 10px;
-		font-size: .75rem;
-		border-radius: 9px;
-	}
+  &.sm {
+    padding: 5px 10px;
+    font-size: 0.75rem;
+    border-radius: 9px;
+  }
 
-	&.mini {
-		padding: 3px 8px;
-		font-size: .6rem;
-		border-radius: 7px;
-	}
+  &.mini {
+    padding: 3px 8px;
+    font-size: 0.6rem;
+    border-radius: 7px;
+  }
 
-	&.no-float {
-		transform: none;
+  &.no-float {
+    transform: none;
 
-		&:hover {
-			transform: none;
-		}
-	}
+    &:hover {
+      transform: none;
+    }
+  }
 
-	&.bordered {
-		background-color: transparent;
-		color: white;
-		border-color: white;
-		transition: border-color .25s ease, background-color 0.25s ease, color 0.25s ease;
+  &.bordered {
+    background-color: transparent;
+    color: white;
+    border-color: white;
+    transition: border-color 0.25s ease, background-color 0.25s ease,
+      color 0.25s ease;
 
-		&:hover {
-			transform: none;
-			box-shadow: none;
-		}
+    &:hover {
+      transform: none;
+      box-shadow: none;
+    }
 
-		&:active {
-			transform: none;
-			box-shadow: none;
-		}
-	}
+    &:active {
+      transform: none;
+      box-shadow: none;
+      color: $font-color;
+      background-color: white;
+    }
+  }
 
-	&.flat {
-		background-color: rgba(white, .15);
-		color: white;
-		transition: background 0.5s ease, color 0.6s ease;
+  &.flat {
+    background-color: rgba(white, 0.15);
+    color: white;
+    transition: background 0.5s ease, color 0.6s ease;
 
-		&:hover {
-			background: rgba(white, .25);
-			transform: none;
-			box-shadow: none;
-		}
+    &:hover {
+      background: rgba(white, 0.25);
+      transform: none;
+      box-shadow: none;
+    }
 
-		&:active {
-			color: get-contrast(white);
-			background: white;
-			background-size: 100%;
-			transition: background 0s;
-			transform: none;
-			box-shadow: none;
-		}
-	}
+    &:active {
+      color: get-contrast(white);
+      background: white;
+      background-size: 100%;
+      transition: background 0s;
+      transform: none;
+      box-shadow: none;
+    }
+  }
 
-	@each $color, $value in $colors {
-		&.#{$color} {
-			background-color: $value;
-			color: get-contrast($value);
+  &.floating {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 
-			&:hover, &:active {
-				box-shadow: 0 10px 20px -10px $value;
-			}
+    &:hover {
+      transform: translateY(-3px);
+    }
 
-			&.flat {
-				background-color: tint($value, 85%);
-				color: $value;
-				transition: background 0.5s ease, color 0.6s ease;
+    &:active {
+      transform: none;
+    }
+  }
 
-				&:hover {
-					background: tint($value, 75%);
-					transform: none;
-					box-shadow: none;
-				}
+  &.link {
+    position: relative;
+    background-color: transparent;
+    color: white;
+    border-color: transparent;
+    transition: background 0.5s ease, color 0.6s ease;
 
-				&:active {
-					color: get-contrast($value);
-					background: $value;
-					background-size: 100%;
-					transition: background 0s;
-					transform: none;
-					box-shadow: none;
-				}
-			}
+    &:before {
+      content: "";
+      background: tint(white, 90%);
+      border-color: tint(white, 90%);
+      position: absolute;
+      bottom: -2px;
+      left: -2px;
+      top: -2px;
+      right: -2px;
+      border-radius: inherit;
+      pointer-events: none;
+      transition: all 0.25s ease;
+      z-index: -1;
+      transform: scale(0.5);
+      opacity: 0;
+      box-sizing: border-box;
+    }
 
-			&.bordered {
-				background-color: get-contrast($value);
-				color: $value;
-				border-color: $value;
+    &:hover {
+      transform: translateY(0);
+      box-shadow: none;
+      color: $font-color;
 
-				&:hover {
-					border-color: rgba($value, .5);
-				}
+      &:before {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
-				&:active {
-					color: get-contrast($value);
-					background-color: $value;
-				}
-			}
+    &:active {
+      transform: none;
+      box-shadow: none;
+      color: get-contrast(white);
+      background: white;
+      background-size: 100%;
+      transition: background 0s;
+    }
+  }
 
-			&.link {
-				position: relative;
-				background-color: transparent;
-				color: $value;
-				border-color: transparent;
-				transition: background 0.5s ease, color 0.6s ease;
+  &.loading {
+    position: relative;
+    color: transparent !important;
+    pointer-events: none;
 
-				&:before {
-					content: "";
-					background: tint($value, 90%);
-					border-color: tint($value, 90%);
-					position: absolute;
-					bottom: -2px;
-					left: -2px;
-					top: -2px;
-					right: -2px;
-					border-radius: inherit;
-					pointer-events: none;
-					transition: all .25s ease;
-					z-index: -1;
-					transform: scale(.5);
-					opacity: 0;
-					box-sizing: border-box;
-				}
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border: 4px solid transparent;
+      border-top-color: $font-color;
+      border-radius: 50%;
+      animation: loading-spinner 1s ease infinite;
+    }
+  }
 
-				&:hover {
-					transform: translateY(0);
-					box-shadow: none;
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: get-contrast($value);
 
-					&:before {
-						opacity: 1;
-						transform: scale(1);
-					}
-				}
+      &:hover,
+      &:active {
+        box-shadow: 0 10px 20px -10px $value;
+      }
 
-				&:active {
-					transform: none;
-					box-shadow: none;
-					color: get-contrast($value);
-					background: $value;
-					background-size: 100%;
-					transition: background 0s;
-				}
-			}
+      &.flat {
+        background-color: tint($value, 85%);
+        color: $value;
+        transition: background 0.5s ease, color 0.6s ease;
 
-			&.floating {
-				transform: translateY(-3px);
-				box-shadow: 0 10px 20px -10px $value;
-				transition: transform .3s ease-in-out;
+        &:hover {
+          background: tint($value, 75%);
+          transform: none;
+          box-shadow: none;
+        }
 
-				&:hover {
-					transform: translateY(-3px);
-				}
+        &:active {
+          color: get-contrast($value);
+          background: $value;
+          background-size: 100%;
+          transition: background 0s;
+          transform: none;
+          box-shadow: none;
+        }
+      }
 
-				&:active {
-					transform: none;
-				}
-			}
+      &.bordered {
+        background-color: transparent;
+        color: $value;
+        border-color: $value;
 
-			&.loading {
-				position: relative;
-				color: transparent !important;
-				pointer-events: none;
+        &:hover {
+          border-color: tint($value, 50%);
+        }
 
-				&::after {
-					content: "";
-					position: absolute;
-					width: 16px;
-					height: 16px;
-					top: 0;
-					left: 0;
-					right: 0;
-					bottom: 0;
-					margin: auto;
-					border: 4px solid transparent;
-					border-top-color: #ffffff;
-					border-radius: 50%;
-					animation: loading-spinner 1s ease infinite;
-				}
-			}
-		}
-	}
+        &:active {
+          color: get-contrast($value);
+          background-color: $value;
+        }
+      }
+
+      &.link {
+        background-color: transparent;
+        color: $value;
+
+        &:before {
+          background: tint($value, 90%);
+          border-color: tint($value, 90%);
+        }
+
+        &:hover {
+          box-shadow: none;
+        }
+
+        &:active {
+          transform: none;
+          color: get-contrast($value);
+          background: $value;
+        }
+      }
+
+      &.floating {
+        box-shadow: 0 10px 20px -10px $value;
+      }
+
+      &.loading {
+        &::after {
+          border-top-color: get-contrast($value);
+        }
+      }
+    }
+  }
+}
+
+.g-btn-group {
+  display: flex;
+
+  .g-btn:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .g-btn:not(:first-child, :last-child) {
+    border-radius: 0;
+  }
+
+  .g-btn:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
