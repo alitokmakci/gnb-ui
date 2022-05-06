@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="stylesheet" href="../../dist/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body style="background-color: gainsboro">
+    <div>
+      <h5>Toasts</h5>
+      <div>
+        <button class="g-btn primary" id="default-toast-button">
+          Open Default Toast
+        </button>
+      </div>
+
+      <h5>Close Button</h5>
+
+      <button class="g-btn primary" id="toast-with-close-button">
+        Open Toast with Close Button
+      </button>
+
+      <h5>Positioning</h5>
+      <button class="g-btn primary" id="top-left-toast-button">
+        Top Left Toast
+      </button>
+
+      <button class="g-btn primary" id="top-right-toast-button">
+        Top Right Toast
+      </button>
+
+      <button class="g-btn primary" id="top-center-toast-button">
+        Top Center Toast
+      </button>
+
+      <button class="g-btn primary" id="bottom-left-toast-button">
+        Bottom Left Toast
+      </button>
+
+      <button class="g-btn primary" id="bottom-center-toast-button">
+        Bottom Center Toast
+      </button>
+
+      <h5>Colors</h5>
+
+      <button class="g-btn primary" id="primary-toast-button">
+        Primary Toast
+      </button>
+
+      <button class="g-btn primary" id="secondary-toast-button">
+        Secondary Toast
+      </button>
+
+      <h5>Flat Colors</h5>
+
+      <button class="g-btn primary" id="flat-secondary-toast-button">
+        Flat Secondary Toast
+      </button>
+
+      <h5>Square</h5>
+
+      <button class="g-btn primary" id="square-toast-button">
+        Square Toast
+      </button>
+
+      <h5>Bordered</h5>
+      <button class="g-btn primary" id="bordered-top-left-toast-button">
+        Bordered Top Left Toast
+      </button>
+
+      <button class="g-btn primary" id="bordered-top-center-toast-button">
+        Bordered Top Center Toast
+      </button>
+
+      <button class="g-btn primary" id="bordered-top-right-toast-button">
+        Bordered Top Right Toast
+      </button>
+
+      <button class="g-btn primary" id="bordered-bottom-center-toast-button">
+        Bordered Bottom Center Toast
+      </button>
+
+      <h5>Full Width</h5>
+      <button class="g-btn primary" id="full-width-toast-button">
+        Full Width Toast
+      </button>
+
+      <h5>Icon</h5>
+      <button class="g-btn primary" id="icon-toast-button">Icon Toast</button>
+    </div>
+
+    <div class="g-toast" id="default-toast">
+      <div class="g-toast-content">
+        <h5>New Notification!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast" id="toast-with-close">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast top-left" id="top-left-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast top-center" id="top-center-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast top-right" id="top-right-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast bottom-center" id="bottom-center-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast bottom-left" id="bottom-left-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h4>New Notification with Close Button!</h4>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast primary" id="primary-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h4>New Notification with Close Button!</h4>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast secondary" id="secondary-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h4>New Notification with Close Button!</h4>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast square" id="square-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h4>New Notification with Close Button!</h4>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div
+      class="g-toast bordered-secondary top-left"
+      id="bordered-top-left-toast"
+    >
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div
+      class="g-toast bordered-secondary top-center"
+      id="bordered-top-center-toast"
+    >
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div
+      class="g-toast bordered-primary top-right"
+      id="bordered-top-right-toast"
+    >
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div
+      class="g-toast bordered-success bottom-center"
+      id="bordered-bottom-center-toast"
+    >
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast full-width" id="full-width-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast secondary flat" id="flat-secondary-toast">
+      <button class="close"></button>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+
+    <div class="g-toast has-icon primary" id="icon-toast">
+      <button class="close"></button>
+      <div class="g-toast-icon">
+        <i class="ri-mail-send-line"></i>
+      </div>
+      <div class="g-toast-content">
+        <h5>New Notification with Close Button!</h5>
+        This is a simple toast! Use it wisely!
+      </div>
+    </div>
+    <script>
+      document
+        .getElementById("default-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("default-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("toast-with-close-button")
+        .addEventListener("click", function () {
+          document.getElementById("toast-with-close").classList.add("active");
+        });
+
+      document
+        .getElementById("top-left-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("top-left-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("top-center-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("top-center-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("top-right-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("top-right-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("bottom-left-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("bottom-left-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("bottom-center-toast-button")
+        .addEventListener("click", function () {
+          document
+            .getElementById("bottom-center-toast")
+            .classList.add("active");
+        });
+
+      document
+        .getElementById("primary-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("primary-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("secondary-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("secondary-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("square-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("square-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("bordered-top-left-toast-button")
+        .addEventListener("click", function () {
+          document
+            .getElementById("bordered-top-left-toast")
+            .classList.add("active");
+        });
+
+      document
+        .getElementById("bordered-top-center-toast-button")
+        .addEventListener("click", function () {
+          document
+            .getElementById("bordered-top-center-toast")
+            .classList.add("active");
+        });
+
+      document
+        .getElementById("bordered-top-right-toast-button")
+        .addEventListener("click", function () {
+          document
+            .getElementById("bordered-top-right-toast")
+            .classList.add("active");
+        });
+
+      document
+        .getElementById("bordered-bottom-center-toast-button")
+        .addEventListener("click", function () {
+          document
+            .getElementById("bordered-bottom-center-toast")
+            .classList.add("active");
+        });
+
+      document
+        .getElementById("full-width-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("full-width-toast").classList.add("active");
+        });
+
+      document
+        .getElementById("flat-secondary-toast-button")
+        .addEventListener("click", function () {
+          document
+            .getElementById("flat-secondary-toast")
+            .classList.add("active");
+        });
+
+      document
+        .getElementById("icon-toast-button")
+        .addEventListener("click", function () {
+          document.getElementById("icon-toast").classList.add("active");
+        });
+
+      const closes = document.querySelectorAll(".close");
+
+      closes.forEach((el) => {
+        el.addEventListener("click", function () {
+          el.parentElement.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

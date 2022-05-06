@@ -1,0 +1,229 @@
+.g-toast {
+  position: fixed;
+  right: 10px;
+  bottom: -1000px;
+  z-index: 200000;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  padding: 10px 0;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+
+  &.full-width {
+    right: 10px;
+    left: 10px;
+
+    .g-toast-content {
+      max-width: 100%;
+    }
+  }
+
+  &.active {
+    bottom: 10px;
+
+    &.bottom-left {
+      bottom: 10px;
+    }
+
+    &.bottom-center {
+      bottom: 10px;
+    }
+
+    &.top-left {
+      top: 10px;
+    }
+
+    &.top-center {
+      top: 10px;
+    }
+
+    &.top-right {
+      top: 10px;
+    }
+  }
+
+  &.bottom-left {
+    right: auto;
+    left: 10px;
+  }
+
+  &.bottom-center {
+    right: calc(50vw - 170px);
+  }
+
+  &.top-left {
+    bottom: auto;
+    top: -1000px;
+    left: 10px;
+    right: auto;
+  }
+
+  &.top-center {
+    bottom: auto;
+    top: -1000px;
+    right: calc(50vw - 170px);
+    left: auto;
+  }
+
+  &.top-right {
+    bottom: auto;
+    top: -1000px;
+    right: 10px;
+  }
+
+  .g-toast-content {
+    font-size: 0.75rem;
+    position: relative;
+    max-width: 340px;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    background: white;
+    color: $font-color;
+    padding: 20px;
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      color: get-contrast($value);
+
+      .g-toast-content {
+        background: $value;
+        color: get-contrast($value);
+      }
+
+      .close {
+        &:before,
+        &:after {
+          background-color: get-contrast($value);
+        }
+      }
+
+      &.flat {
+        .g-toast-content {
+          background: tint($value, 85%);
+          color: $value;
+        }
+
+        .close {
+          &:before,
+          &:after {
+            background-color: $value;
+          }
+        }
+      }
+    }
+
+    &.bordered-#{$color} {
+      &.top-left,
+      &.bottom-left {
+        .g-toast-content {
+          border-left: 2px solid $value;
+        }
+      }
+
+      &.top-center {
+        .g-toast-content {
+          border-top: 2px solid $value;
+        }
+      }
+
+      &.bottom-center {
+        .g-toast-content {
+          border-bottom: 2px solid $value;
+        }
+      }
+
+      &.top-right,
+      &.bottom-right {
+        .g-toast-content {
+          border-right: 2px solid $value;
+        }
+      }
+    }
+  }
+
+  &.square {
+    .g-toast-content {
+      border-radius: 0;
+    }
+  }
+
+  .close {
+    user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 25px;
+    max-height: 25px;
+    max-width: 25px;
+    min-height: 25px;
+    min-width: 25px;
+    width: 25px;
+    outline: 0;
+    vertical-align: top;
+    margin-left: 4px;
+    position: absolute;
+    top: 14px;
+    right: 4px;
+    z-index: 200001;
+
+    &:before,
+    &:after {
+      background-color: $font-color;
+      content: "";
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform-origin: center center;
+    }
+
+    &:before {
+      height: 2px;
+      width: 50%;
+    }
+
+    &:after {
+      height: 50%;
+      width: 2px;
+    }
+  }
+
+  &.has-icon {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .g-toast-content {
+      padding-left: 50px;
+    }
+
+    .g-toast-icon {
+      position: absolute;
+      left: 20px;
+      color: inherit;
+      z-index: 200001;
+    }
+  }
+}
