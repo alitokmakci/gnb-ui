@@ -1,98 +1,111 @@
 .g-tag {
-	display: inline-block;
-	font-size: .6rem;
-	border-radius: 7px;
-	padding: 4px 7px;
-	color: $font-color;
-	background-color: $gray-1;
-	cursor: default;
-	pointer-events: none;
-	user-select: none;
-	font-weight: 600;
+  display: inline-block;
+  font-size: 0.6rem;
+  border-radius: 7px;
+  padding: 4px 7px;
+  color: $font-color;
+  background-color: tint(white, 85%);
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 600;
 
-	@each $color, $value in $colors {
-		&.#{$color} {
-			background-color: $value;
-			color: get-contrast($value);
+  &.lg {
+    font-size: 0.7rem;
+    border-radius: 8px;
+    padding: 6px 9px;
+  }
 
-			@if($color == 'dark'){
-				.close {
-					background-color: rgba($white, .3);
-				}
-			}
+  &.xl {
+    font-size: 0.8rem;
+    border-radius: 9px;
+    padding: 8px 11px;
+  }
 
-			&.flat {
-				background-color: tint($value, 85%);
-				color: $value;
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: get-contrast($value);
 
-				.close {
-					background-color: tint($value, 30%) !important;
-				}
-			}
-		}
-	}
+      @if ($color == "dark") {
+        .close {
+          background-color: rgba($white, 0.3);
+        }
+      }
 
-	.close {
-		user-select: none;
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		background-color: rgba($dark, .3);
-		border: none;
-		border-radius: 9999px;
-		cursor: pointer;
-		pointer-events: auto;
-		display: inline-block;
-		flex-grow: 0;
-		flex-shrink: 0;
-		font-size: 0;
-		height: 12px;
-		max-height: 12px;
-		max-width: 12px;
-		min-height: 12px;
-		min-width: 12px;
-		width: 12px;
-		outline: 0;
-		position: relative;
-		vertical-align: top;
-		margin-left: 4px;
+      &.flat {
+        background-color: tint($value, 85%);
+        color: $value;
 
-		&:before, &:after {
-			background-color: #fff;
-			content: "";
-			display: block;
-			left: 50%;
-			position: absolute;
-			top: 50%;
-			transform: translateX(-50%) translateY(-50%) rotate(45deg);
-			transform-origin: center center;
-		}
+        .close {
+          background-color: tint($value, 30%) !important;
+        }
+      }
+    }
+  }
 
-		&:before {
-			height: 1px;
-			width: 50%;
-		}
+  .close {
+    user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: rgba($dark, 0.3);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: 12px;
+    max-height: 12px;
+    max-width: 12px;
+    min-height: 12px;
+    min-width: 12px;
+    width: 12px;
+    outline: 0;
+    position: relative;
+    vertical-align: top;
+    margin-left: 4px;
 
-		&:after {
-			height: 50%;
-			width: 1px;
-		}
-	}
+    &:before,
+    &:after {
+      background-color: #fff;
+      content: "";
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform-origin: center center;
+    }
+
+    &:before {
+      height: 1px;
+      width: 50%;
+    }
+
+    &:after {
+      height: 50%;
+      width: 1px;
+    }
+  }
 }
 
 .g-tag-group {
-	display: flex;
+  display: flex;
 
-	.g-tag:first-child {
-		border-top-right-radius: 0;
-		border-bottom-right-radius: 0;
-	}
+  .g-tag:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 
-	.g-tag:not(:first-child,:last-child) {
-		border-radius: 0;
-	}
+  .g-tag:not(:first-child, :last-child) {
+    border-radius: 0;
+  }
 
-	.g-tag:last-child {
-		border-top-left-radius: 0;
-		border-bottom-left-radius: 0;
-	}
+  .g-tag:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
 }
