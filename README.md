@@ -46,9 +46,18 @@ Components:
 
 Layout:
 
-- [ ] Container
+- [x] Container
 - [ ] Hero
-- [ ] Section
+- [x] Section
+- [ ] Footer
+- [ ] Grid Design
+
+Components must be redesigned for responsive design:
+
+- [ ] Navbar
+- [x] Container
+- [ ] Hero
+- [x] Section
 - [ ] Footer
 - [ ] Grid Design
 

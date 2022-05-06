@@ -5,7 +5,7 @@ body {
   font-size: 16px;
   color: #2c3e50;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #f0f0f0;
+  background-color: #e6e9ea;
 }
 
 * {
@@ -719,6 +719,46 @@ figure {
 .py-100 {
   padding-top: 100px !important;
   padding-bottom: 100px !important;
+}
+
+.bg-primary {
+  background-color: #1a5cff;
+  color: white;
+}
+
+.bg-secondary {
+  background-color: #7d33ff;
+  color: white;
+}
+
+.bg-success {
+  background-color: #46c93a;
+  color: white;
+}
+
+.bg-info {
+  background-color: #00aff0;
+  color: white;
+}
+
+.bg-warning {
+  background-color: #ffba00;
+  color: white;
+}
+
+.bg-danger {
+  background-color: #ff4757;
+  color: white;
+}
+
+.bg-dark {
+  background-color: black;
+  color: white;
+}
+
+.bg-white {
+  background-color: white;
+  color: #2c3e50;
 }
 
 .g-btn {
@@ -2995,7 +3035,7 @@ figure {
   transform: translateY(90%);
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  z-index: 300;
+  z-index: 10000;
 }
 .g-dropdown .g-dropdown-content .g-dropdown-menu {
   background-color: white;
@@ -3639,6 +3679,56 @@ figure {
   left: 20px;
   color: inherit;
   z-index: 200001;
+}
+
+.g-container {
+  --sm-width: 540px;
+  --md-width: 720px;
+  --lg-width: 960px;
+  --xl-width: 1140px;
+  --xxl-width: 1320px;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+}
+@media screen and (min-width: 576px) {
+  .g-container {
+    max-width: var(--sm-width);
+  }
+}
+@media screen and (min-width: 768px) {
+  .g-container {
+    max-width: var(--md-width);
+  }
+}
+@media screen and (min-width: 992px) {
+  .g-container {
+    max-width: var(--lg-width);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .g-container {
+    max-width: var(--xl-width);
+  }
+}
+@media screen and (min-width: 1600px) {
+  .g-container {
+    max-width: var(--xxl-width);
+  }
+}
+.g-container.fluid {
+  max-width: 100%;
+}
+
+.g-section {
+  padding: 3rem 1.5rem;
+}
+@media screen and (min-width: 992px) {
+  .g-section {
+    padding: 3rem 3rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -10,7 +10,7 @@ $gray-1: rgb(230, 233, 234);
 $gray-2: rgb(244, 247, 248);
 $gray-3: rgb(249, 252, 253);
 $font-color: rgb(44, 62, 80);
-$body-background: #f0f0f0;
+$body-background: $gray-1;
 
 $colors: (
   "primary": $primary,

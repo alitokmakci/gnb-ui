@@ -3,6 +3,7 @@
 @import "reset";
 @import "animations";
 @import "utilities/spacing";
+@import "utilities/backgrounds";
 @import "elements/button";
 @import "elements/tag";
 @import "elements/table";
@@ -20,3 +21,5 @@
 @import "components/dropdown";
 @import "components/navbar";
 @import "components/toast";
+@import "layout/container";
+@import "layout/section";

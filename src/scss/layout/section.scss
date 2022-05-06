@@ -1,0 +1,7 @@
+.g-section {
+  padding: 3rem 1.5rem;
+
+  @media screen and (min-width: $lg) {
+    padding: 3rem 3rem;
+  }
+}

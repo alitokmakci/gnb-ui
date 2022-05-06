@@ -1,0 +1,11 @@
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value;
+    color: get-contrast($value);
+  }
+}
+
+.bg-white {
+  background-color: white;
+  color: $font-color;
+}
