@@ -1,0 +1,81 @@
+$sizes: (16, 24, 32, 48, 64, 96, 128);
+
+$ratios: (
+  "1by1": 100%,
+  "5by4": 80%,
+  "4by3": 75%,
+  "3by2": 66.6666%,
+  "5by3": 60%,
+  "16by9": 56.25%,
+  "2by1": 50%,
+  "3by1": 33.3333%,
+  "4by5": 125%,
+  "3by4": 133.3333%,
+  "2by3": 150%,
+  "3by5": 166.6666%,
+  "9by16": 177.7777%,
+  "1by2": 200%,
+  "1by3": 300%,
+);
+
+.g-img {
+  display: block;
+  position: relative;
+
+  img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .rounded {
+    border-radius: $default-border-radius;
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  @each $size in $sizes {
+    &.size_#{$size} {
+      width: $size * 1px;
+      height: $size * 1px;
+    }
+  }
+
+  @each $name, $ratio in $ratios {
+    &.size_#{$name} {
+      padding-top: $ratio;
+    }
+  }
+
+  &.size_1by1,
+  &.size_5by4,
+  &.size_4by3,
+  &.size_3by2,
+  &.size_5by3,
+  &.size_16by9,
+  &.size_2by1,
+  &.size_3by1,
+  &.size_4by5,
+  &.size_3by4,
+  &.size_2by3,
+  &.size_3by5,
+  &.size_9by16,
+  &.size_1by2,
+  &.size_1by3 {
+    img,
+    .has-ratio {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

@@ -26,6 +26,11 @@ h6 {
   margin: 0;
 }
 
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 @keyframes loading-spinner {
   from {
     transform: rotate(0turn);
@@ -1826,6 +1831,122 @@ h6 {
   right: 0;
   bottom: 0;
   animation: infinite-progress 1.5s linear infinite;
+}
+
+.g-img {
+  display: block;
+  position: relative;
+}
+.g-img img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+.g-img .rounded {
+  border-radius: 12px;
+}
+.g-img .circle {
+  border-radius: 50%;
+}
+.g-img.size_16 {
+  width: 16px;
+  height: 16px;
+}
+.g-img.size_24 {
+  width: 24px;
+  height: 24px;
+}
+.g-img.size_32 {
+  width: 32px;
+  height: 32px;
+}
+.g-img.size_48 {
+  width: 48px;
+  height: 48px;
+}
+.g-img.size_64 {
+  width: 64px;
+  height: 64px;
+}
+.g-img.size_96 {
+  width: 96px;
+  height: 96px;
+}
+.g-img.size_128 {
+  width: 128px;
+  height: 128px;
+}
+.g-img.size_1by1 {
+  padding-top: 100%;
+}
+.g-img.size_5by4 {
+  padding-top: 80%;
+}
+.g-img.size_4by3 {
+  padding-top: 75%;
+}
+.g-img.size_3by2 {
+  padding-top: 66.6666%;
+}
+.g-img.size_5by3 {
+  padding-top: 60%;
+}
+.g-img.size_16by9 {
+  padding-top: 56.25%;
+}
+.g-img.size_2by1 {
+  padding-top: 50%;
+}
+.g-img.size_3by1 {
+  padding-top: 33.3333%;
+}
+.g-img.size_4by5 {
+  padding-top: 125%;
+}
+.g-img.size_3by4 {
+  padding-top: 133.3333%;
+}
+.g-img.size_2by3 {
+  padding-top: 150%;
+}
+.g-img.size_3by5 {
+  padding-top: 166.6666%;
+}
+.g-img.size_9by16 {
+  padding-top: 177.7777%;
+}
+.g-img.size_1by2 {
+  padding-top: 200%;
+}
+.g-img.size_1by3 {
+  padding-top: 300%;
+}
+.g-img.size_1by1 img,
+.g-img.size_1by1 .has-ratio, .g-img.size_5by4 img,
+.g-img.size_5by4 .has-ratio, .g-img.size_4by3 img,
+.g-img.size_4by3 .has-ratio, .g-img.size_3by2 img,
+.g-img.size_3by2 .has-ratio, .g-img.size_5by3 img,
+.g-img.size_5by3 .has-ratio, .g-img.size_16by9 img,
+.g-img.size_16by9 .has-ratio, .g-img.size_2by1 img,
+.g-img.size_2by1 .has-ratio, .g-img.size_3by1 img,
+.g-img.size_3by1 .has-ratio, .g-img.size_4by5 img,
+.g-img.size_4by5 .has-ratio, .g-img.size_3by4 img,
+.g-img.size_3by4 .has-ratio, .g-img.size_2by3 img,
+.g-img.size_2by3 .has-ratio, .g-img.size_3by5 img,
+.g-img.size_3by5 .has-ratio, .g-img.size_9by16 img,
+.g-img.size_9by16 .has-ratio, .g-img.size_1by2 img,
+.g-img.size_1by2 .has-ratio, .g-img.size_1by3 img,
+.g-img.size_1by3 .has-ratio {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 .g-form-element {

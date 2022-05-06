@@ -4,14 +4,14 @@
 
 This is a UI framework inspired by the Vuesax project.
 
-I am trying to redesign and create the components with **minimal** js codes and **customizable** way. Documentation will be add after the elements and components finished.
+I am trying to redesign and create the components with **minimal** js codes and **customizable** way. Documentation will be added after the elements and components finished.
 
 You can learn about the progress of the project from the checklist below.
 
 Elements:
 
 - [x] Button
-- [ ] Image
+- [x] Image
 - [x] Table
 - [x] Progress bar
 - [x] Tag
