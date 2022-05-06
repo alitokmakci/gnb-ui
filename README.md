@@ -42,7 +42,7 @@ Components:
 - [x] Spinner
 - [ ] Collapse
 - [ ] Breadcrumb
-- [ ] Toast
+- [x] Toast
 
 Layout:
 
