@@ -1,0 +1,142 @@
+@use "sass:list";
+
+$column-sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
+$gaps: (5, 10, 15, 20, 25, 30, 40, 50, 75, 100);
+$size-length: list.length($column-sizes);
+$max-size: list.nth($column-sizes, $size-length);
+
+.g-row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -#{$gutter-x};
+  margin-left: -#{$gutter-x};
+
+  @each $gap in $gaps {
+    &.has-gap-x-#{$gap},
+    &.has-gap-#{$gap} {
+      margin-right: $gap * -0.5px;
+      margin-left: $gap * -0.5px;
+
+      .g-column {
+        padding-left: $gap * 0.5px;
+        padding-right: $gap * 0.5px;
+      }
+    }
+
+    &.has-gap-y-#{$gap},
+    &.has-gap-#{$gap} {
+      margin-top: $gap * -1px;
+
+      .g-column {
+        margin-top: $gap * 1px;
+      }
+    }
+
+    @each $screen, $width in $breakpoints {
+      &.has-gap-x-#{$screen}-#{$gap},
+      &.has-gap-#{$screen}-#{$gap} {
+        @media screen and (min-width: $width) {
+          .g-column {
+            padding-left: $gap * 0.5px;
+            padding-right: $gap * 0.5px;
+          }
+        }
+      }
+    }
+
+    @each $screen, $width in $breakpoints {
+      &.has-gap-y-#{$screen}-#{$gap},
+      &.has-gap-#{$screen}-#{$gap} {
+        @media screen and (min-width: $width) {
+          .g-column {
+            margin-top: $gap * 1px;
+          }
+        }
+      }
+    }
+  }
+
+  &.no-gap {
+    margin: 0;
+
+    .g-column {
+      padding: 0;
+    }
+  }
+
+  @each $size in $column-sizes {
+    @if ($size == 1) {
+      &.has-#{$size}-column {
+        .g-column {
+          flex: 0 0 auto;
+          width: percentage(1 / $size);
+        }
+      }
+    } @else {
+      &.has-#{$size}-columns {
+        .g-column {
+          flex: 0 0 auto;
+          width: percentage(1 / $size);
+        }
+      }
+    }
+  }
+
+  .g-column {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: $gutter-x;
+    padding-left: $gutter-x;
+    margin-top: $gutter-y;
+
+    &.content-width {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    &.order-first {
+      order: -1 !important;
+    }
+
+    &.order-last {
+      order: 6 !important;
+    }
+
+    @each $size in $column-sizes {
+      &.size-#{$size} {
+        flex: 0 0 auto;
+        width: percentage($size / $max-size) !important;
+      }
+
+      @each $screen, $width in $breakpoints {
+        &.size-#{$screen}-#{$size} {
+          @media screen and (min-width: $width) {
+            flex: 0 0 auto;
+            width: percentage($size / $max-size) !important;
+          }
+        }
+      }
+    }
+
+    @each $size in $column-sizes {
+      &.has-offset-#{$size} {
+        margin-left: percentage($size / $max-size);
+      }
+
+      @each $screen, $width in $breakpoints {
+        &.has-offset-#{$screen}-#{$size} {
+          @media screen and (min-width: $width) {
+            margin-left: percentage($size / $max-size);
+          }
+        }
+      }
+    }
+  }
+}

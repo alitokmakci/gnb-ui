@@ -1,4 +1,5 @@
-$container-padding: 1.5rem;
+$gutter-x: 24px;
+$gutter-y: 0;
 $sm-width: 540px;
 $md-width: 720px;
 $lg-width: 960px;
@@ -6,16 +7,15 @@ $xl-width: 1140px;
 $xxl-width: 1320px;
 
 .g-container {
-  --sm-width: $sm-width;
-  --md-width: $md-width;
-  --lg-width: $lg-width;
-  --xl-width: $xl-width;
-  --xxl-width: $xxl-width;
+  --sm-width: #{$sm-width};
+  --md-width: #{$md-width};
+  --lg-width: #{$lg-width};
+  --xl-width: #{$xl-width};
+  --xxl-width: #{$xxl-width};
 
-  padding-right: $container-padding;
-  padding-left: $container-padding;
-  margin-left: auto;
-  margin-right: auto;
+  padding-right: $gutter-x;
+  padding-left: $gutter-x;
+  margin: $gutter-y auto;
   max-width: 100%;
 
   @each $screen, $width in $breakpoints {

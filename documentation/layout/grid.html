@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../dist/index.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section class="g-section">
+      <div class="g-container">
+        <h5>Auto width:</h5>
+        <div class="g-row">
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+
+        <div class="g-row mt-20">
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-container mt-20">
+        <h5>Column with content width:</h5>
+        <div class="g-row">
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+          <div class="g-column content-width">
+            <div class="bg-primary p-10">Content Width</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+
+        <div class="g-row mt-20">
+          <div class="g-column content-width">
+            <div class="bg-primary p-10">Content Width</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-container mt-20">
+        <h5>Column Sizing:</h5>
+        <div class="g-row">
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+          <div class="g-column size-2">
+            <div class="bg-primary p-10">Size 2</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+
+        <div class="g-row mt-20">
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Size 6</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-container mt-20">
+        <h5>Column Responsive Sizing:</h5>
+        <div class="g-row">
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+          <div class="g-column size-md-6">
+            <div class="bg-primary p-10">Size md 6</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+
+        <div class="g-row mt-20">
+          <div class="g-column size-md-4 size-lg-6">
+            <div class="bg-primary p-10">Size md 4, lg 6</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Auto Width</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-container mt-20">
+        <h5>Row has number of columns:</h5>
+        <h5>Row has 1 column</h5>
+        <div class="g-row has-1-column">
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-secondary p-10">Column 2</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 3</div>
+          </div>
+        </div>
+
+        <h5>Row has 2 columns</h5>
+        <div class="g-row has-2-columns mt-20">
+          <div class="g-column size-3">
+            <div class="bg-primary p-10">Column 1 size 3</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-secondary p-10">Column 2</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 3</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 4</div>
+          </div>
+          <div class="g-column size-6">
+            <div class="bg-secondary p-10">Column 5 size 6</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 6</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-container mt-20">
+        <h5>Column Reordering:</h5>
+        <div class="g-row">
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column order-first">
+            <div class="bg-primary p-10">Column 2 (First)</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 1 size 3</div>
+          </div>
+        </div>
+
+        <div class="g-row mt-20">
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column order-last">
+            <div class="bg-primary p-10">Column 2 (Last)</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 3</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 4</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-container mt-20">
+        <h5>Column Offsets:</h5>
+        <div class="g-row">
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column has-offset-3">
+            <div class="bg-primary p-10">Column 2 (Offset 3)</div>
+          </div>
+          <div class="g-column">
+            <div class="bg-primary p-10">Column 3</div>
+          </div>
+        </div>
+
+        <div class="g-row mt-20">
+          <div class="g-column size-4">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column size-4 has-offset-4">
+            <div class="bg-primary p-10">Column (offset 4)</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="g-container mt-20">
+        <h5>Gaps:</h5>
+        <h5>Vertical and Horizontal</h5>
+        <div class="g-row has-gap-5">
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Column 2</div>
+          </div>
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Column 3</div>
+          </div>
+        </div>
+        <h5 class="mt-20">Only Vertical Gaps</h5>
+        <div class="g-row has-gap-y-50">
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Column 2</div>
+          </div>
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Column 3</div>
+          </div>
+          <div class="g-column size-6">
+            <div class="bg-primary p-10">Column 4</div>
+          </div>
+        </div>
+        <h5 class="mt-20">Only Horizontal Gaps</h5>
+        <div class="g-row has-gap-x-100">
+          <div class="g-column size-4">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column size-4">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column size-4">
+            <div class="bg-primary p-10">Column 2</div>
+          </div>
+        </div>
+        <h5 class="mt-20">No Gap</h5>
+        <div class="g-row no-gap">
+          <div class="g-column size-4">
+            <div class="bg-primary p-10">Column 1</div>
+          </div>
+          <div class="g-column size-4">
+            <div class="bg-primary p-10">Column 2</div>
+          </div>
+          <div class="g-column size-4">
+            <div class="bg-primary p-10">Column 2</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
