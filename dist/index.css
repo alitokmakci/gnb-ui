@@ -2875,7 +2875,7 @@ figure {
 .g-avatar {
   width: 50px;
   height: 50px;
-  background-color: #e6e9ea;
+  background-color: white;
   color: #2c3e50;
   border-radius: 35%;
   margin: 5px;
@@ -3005,17 +3005,31 @@ figure {
   width: 30px;
   height: 30px;
 }
+.g-avatar.mini .g-avatar-content {
+  font-size: 0.7rem;
+}
 .g-avatar.sm {
   width: 40px;
   height: 40px;
+}
+.g-avatar.sm .g-avatar-content {
+  font-size: 0.8rem;
 }
 .g-avatar.lg {
   width: 60px;
   height: 60px;
 }
+.g-avatar.lg .g-avatar-content {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
 .g-avatar.xl {
   width: 70px;
   height: 70px;
+}
+.g-avatar.xl .g-avatar-content {
+  font-size: 2rem;
+  font-weight: 400;
 }
 
 .g-dropdown {
@@ -3682,11 +3696,11 @@ figure {
 }
 
 .g-container {
-  --sm-width: 540px;
-  --md-width: 720px;
-  --lg-width: 960px;
-  --xl-width: 1140px;
-  --xxl-width: 1320px;
+  --sm-width: $sm-width;
+  --md-width: $md-width;
+  --lg-width: $lg-width;
+  --xl-width: $xl-width;
+  --xxl-width: $xxl-width;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   margin-left: auto;

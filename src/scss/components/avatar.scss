@@ -1,122 +1,140 @@
 .g-avatar {
-    width: 50px;
-    height: 50px;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  color: $font-color;
+  border-radius: 35%;
+  margin: 5px;
+  display: inline-block;
+  position: relative;
+
+  .g-avatar-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    font-weight: 500;
+  }
+
+  .g-avatar-image {
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    object-fit: cover;
+  }
+
+  .g-avatar-badge {
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
     background-color: $gray-1;
+    z-index: 200;
+    top: -4px;
+    right: -4px;
+    font-size: 0.6rem;
+    font-weight: 700;
+    border: 2px solid $white;
     color: $font-color;
-    border-radius: 35%;
-    margin: 5px;
-    display: inline-block;
-    position: relative;
-
-    .g-avatar-content {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        user-select: none;
-        font-weight: 500;
-    }
-
-    .g-avatar-image {
-        width: 100%;
-        height: 100%;
-        border-radius: inherit;
-        object-fit: cover;
-    }
-
-    .g-avatar-badge {
-        position: absolute;
-        width: 13px;
-        height: 13px;
-        border-radius: 50%;
-        background-color: $gray-1;
-        z-index: 200;
-        top: -4px;
-        right: -4px;
-        font-size: .6rem;
-        font-weight: 700;
-        border: 2px solid $white;
-        color: $font-color;
-
-        @each $color, $value in $colors {
-            &.#{$color} {
-                background-color: $value;
-                color: get-contrast($value);
-            }
-        }
-
-        &.top-left {
-            top: -4px;
-            left: -4px;
-        }
-
-        &.bottom-right {
-            top: inherit;
-            bottom: -4px;
-            right: -4px;
-        }
-
-        &.bottom-left {
-            top: inherit;
-            bottom: -4px;
-            left: -4px;
-        }
-
-        &.has-content {
-            width: auto;
-            height: auto;
-            border-radius: 7px;
-            min-width: 18px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            line-height: .9rem;
-            padding: 0 3px;
-            min-height: 18px;
-            font-size: .6rem;
-            font-weight: 700;
-        }
-    }
 
     @each $color, $value in $colors {
-		&.#{$color} {
-            background-color: $value;
-            color: get-contrast($value);
-		}
-	}
-
-    &.circle {
-        border-radius: 50%;
+      &.#{$color} {
+        background-color: $value;
+        color: get-contrast($value);
+      }
     }
 
-    &.square {
-        border-radius: 0;
+    &.top-left {
+      top: -4px;
+      left: -4px;
     }
 
-    &.mini {
-        width: 30px;
-        height: 30px;
+    &.bottom-right {
+      top: inherit;
+      bottom: -4px;
+      right: -4px;
     }
 
-    &.sm {
-        width: 40px;
-        height: 40px;
+    &.bottom-left {
+      top: inherit;
+      bottom: -4px;
+      left: -4px;
     }
 
-    &.lg {
-        width: 60px;
-        height: 60px;
+    &.has-content {
+      width: auto;
+      height: auto;
+      border-radius: 7px;
+      min-width: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: 0.9rem;
+      padding: 0 3px;
+      min-height: 18px;
+      font-size: 0.6rem;
+      font-weight: 700;
     }
+  }
 
-    &.xl {
-        width: 70px;
-        height: 70px;
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: get-contrast($value);
     }
+  }
 
-    // TODO Grouping
+  &.circle {
+    border-radius: 50%;
+  }
 
-    // TODO Loading
+  &.square {
+    border-radius: 0;
+  }
 
-    // TODO Border Color
+  &.mini {
+    width: 30px;
+    height: 30px;
+
+    .g-avatar-content {
+      font-size: 0.7rem;
+    }
+  }
+
+  &.sm {
+    width: 40px;
+    height: 40px;
+
+    .g-avatar-content {
+      font-size: 0.8rem;
+    }
+  }
+
+  &.lg {
+    width: 60px;
+    height: 60px;
+
+    .g-avatar-content {
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+  }
+
+  &.xl {
+    width: 70px;
+    height: 70px;
+
+    .g-avatar-content {
+      font-size: 2rem;
+      font-weight: 400;
+    }
+  }
+
+  // TODO Grouping
+
+  // TODO Loading
+
+  // TODO Border Color
 }

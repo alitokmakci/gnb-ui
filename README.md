@@ -55,6 +55,7 @@ Layout:
 Components must be redesigned for responsive design:
 
 - [ ] Navbar
+- [ ] Sidebar
 - [x] Container
 - [ ] Hero
 - [x] Section
