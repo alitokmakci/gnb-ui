@@ -1,3 +1,43 @@
+$button-box-shadow-active: true;
+$button-default-font-color: $font-color;
+$button-default-background-color: $white;
+$button-border-width: 2px;
+$button-padding: 6px 10px;
+$button-font-size: 0.8rem;
+$button-border-radius: 12px;
+$disabled-button-opacity: 0.5;
+$xl-button-padding: 15px 20px;
+$xl-button-font-size: 1.1rem;
+$xl-button-border-radius: 20px;
+$lg-button-padding: 10px 15px;
+$lg-button-font-size: 1rem;
+$lg-button-border-radius: 15px;
+$sm-button-padding: 5px 10px;
+$sm-button-font-size: 0.75rem;
+$sm-button-border-radius: 9px;
+$mini-button-padding: 3px 8px;
+$mini-button-font-size: 0.6rem;
+$mini-button-border-radius: 7px;
+$icon-button-padding: 6px;
+$icon-button-font-size: 16px;
+$bordered-button-default-font-color: $button-default-background-color;
+$bordered-button-default-border-color: $button-default-background-color;
+$bordered-button-hovered-border-color-alpha: 0.5;
+$floating-button-translate-size: -3px;
+$flat-button-background-alpha: 0.15;
+$flat-button-default-background-color: tint(
+  $button-default-background-color,
+  percentage(1 - $flat-button-background-alpha)
+);
+$flat-button-default-font-color: $button-default-background-color;
+$flat-button-hovered-background-alpha: 0.25;
+$link-button-default-background-color: $button-default-background-color;
+$link-button-default-font-color: $button-default-font-color;
+$link-button-background-alpha: 0.1;
+$loading-button-spinner-diameter: 16px;
+$loading-button-spinner-width: 3px;
+$loading-button-spinner-color: $button-default-font-color;
+
 .btn {
   padding: 6px 10px;
   display: inline-flex;
@@ -7,17 +47,19 @@
   -webkit-box-pack: center;
   transition: all 0.25s ease-in-out;
   user-select: none;
-  font-size: 0.8rem;
-  border-radius: $default-border-radius;
+  font-size: $button-font-size;
+  border-radius: $button-border-radius;
   cursor: pointer;
-  background-color: $white;
-  color: get-contrast($white);
-  border: 2px solid transparent;
+  background-color: $button-default-background-color;
+  color: $button-default-font-color;
+  border: $button-border-width solid transparent;
   background-position: center;
 
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
+    @if ($button-box-shadow-active) {
+      box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
+    }
   }
 
   &:active {
@@ -29,11 +71,11 @@
 
   &:disabled {
     pointer-events: none;
-    opacity: 0.5;
+    opacity: $disabled-button-opacity;
   }
 
   &.pill {
-    border-radius: 25px;
+    border-radius: 99999px;
   }
 
   &.square {
@@ -46,32 +88,32 @@
   }
 
   &.xl {
-    padding: 15px 20px;
-    font-size: 1.1rem;
-    border-radius: 20px;
+    padding: $xl-button-padding;
+    font-size: $xl-button-font-size;
+    border-radius: $xl-button-border-radius;
   }
 
   &.lg {
-    padding: 10px 15px;
-    font-size: 1rem;
-    border-radius: 15px;
+    padding: $lg-button-padding;
+    font-size: $lg-button-font-size;
+    border-radius: $lg-button-border-radius;
   }
 
   &.sm {
-    padding: 5px 10px;
-    font-size: 0.75rem;
-    border-radius: 9px;
+    padding: $sm-button-padding;
+    font-size: $sm-button-font-size;
+    border-radius: $sm-button-border-radius;
   }
 
   &.mini {
-    padding: 3px 8px;
-    font-size: 0.6rem;
-    border-radius: 7px;
+    padding: $mini-button-padding;
+    font-size: $mini-button-font-size;
+    border-radius: $mini-button-border-radius;
   }
 
   &.icon {
-    padding: 6px;
-    font-size: 16px;
+    padding: $icon-button-padding;
+    font-size: $icon-button-font-size;
   }
 
   &.no-float {
@@ -84,52 +126,55 @@
 
   &.bordered {
     background-color: transparent;
-    color: white;
-    border-color: white;
+    color: $bordered-button-default-font-color;
+    border-color: $bordered-button-default-border-color;
     transition: border-color 0.25s ease, background-color 0.25s ease,
       color 0.25s ease;
 
     &:hover {
       transform: none;
-      box-shadow: none;
+      box-shadow: none !important;
     }
 
     &:active {
       transform: none;
       box-shadow: none;
-      color: $font-color;
-      background-color: white;
+      color: $button-default-font-color;
+      background-color: $button-default-background-color;
     }
   }
 
   &.flat {
-    background-color: rgba(white, 0.15);
-    color: white;
+    background-color: $flat-button-default-background-color;
+    color: $flat-button-default-font-color;
     transition: background 0.5s ease, color 0.6s ease;
 
     &:hover {
-      background: rgba(white, 0.25);
+      background: tint(
+        $flat-button-default-font-color,
+        percentage(1 - $flat-button-hovered-background-alpha)
+      );
       transform: none;
       box-shadow: none;
     }
 
     &:active {
-      color: get-contrast(white);
-      background: white;
+      color: $button-default-font-color;
+      background: $button-default-background-color;
       background-size: 100%;
-      transition: background 0s;
+      transition: background 0.5s ease;
       transform: none;
       box-shadow: none;
     }
   }
 
   &.floating {
-    transform: translateY(-3px);
+    transform: translateY($floating-button-translate-size);
     box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: translateY(-3px);
+      transform: translateY($floating-button-translate-size);
     }
 
     &:active {
@@ -140,14 +185,20 @@
   &.link {
     position: relative;
     background-color: transparent;
-    color: white;
+    color: $link-button-default-font-color;
     border-color: transparent;
     transition: background 0.5s ease, color 0.6s ease;
 
     &:before {
       content: "";
-      background: tint(white, 90%);
-      border-color: tint(white, 90%);
+      background: tint(
+        $button-default-background-color,
+        percentage(1 - $link-button-background-alpha)
+      );
+      border-color: tint(
+        $button-default-background-color,
+        percentage(1 - $link-button-background-alpha)
+      );
       position: absolute;
       bottom: -2px;
       left: -2px;
@@ -165,7 +216,7 @@
     &:hover {
       transform: translateY(0);
       box-shadow: none;
-      color: $font-color;
+      color: $link-button-default-font-color;
 
       &:before {
         opacity: 1;
@@ -176,8 +227,8 @@
     &:active {
       transform: none;
       box-shadow: none;
-      color: get-contrast(white);
-      background: white;
+      color: $link-button-default-font-color;
+      background: $link-button-default-background-color;
       background-size: 100%;
       transition: background 0s;
     }
@@ -191,15 +242,15 @@
     &::after {
       content: "";
       position: absolute;
-      width: 16px;
-      height: 16px;
+      width: $loading-button-spinner-diameter;
+      height: $loading-button-spinner-diameter;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
       margin: auto;
-      border: 4px solid transparent;
-      border-top-color: $font-color;
+      border: $loading-button-spinner-width solid transparent;
+      border-top-color: $loading-button-spinner-color;
       border-radius: 50%;
       animation: loading-spinner 1s ease infinite;
     }
@@ -212,16 +263,24 @@
 
       &:hover,
       &:active {
-        box-shadow: 0 10px 20px -10px $value;
+        @if ($button-box-shadow-active) {
+          box-shadow: 0 10px 20px -10px $value;
+        }
       }
 
       &.flat {
-        background-color: tint($value, 85%);
+        background-color: tint(
+          $value,
+          percentage(1 - $flat-button-background-alpha)
+        );
         color: $value;
         transition: background 0.5s ease, color 0.6s ease;
 
         &:hover {
-          background: tint($value, 75%);
+          background: tint(
+            $flat-button-default-font-color,
+            percentage(1 - $flat-button-hovered-background-alpha)
+          );
           transform: none;
           box-shadow: none;
         }
@@ -242,7 +301,10 @@
         border-color: $value;
 
         &:hover {
-          border-color: tint($value, 50%);
+          border-color: tint(
+            $value,
+            percentage(1- $bordered-button-hovered-border-color-alpha)
+          );
         }
 
         &:active {
@@ -256,8 +318,14 @@
         color: $value;
 
         &:before {
-          background: tint($value, 90%);
-          border-color: tint($value, 90%);
+          background: tint(
+            $value,
+            percentage(1 - $link-button-background-alpha)
+          );
+          border-color: tint(
+            $value,
+            percentage(1 - $link-button-background-alpha)
+          );
         }
 
         &:hover {

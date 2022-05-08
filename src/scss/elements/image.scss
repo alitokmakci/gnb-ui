@@ -18,6 +18,8 @@ $ratios: (
   "1by3": 300%,
 );
 
+$rounded-image-border-radius: 12px;
+
 .figure {
   display: block;
   position: relative;
@@ -31,7 +33,7 @@ $ratios: (
   }
 
   .rounded {
-    border-radius: $default-border-radius;
+    border-radius: $rounded-image-border-radius;
   }
 
   .circle {

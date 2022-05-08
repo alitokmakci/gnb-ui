@@ -921,7 +921,7 @@ figure {
   opacity: 0.5;
 }
 .btn.pill {
-  border-radius: 25px;
+  border-radius: 99999px;
 }
 .btn.square {
   border-radius: 0;
@@ -968,7 +968,7 @@ figure {
 }
 .btn.bordered:hover {
   transform: none;
-  box-shadow: none;
+  box-shadow: none !important;
 }
 .btn.bordered:active {
   transform: none;
@@ -977,12 +977,12 @@ figure {
   background-color: white;
 }
 .btn.flat {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: white;
   color: white;
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.flat:hover {
-  background: rgba(255, 255, 255, 0.25);
+  background: white;
   transform: none;
   box-shadow: none;
 }
@@ -990,7 +990,7 @@ figure {
   color: #2c3e50;
   background: white;
   background-size: 100%;
-  transition: background 0s;
+  transition: background 0.5s ease;
   transform: none;
   box-shadow: none;
 }
@@ -1008,7 +1008,7 @@ figure {
 .btn.link {
   position: relative;
   background-color: transparent;
-  color: white;
+  color: #2c3e50;
   border-color: transparent;
   transition: background 0.5s ease, color 0.6s ease;
 }
@@ -1061,7 +1061,7 @@ figure {
   right: 0;
   bottom: 0;
   margin: auto;
-  border: 4px solid transparent;
+  border: 3px solid transparent;
   border-top-color: #2c3e50;
   border-radius: 50%;
   animation: loading-spinner 1s ease infinite;
@@ -1079,7 +1079,7 @@ figure {
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.primary.flat:hover {
-  background: #c6d6ff;
+  background: white;
   transform: none;
   box-shadow: none;
 }
@@ -1138,7 +1138,7 @@ figure {
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.secondary.flat:hover {
-  background: #dfccff;
+  background: white;
   transform: none;
   box-shadow: none;
 }
@@ -1197,7 +1197,7 @@ figure {
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.success.flat:hover {
-  background: #d1f2ce;
+  background: white;
   transform: none;
   box-shadow: none;
 }
@@ -1256,7 +1256,7 @@ figure {
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.info.flat:hover {
-  background: #bfebfb;
+  background: white;
   transform: none;
   box-shadow: none;
 }
@@ -1315,7 +1315,7 @@ figure {
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.warning.flat:hover {
-  background: #ffeebf;
+  background: white;
   transform: none;
   box-shadow: none;
 }
@@ -1374,7 +1374,7 @@ figure {
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.danger.flat:hover {
-  background: #ffd1d5;
+  background: white;
   transform: none;
   box-shadow: none;
 }
@@ -1433,7 +1433,7 @@ figure {
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.dark.flat:hover {
-  background: #bfbfbf;
+  background: white;
   transform: none;
   box-shadow: none;
 }
