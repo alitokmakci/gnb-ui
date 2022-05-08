@@ -24,7 +24,7 @@ Form Elements:
 - [x] Textarea
 - [x] Checkbox
 - [x] Switch
-- [ ] Radio
+- [x] Radio
 - [ ] Upload
 - [ ] Slider
 
@@ -50,7 +50,7 @@ Layout:
 - [ ] Hero
 - [x] Section
 - [ ] Footer
-- [ ] Grid Design
+- [x] Grid Design
 
 Components must be redesigned for responsive design:
 
@@ -60,7 +60,7 @@ Components must be redesigned for responsive design:
 - [ ] Hero
 - [x] Section
 - [ ] Footer
-- [ ] Grid Design
+- [x] Grid Design
 
 ## ⚠️ ALERT!!
 

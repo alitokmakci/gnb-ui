@@ -5,7 +5,7 @@ body {
   font-size: 16px;
   color: #2c3e50;
   font-family: Poppins, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: #e6e9ea;
+  background-color: #f4f7f8;
 }
 
 * {
@@ -2795,6 +2795,365 @@ figure {
 }
 .g-textarea.square {
   border-radius: 0;
+}
+
+.g-form-element .g-radio-group {
+  display: flex;
+}
+.g-form-element .g-radio-group .g-label {
+  font-size: 0.8rem;
+  transition: all 0.25s ease;
+  margin: 0;
+}
+.g-form-element .g-radio-group .g-label:before {
+  content: "";
+  transition: all 0.25s ease;
+  display: flex;
+  border: 2px solid #e6e9ea;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 6px;
+  background-color: white;
+}
+.g-form-element .g-radio-group .g-label:after {
+  transition: all 0.25s ease;
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  font-size: 1.1rem;
+  content: "";
+  opacity: 0;
+  background-color: white;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-radius: 50%;
+}
+
+.g-radio {
+  transition: all 0.25s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+.g-radio:hover ~ .g-label:before {
+  background-color: #e6e9ea;
+}
+.g-radio:checked ~ .g-label:after {
+  opacity: 1;
+}
+.g-radio:checked ~ .g-label:before {
+  background-color: #e6e9ea;
+}
+.g-radio.square ~ .g-label:before {
+  border-radius: 4px !important;
+}
+.g-radio.square ~ .g-label::after {
+  border-radius: 2px !important;
+}
+.g-radio.primary:checked ~ .g-label:after {
+  background-color: white;
+}
+.g-radio.primary:checked ~ .g-label:before {
+  background-color: #1a5cff;
+  border-color: #1a5cff;
+}
+.g-radio.primary:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #afc6ff;
+}
+.g-radio.primary.flat:checked ~ .g-label:after {
+  background-color: #1a5cff;
+}
+.g-radio.primary.flat:checked ~ .g-label:before {
+  background-color: #dde7ff;
+  border-color: #dde7ff;
+}
+.g-radio.primary.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #afc6ff;
+}
+.g-radio.primary.flat:hover ~ .g-label:before {
+  background-color: #c6d6ff;
+  border-color: #c6d6ff;
+}
+.g-radio.primary.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 #afc6ff;
+}
+.g-radio.primary.bordered:checked ~ .g-label:after {
+  background-color: #1a5cff;
+}
+.g-radio.primary.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #1a5cff;
+}
+.g-radio.primary.bordered ~ .g-label:before {
+  border-color: #1a5cff;
+}
+.g-radio.primary.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: #c6d6ff;
+  border-color: #c6d6ff;
+}
+.g-radio.secondary:checked ~ .g-label:after {
+  background-color: white;
+}
+.g-radio.secondary:checked ~ .g-label:before {
+  background-color: #7d33ff;
+  border-color: #7d33ff;
+}
+.g-radio.secondary:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #d2b8ff;
+}
+.g-radio.secondary.flat:checked ~ .g-label:after {
+  background-color: #7d33ff;
+}
+.g-radio.secondary.flat:checked ~ .g-label:before {
+  background-color: #ece0ff;
+  border-color: #ece0ff;
+}
+.g-radio.secondary.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #d2b8ff;
+}
+.g-radio.secondary.flat:hover ~ .g-label:before {
+  background-color: #dfccff;
+  border-color: #dfccff;
+}
+.g-radio.secondary.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 #d2b8ff;
+}
+.g-radio.secondary.bordered:checked ~ .g-label:after {
+  background-color: #7d33ff;
+}
+.g-radio.secondary.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #7d33ff;
+}
+.g-radio.secondary.bordered ~ .g-label:before {
+  border-color: #7d33ff;
+}
+.g-radio.secondary.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: #dfccff;
+  border-color: #dfccff;
+}
+.g-radio.success:checked ~ .g-label:after {
+  background-color: white;
+}
+.g-radio.success:checked ~ .g-label:before {
+  background-color: #46c93a;
+  border-color: #46c93a;
+}
+.g-radio.success:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #beecba;
+}
+.g-radio.success.flat:checked ~ .g-label:after {
+  background-color: #46c93a;
+}
+.g-radio.success.flat:checked ~ .g-label:before {
+  background-color: #e3f7e1;
+  border-color: #e3f7e1;
+}
+.g-radio.success.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #beecba;
+}
+.g-radio.success.flat:hover ~ .g-label:before {
+  background-color: #d1f2ce;
+  border-color: #d1f2ce;
+}
+.g-radio.success.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 #beecba;
+}
+.g-radio.success.bordered:checked ~ .g-label:after {
+  background-color: #46c93a;
+}
+.g-radio.success.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #46c93a;
+}
+.g-radio.success.bordered ~ .g-label:before {
+  border-color: #46c93a;
+}
+.g-radio.success.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: #d1f2ce;
+  border-color: #d1f2ce;
+}
+.g-radio.info:checked ~ .g-label:after {
+  background-color: white;
+}
+.g-radio.info:checked ~ .g-label:before {
+  background-color: #00aff0;
+  border-color: #00aff0;
+}
+.g-radio.info:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #a6e3fa;
+}
+.g-radio.info.flat:checked ~ .g-label:after {
+  background-color: #00aff0;
+}
+.g-radio.info.flat:checked ~ .g-label:before {
+  background-color: #d9f3fd;
+  border-color: #d9f3fd;
+}
+.g-radio.info.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #a6e3fa;
+}
+.g-radio.info.flat:hover ~ .g-label:before {
+  background-color: #bfebfb;
+  border-color: #bfebfb;
+}
+.g-radio.info.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 #a6e3fa;
+}
+.g-radio.info.bordered:checked ~ .g-label:after {
+  background-color: #00aff0;
+}
+.g-radio.info.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #00aff0;
+}
+.g-radio.info.bordered ~ .g-label:before {
+  border-color: #00aff0;
+}
+.g-radio.info.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: #bfebfb;
+  border-color: #bfebfb;
+}
+.g-radio.warning:checked ~ .g-label:after {
+  background-color: white;
+}
+.g-radio.warning:checked ~ .g-label:before {
+  background-color: #ffba00;
+  border-color: #ffba00;
+}
+.g-radio.warning:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #ffe7a6;
+}
+.g-radio.warning.flat:checked ~ .g-label:after {
+  background-color: #ffba00;
+}
+.g-radio.warning.flat:checked ~ .g-label:before {
+  background-color: #fff5d9;
+  border-color: #fff5d9;
+}
+.g-radio.warning.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #ffe7a6;
+}
+.g-radio.warning.flat:hover ~ .g-label:before {
+  background-color: #ffeebf;
+  border-color: #ffeebf;
+}
+.g-radio.warning.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 #ffe7a6;
+}
+.g-radio.warning.bordered:checked ~ .g-label:after {
+  background-color: #ffba00;
+}
+.g-radio.warning.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #ffba00;
+}
+.g-radio.warning.bordered ~ .g-label:before {
+  border-color: #ffba00;
+}
+.g-radio.warning.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: #ffeebf;
+  border-color: #ffeebf;
+}
+.g-radio.danger:checked ~ .g-label:after {
+  background-color: white;
+}
+.g-radio.danger:checked ~ .g-label:before {
+  background-color: #ff4757;
+  border-color: #ff4757;
+}
+.g-radio.danger:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #ffbfc4;
+}
+.g-radio.danger.flat:checked ~ .g-label:after {
+  background-color: #ff4757;
+}
+.g-radio.danger.flat:checked ~ .g-label:before {
+  background-color: #ffe3e6;
+  border-color: #ffe3e6;
+}
+.g-radio.danger.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #ffbfc4;
+}
+.g-radio.danger.flat:hover ~ .g-label:before {
+  background-color: #ffd1d5;
+  border-color: #ffd1d5;
+}
+.g-radio.danger.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 #ffbfc4;
+}
+.g-radio.danger.bordered:checked ~ .g-label:after {
+  background-color: #ff4757;
+}
+.g-radio.danger.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: #ff4757;
+}
+.g-radio.danger.bordered ~ .g-label:before {
+  border-color: #ff4757;
+}
+.g-radio.danger.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: #ffd1d5;
+  border-color: #ffd1d5;
+}
+.g-radio.dark:checked ~ .g-label:after {
+  background-color: white;
+}
+.g-radio.dark:checked ~ .g-label:before {
+  background-color: black;
+  border-color: black;
+}
+.g-radio.dark:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #a6a6a6;
+}
+.g-radio.dark.flat:checked ~ .g-label:after {
+  background-color: black;
+}
+.g-radio.dark.flat:checked ~ .g-label:before {
+  background-color: #d9d9d9;
+  border-color: #d9d9d9;
+}
+.g-radio.dark.flat:checked:hover ~ .g-label:before {
+  box-shadow: 0 3px 15px 0 #a6a6a6;
+}
+.g-radio.dark.flat:hover ~ .g-label:before {
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
+}
+.g-radio.dark.bordered:hover ~ .g-label:before {
+  background-color: transparent;
+  box-shadow: 0 3px 15px 0 #a6a6a6;
+}
+.g-radio.dark.bordered:checked ~ .g-label:after {
+  background-color: black;
+}
+.g-radio.dark.bordered:checked ~ .g-label:before {
+  background-color: transparent;
+  border-color: black;
+}
+.g-radio.dark.bordered ~ .g-label:before {
+  border-color: black;
+}
+.g-radio.dark.hover-color:not(:checked):hover ~ .g-label:before {
+  background-color: #bfbfbf;
+  border-color: #bfbfbf;
 }
 
 .g-spinner {
