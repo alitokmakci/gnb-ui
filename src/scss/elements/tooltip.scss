@@ -1,3 +1,11 @@
+$tooltip-default-background-color: $font-color;
+$tooltip-default-font-color: $white;
+$tooltip-border-radius: 12px;
+$tooltip-padding: 0.5rem 1rem;
+$tooltip-font-size: 0.75rem;
+$tooltip-z-index: 1020;
+$flat-tooltip-background-alpha: $flat-color-alpha;
+
 .has-tooltip {
   position: relative;
 
@@ -11,19 +19,19 @@
 .tooltip {
   display: none;
   position: absolute;
-  background-color: $font-color;
-  color: white;
+  background-color: $tooltip-default-background-color;
+  color: $tooltip-default-font-color;
   top: 0;
   right: auto;
   bottom: auto;
   left: 50%;
   transform: translate(-50%, -120%);
-  border-radius: 12px;
+  border-radius: $tooltip-border-radius;
   text-overflow: ellipsis;
   white-space: pre;
-  font-size: 0.75rem;
-  z-index: 1020;
-  padding: 0.5rem 1rem;
+  font-size: $tooltip-font-size;
+  z-index: $tooltip-z-index;
+  padding: $tooltip-font-size;
   border: none;
 
   &:after {
@@ -34,9 +42,10 @@
     bottom: 0;
     right: auto;
     left: 50%;
-    border-color: $font-color transparent transparent transparent;
+    border-color: $tooltip-default-background-color transparent transparent
+      transparent;
     transform: translate(-50%, 90%);
-    z-index: 1020;
+    z-index: $tooltip-z-index;
   }
 
   &.always-active {
@@ -48,7 +57,8 @@
 
     &:after {
       transform: translate(-50%, -245%);
-      border-color: transparent transparent $font-color transparent;
+      border-color: transparent transparent $tooltip-default-background-color
+        transparent;
     }
   }
 
@@ -61,7 +71,8 @@
       bottom: inherit;
       top: 50%;
       left: 0;
-      border-color: transparent $font-color transparent transparent;
+      border-color: transparent $tooltip-default-background-color transparent
+        transparent;
       transform: translate(-90%, -50%);
       border-width: 8px;
     }
@@ -77,7 +88,8 @@
       top: 50%;
       left: inherit;
       right: 0;
-      border-color: transparent transparent transparent $font-color;
+      border-color: transparent transparent transparent
+        $tooltip-default-background-color;
       transform: translate(90%, -50%);
       border-width: 8px;
     }
@@ -93,11 +105,20 @@
       }
 
       &.flat {
-        background-color: tint($value, 85);
+        background-color: tint(
+          $value,
+          percentage(1-$flat-tooltip-background-alpha)
+        );
         color: $value;
 
         &::after {
-          border-color: tint($value, 85) transparent transparent transparent;
+          border-color: tint(
+              $value,
+              percentage(1-$flat-tooltip-background-alpha)
+            )
+            transparent
+            transparent
+            transparent;
         }
       }
     }

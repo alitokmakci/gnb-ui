@@ -24,7 +24,7 @@ $bordered-button-default-font-color: $button-default-background-color;
 $bordered-button-default-border-color: $button-default-background-color;
 $bordered-button-hovered-border-color-alpha: 0.5;
 $floating-button-translate-size: -3px;
-$flat-button-background-alpha: 0.15;
+$flat-button-background-alpha: $flat-color-alpha;
 $flat-button-default-background-color: tint(
   $button-default-background-color,
   percentage(1 - $flat-button-background-alpha)
