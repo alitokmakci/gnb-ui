@@ -17,6 +17,11 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0;
+  line-height: 1.7;
+}
+
 h1,
 h2,
 h3,
@@ -24,6 +29,8 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-weight: 600;
+  line-height: 1.25;
 }
 
 figure {
@@ -61,6 +68,22 @@ figure {
     width: 0%;
   }
 }
+.p-0 {
+  padding: 0px !important;
+}
+
+.m-0 {
+  margin: 0px !important;
+}
+
+.p-5 {
+  padding: 5px !important;
+}
+
+.m-5 {
+  margin: 5px !important;
+}
+
 .p-10 {
   padding: 10px !important;
 }
@@ -147,6 +170,110 @@ figure {
 
 .m-100 {
   margin: 100px !important;
+}
+
+.mt-0 {
+  margin-top: 0px !important;
+}
+
+.pt-0 {
+  padding-top: 0px !important;
+}
+
+.mb-0 {
+  margin-bottom: 0px !important;
+}
+
+.pb-0 {
+  padding-bottom: 0px !important;
+}
+
+.ml-0 {
+  margin-left: 0px !important;
+}
+
+.pl-0 {
+  padding-left: 0px !important;
+}
+
+.mr-0 {
+  margin-right: 0px !important;
+}
+
+.pr-0 {
+  padding-right: 0px !important;
+}
+
+.mx-0 {
+  margin-right: 0px !important;
+  margin-left: 0px !important;
+}
+
+.px-0 {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.my-0 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
+.py-0 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+.mt-5 {
+  margin-top: 5px !important;
+}
+
+.pt-5 {
+  padding-top: 5px !important;
+}
+
+.mb-5 {
+  margin-bottom: 5px !important;
+}
+
+.pb-5 {
+  padding-bottom: 5px !important;
+}
+
+.ml-5 {
+  margin-left: 5px !important;
+}
+
+.pl-5 {
+  padding-left: 5px !important;
+}
+
+.mr-5 {
+  margin-right: 5px !important;
+}
+
+.pr-5 {
+  padding-right: 5px !important;
+}
+
+.mx-5 {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+}
+
+.px-5 {
+  padding-right: 5px !important;
+  padding-left: 5px !important;
+}
+
+.my-5 {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.py-5 {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
 }
 
 .mt-10 {
@@ -781,10 +908,9 @@ figure {
 .g-btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.25) radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.25) 1%) center/15000%;
 }
 .g-btn:active {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: white;
   transform: translateY(0);
   background-size: 100%;
   transition: background 0s;
@@ -822,6 +948,10 @@ figure {
   padding: 3px 8px;
   font-size: 0.6rem;
   border-radius: 7px;
+}
+.g-btn.icon {
+  padding: 6px;
+  font-size: 16px;
 }
 .g-btn.no-float {
   transform: none;
@@ -3160,14 +3290,232 @@ figure {
   background-color: white;
   color: #2c3e50;
   width: 100%;
-  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, var(--vs-shadow-opacity));
-  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, var(--vs-shadow-opacity));
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
   border-radius: 20px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   cursor: pointer;
   position: relative;
-  height: 30px;
+}
+.g-card:hover {
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, var(--vs-shadow-opacity));
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, var(--vs-shadow-opacity));
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+}
+.g-card:hover img {
+  -webkit-transform: scale(1.15);
+  transform: scale(1.15);
+}
+.g-card .card-img {
+  position: relative;
+  max-height: 250px;
+  overflow: hidden;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.g-card .card-img,
+.g-card .card-img .card-interactions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.g-card .card-img .card-interactions {
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  left: 0;
+}
+.g-card .card-img .card-interactions.bottom-right {
+  left: initial;
+  right: 0;
+}
+.g-card .card-img .card-interactions.top-right {
+  left: initial;
+  right: 0;
+  top: 0;
+  bottom: initial;
+}
+.g-card .card-img .card-interactions.top-left {
+  top: 0;
+  bottom: initial;
+}
+.g-card .card-img,
+.g-card .card-img img {
+  border-radius: 20px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.g-card .card-img img {
+  width: 100%;
+  display: block;
+}
+.g-card .card-content {
+  font-size: 0.85rem;
+  padding: 0 15px 15px;
+}
+.g-card .card-content .card-title {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  margin: 0;
+  font-size: 1.1rem;
+}
+.g-card .card-content .card-text {
+  font-size: inherit;
+  margin: 0;
+  opacity: 0.8;
+}
+.g-card.type-2 {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  overflow: hidden;
+}
+.g-card.type-2:hover {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+.g-card.type-2:hover .card-content {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  opacity: 1;
+  color: #fff;
+}
+.g-card.type-2 .card-content {
+  position: absolute;
+  bottom: 0;
+  background: rgba(var(--vs-background), 0.9);
+  padding-top: 30px;
+  border-radius: 0 0 20px 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.5)));
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.5));
+  color: transparent;
+  font-size: 0.9rem;
+  -webkit-transform: translateY(45%);
+  transform: translateY(45%);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.g-card.type-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.g-card.type-3:hover {
+  -webkit-transform: scale(1.04);
+  transform: scale(1.04);
+}
+.g-card.type-3 .card-img img {
+  min-width: 200px;
+  height: 100%;
+}
+.g-card.type-3 .card-content {
+  padding-top: 15px;
+}
+.g-card.type-4 {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.g-card.type-4:hover {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+.g-card.type-4:hover .card-img img {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.g-card.type-4:hover .card-content {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.g-card.type-4 .card-img {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  max-height: 600px;
+}
+.g-card.type-4 .card-img img {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+}
+.g-card.type-4 .card-content {
+  background: rgba(var(--vs-background), 0.8);
+  position: absolute;
+  bottom: 0;
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border-radius: 0 0 20px 20px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.g-card.type-5 {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: transparent;
+}
+.g-card.type-5:hover .card-img {
+  border-radius: 6px 40px 6px 40px;
+}
+.g-card.type-5:hover .card-img img {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.g-card.type-5:hover .card-img .card-interactions:not(.top-right, .top-left) {
+  bottom: 50px;
+}
+.g-card.type-5:hover .card-content {
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  opacity: 1;
+  -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+}
+.g-card.type-5 .card-img {
+  border-radius: 6px 20px 6px 20px;
+}
+.g-card.type-5 .card-img .card-interactions {
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 20;
+}
+.g-card.type-5 .card-img img {
+  border-radius: 0;
+}
+.g-card.type-5 .card-content {
+  background: white;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.05);
+  border-radius: 6px 20px 6px 20px;
+  margin-top: -50px;
+  z-index: 10;
+  position: relative;
+  width: calc(100% - 30px);
+  padding-top: 10px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-transform: translateY(25px);
+  transform: translateY(25px);
+  opacity: 0;
 }
 
 .g-spinner {

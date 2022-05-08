@@ -30,8 +30,8 @@ Form Elements:
 
 Components:
 
-- [ ] Card
-- [ ] Navbar
+- [x] Card
+- [x] Navbar
 - [ ] Tabs
 - [ ] Alert
 - [x] Avatar
@@ -52,6 +52,15 @@ Layout:
 - [ ] Footer
 - [x] Grid Design
 
+Utilities:
+
+- [x] Sizing
+- [x] Backgrounds
+- [ ] Displays
+- [ ] Headings
+- [ ] Typographies
+- [ ] Alignments
+
 Components must be redesigned for responsive design:
 
 - [ ] Navbar
@@ -61,6 +70,11 @@ Components must be redesigned for responsive design:
 - [x] Section
 - [ ] Footer
 - [x] Grid Design
+- [ ] Sizing
+- [ ] Display
+- [ ] Typography
+- [ ] Backgrounds
+- [ ] Alignments
 
 ## ⚠️ ALERT!!
 
