@@ -4875,7 +4875,7 @@ figure {
   order: -1 !important;
 }
 .g-row .g-column.order-last {
-  order: 6 !important;
+  order: 12 !important;
 }
 .g-row .g-column.size-1 {
   flex: 0 0 auto;

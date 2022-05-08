@@ -106,7 +106,7 @@ $max-size: list.nth($column-sizes, $size-length);
     }
 
     &.order-last {
-      order: 6 !important;
+      order: $max-size !important;
     }
 
     @each $size in $column-sizes {
