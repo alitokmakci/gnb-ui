@@ -1,4 +1,4 @@
-.g-toast {
+.toast {
   position: fixed;
   right: 10px;
   bottom: -1000px;
@@ -22,7 +22,7 @@
     right: 10px;
     left: 10px;
 
-    .g-toast-content {
+    .toast-content {
       max-width: 100%;
     }
   }
@@ -80,7 +80,7 @@
     right: 10px;
   }
 
-  .g-toast-content {
+  .toast-content {
     font-size: 0.75rem;
     position: relative;
     max-width: 340px;
@@ -99,7 +99,7 @@
     &.#{$color} {
       color: get-contrast($value);
 
-      .g-toast-content {
+      .toast-content {
         background: $value;
         color: get-contrast($value);
       }
@@ -112,7 +112,7 @@
       }
 
       &.flat {
-        .g-toast-content {
+        .toast-content {
           background: tint($value, 85%);
           color: $value;
         }
@@ -129,26 +129,26 @@
     &.bordered-#{$color} {
       &.top-left,
       &.bottom-left {
-        .g-toast-content {
+        .toast-content {
           border-left: 2px solid $value;
         }
       }
 
       &.top-center {
-        .g-toast-content {
+        .toast-content {
           border-top: 2px solid $value;
         }
       }
 
       &.bottom-center {
-        .g-toast-content {
+        .toast-content {
           border-bottom: 2px solid $value;
         }
       }
 
       &.top-right,
       &.bottom-right {
-        .g-toast-content {
+        .toast-content {
           border-right: 2px solid $value;
         }
       }
@@ -156,7 +156,7 @@
   }
 
   &.square {
-    .g-toast-content {
+    .toast-content {
       border-radius: 0;
     }
   }
@@ -215,11 +215,11 @@
     align-items: center;
     flex-direction: row;
 
-    .g-toast-content {
+    .toast-content {
       padding-left: 50px;
     }
 
-    .g-toast-icon {
+    .toast-icon {
       position: absolute;
       left: 20px;
       color: inherit;

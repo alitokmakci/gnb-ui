@@ -1,4 +1,4 @@
-.g-tag {
+.tag {
   display: inline-block;
   font-size: 0.6rem;
   border-radius: 7px;
@@ -92,19 +92,19 @@
   }
 }
 
-.g-tag-group {
+.tag-group {
   display: flex;
 
-  .g-tag:first-child {
+  .tag:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .g-tag:not(:first-child, :last-child) {
+  .tag:not(:first-child, :last-child) {
     border-radius: 0;
   }
 
-  .g-tag:last-child {
+  .tag:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }

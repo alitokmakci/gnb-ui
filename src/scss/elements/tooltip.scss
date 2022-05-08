@@ -2,13 +2,13 @@
   position: relative;
 
   &:hover {
-    .g-tooltip {
+    .tooltip {
       display: block;
     }
   }
 }
 
-.g-tooltip {
+.tooltip {
   display: none;
   position: absolute;
   background-color: $font-color;

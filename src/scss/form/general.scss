@@ -1,55 +1,55 @@
-.g-form-element {
-	display: flex;
-	flex-direction: column;
-	margin-bottom: .75rem;
-	position: relative;
+.form-element {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+  position: relative;
 
-	&.horizontal {
-		flex-direction: row;
+  &.horizontal {
+    flex-direction: row;
 
-		.g-label {
-			margin-bottom: 0;
-			margin-left: 0;
-			margin-right: 6px;
-			display: flex;
-			align-items: center;
-		}
-	}
+    .label {
+      margin-bottom: 0;
+      margin-left: 0;
+      margin-right: 6px;
+      display: flex;
+      align-items: center;
+    }
+  }
 
-	&.has-icon-before {
-		.g-input-icon {
-			box-shadow: 12px 0 10px -10px rgba(0, 0, 0, .05);
-		}
+  &.has-icon-before {
+    .input-icon {
+      box-shadow: 12px 0 10px -10px rgba(0, 0, 0, 0.05);
+    }
 
-		.g-input {
-			padding-left: 39px;
+    .input {
+      padding-left: 39px;
 
-			&:focus {
-				padding-left: 44px;
+      &:focus {
+        padding-left: 44px;
 
-				& ~ .g-input-icon {
-					transform: translate(-6px, -6px);
-					background-color: rgb(249, 252, 253);
-					box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, .05);
-				}
-			}
-		}
-	}
+        & ~ .input-icon {
+          transform: translate(-6px, -6px);
+          background-color: rgb(249, 252, 253);
+          box-shadow: 15px 10px 10px -10px rgba(0, 0, 0, 0.05);
+        }
+      }
+    }
+  }
 
-	&.has-icon-after {
-		.g-input-icon {
-			right: 0;
-			box-shadow: -12px 0 10px -10px rgba(0, 0, 0, .05);
-		}
+  &.has-icon-after {
+    .input-icon {
+      right: 0;
+      box-shadow: -12px 0 10px -10px rgba(0, 0, 0, 0.05);
+    }
 
-		.g-input {
-			padding-right: 40px;
+    .input {
+      padding-right: 40px;
 
-			&:focus ~ .g-input-icon {
-				transform: translate(6px, -6px);
-				background-color: rgb(249, 252, 253);
-				box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, .05);
-			}
-		}
-	}
+      &:focus ~ .input-icon {
+        transform: translate(6px, -6px);
+        background-color: rgb(249, 252, 253);
+        box-shadow: -15px 10px 10px -10px rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
 }

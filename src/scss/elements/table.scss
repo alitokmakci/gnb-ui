@@ -1,4 +1,4 @@
-.g-table {
+.table {
   border-collapse: collapse;
   border-spacing: 0;
   text-align: left;
@@ -11,7 +11,6 @@
         background-color: $value;
         color: get-contrast($value);
       }
-      
 
       &.flat {
         :not(thead) {
@@ -69,12 +68,11 @@
     }
   }
 
-
   &.square {
     tr:last-of-type td:first-of-type {
       border-bottom-left-radius: 0;
     }
-  
+
     tr:last-of-type td:last-of-type {
       border-bottom-right-radius: 0;
     }

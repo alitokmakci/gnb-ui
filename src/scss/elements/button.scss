@@ -1,4 +1,4 @@
-.g-btn {
+.btn {
   padding: 6px 10px;
   display: inline-flex;
   -webkit-box-align: center;
@@ -284,19 +284,19 @@
   }
 }
 
-.g-btn-group {
+.btn-group {
   display: flex;
 
-  .g-btn:first-child {
+  .btn:first-child {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
 
-  .g-btn:not(:first-child, :last-child) {
+  .btn:not(:first-child, :last-child) {
     border-radius: 0;
   }
 
-  .g-btn:last-child {
+  .btn:last-child {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
   }

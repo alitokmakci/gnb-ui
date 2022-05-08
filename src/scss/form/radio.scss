@@ -1,8 +1,8 @@
-.g-form-element {
-  .g-radio-group {
+.form-element {
+  .radio-group {
     display: flex;
 
-    .g-label {
+    .label {
       font-size: 0.8rem;
       transition: all 0.25s ease;
       margin: 0;
@@ -39,7 +39,7 @@
   }
 }
 
-.g-radio {
+.radio {
   transition: all 0.25s ease;
   position: absolute;
   width: 100%;
@@ -52,11 +52,11 @@
   z-index: 100;
   cursor: pointer;
 
-  &:hover ~ .g-label:before {
+  &:hover ~ .label:before {
     background-color: $gray-1;
   }
 
-  &:checked ~ .g-label {
+  &:checked ~ .label {
     &:after {
       opacity: 1;
     }
@@ -67,7 +67,7 @@
   }
 
   &.square {
-    & ~ .g-label {
+    & ~ .label {
       &:before {
         border-radius: 4px !important;
       }
@@ -80,7 +80,7 @@
 
   @each $color, $value in $colors {
     &.#{$color} {
-      &:checked ~ .g-label {
+      &:checked ~ .label {
         &:after {
           background-color: get-contrast($value);
         }
@@ -92,7 +92,7 @@
       }
 
       &:checked {
-        &:hover ~ .g-label {
+        &:hover ~ .label {
           &:before {
             box-shadow: 0 3px 15px 0 tint($value, 65%);
           }
@@ -100,7 +100,7 @@
       }
 
       &.flat {
-        &:checked ~ .g-label {
+        &:checked ~ .label {
           &:after {
             background-color: $value;
           }
@@ -112,26 +112,26 @@
         }
 
         &:checked {
-          &:hover ~ .g-label {
+          &:hover ~ .label {
             &:before {
               box-shadow: 0 3px 15px 0 tint($value, 65%);
             }
           }
         }
 
-        &:hover ~ .g-label:before {
+        &:hover ~ .label:before {
           background-color: tint($value, 75%);
           border-color: tint($value, 75%);
         }
       }
 
       &.bordered {
-        &:hover ~ .g-label:before {
+        &:hover ~ .label:before {
           background-color: transparent;
           box-shadow: 0 3px 15px 0 tint($value, 65%);
         }
 
-        &:checked ~ .g-label {
+        &:checked ~ .label {
           &:after {
             background-color: $value;
           }
@@ -142,13 +142,13 @@
           }
         }
 
-        ~ .g-label:before {
+        ~ .label:before {
           border-color: rgba($value, 1);
         }
       }
 
       &.hover-color {
-        &:not(:checked):hover ~ .g-label:before {
+        &:not(:checked):hover ~ .label:before {
           background-color: tint($value, 75%);
           border-color: tint($value, 75%);
         }

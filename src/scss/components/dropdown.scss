@@ -1,8 +1,8 @@
-.g-dropdown {
+.dropdown {
   display: inline-flex;
   position: relative;
 
-  .g-dropdown-content {
+  .dropdown-content {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -17,7 +17,7 @@
     transition: all 0.25s ease;
     z-index: 10000;
 
-    .g-dropdown-menu {
+    .dropdown-menu {
       background-color: white;
       border-radius: 5px 18px 18px 18px;
       width: 100%;
@@ -37,7 +37,7 @@
       color: $font-color;
     }
 
-    .g-dropdown-item {
+    .dropdown-item {
       text-align: left;
       width: 100%;
       position: relative;
@@ -57,7 +57,7 @@
       }
     }
 
-    .g-dropdown-title {
+    .dropdown-title {
       text-align: left;
       margin: 0;
       width: 100%;
@@ -67,7 +67,7 @@
 
   &.active,
   &.hoverable:hover {
-    .g-dropdown-content {
+    .dropdown-content {
       opacity: 1;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -89,18 +89,18 @@
   }
 
   &.right {
-    .g-dropdown-content {
+    .dropdown-content {
       left: auto;
       right: 0;
 
-      .g-dropdown-menu {
+      .dropdown-menu {
         border-radius: 18px 5px 18px 18px;
       }
     }
   }
 
   &.to-up {
-    .g-dropdown-content {
+    .dropdown-content {
       -webkit-transform: translateY(-100%);
       transform: translateY(-100%);
       bottom: auto;
@@ -108,7 +108,7 @@
       padding-top: 0;
       padding-bottom: 10px;
 
-      .g-dropdown-menu {
+      .dropdown-menu {
         border-radius: 18px 18px 18px 5px;
       }
     }
@@ -127,27 +127,27 @@
     }
 
     &.right {
-      .g-dropdown-menu {
+      .dropdown-menu {
         border-radius: 18px 18px 5px 18px;
       }
     }
   }
 
   &.square {
-    .g-dropdown-menu {
+    .dropdown-menu {
       border-radius: 0 !important;
     }
   }
 
   @each $color, $value in $colors {
     &.#{$color} {
-      .g-dropdown-menu {
+      .dropdown-menu {
         background-color: $value;
         color: get-contrast($value);
       }
 
       &.flat {
-        .g-dropdown-menu {
+        .dropdown-menu {
           background-color: tint($value, 85%);
           color: $value;
         }

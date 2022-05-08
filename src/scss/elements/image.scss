@@ -18,11 +18,12 @@ $ratios: (
   "1by3": 300%,
 );
 
-.g-img {
+.figure {
   display: block;
   position: relative;
 
-  img {
+  img,
+  video {
     display: block;
     height: auto;
     max-width: 100%;
@@ -66,6 +67,7 @@ $ratios: (
   &.size_1by2,
   &.size_1by3 {
     img,
+    video,
     .has-ratio {
       bottom: 0;
       left: 0;

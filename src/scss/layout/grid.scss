@@ -5,7 +5,7 @@ $gaps: (5, 10, 15, 20, 25, 30, 40, 50, 75, 100);
 $size-length: list.length($column-sizes);
 $max-size: list.nth($column-sizes, $size-length);
 
-.g-row {
+.row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -19,7 +19,7 @@ $max-size: list.nth($column-sizes, $size-length);
       margin-right: $gap * -0.5px;
       margin-left: $gap * -0.5px;
 
-      .g-column {
+      .column {
         padding-left: $gap * 0.5px;
         padding-right: $gap * 0.5px;
       }
@@ -29,7 +29,7 @@ $max-size: list.nth($column-sizes, $size-length);
     &.has-gap-#{$gap} {
       margin-top: $gap * -1px;
 
-      .g-column {
+      .column {
         margin-top: $gap * 1px;
       }
     }
@@ -38,7 +38,7 @@ $max-size: list.nth($column-sizes, $size-length);
       &.has-gap-x-#{$screen}-#{$gap},
       &.has-gap-#{$screen}-#{$gap} {
         @media screen and (min-width: $width) {
-          .g-column {
+          .column {
             padding-left: $gap * 0.5px;
             padding-right: $gap * 0.5px;
           }
@@ -50,7 +50,7 @@ $max-size: list.nth($column-sizes, $size-length);
       &.has-gap-y-#{$screen}-#{$gap},
       &.has-gap-#{$screen}-#{$gap} {
         @media screen and (min-width: $width) {
-          .g-column {
+          .column {
             margin-top: $gap * 1px;
           }
         }
@@ -61,7 +61,7 @@ $max-size: list.nth($column-sizes, $size-length);
   &.no-gap {
     margin: 0;
 
-    .g-column {
+    .column {
       padding: 0;
     }
   }
@@ -71,20 +71,20 @@ $max-size: list.nth($column-sizes, $size-length);
       &.has-#{$size}-column {
         .g-column {
           flex: 0 0 auto;
-          width: percentage(1 / $size);
+          width: percentage(calc(1 / $size));
         }
       }
     } @else {
       &.has-#{$size}-columns {
         .g-column {
           flex: 0 0 auto;
-          width: percentage(1 / $size);
+          width: percentage(calc(1 / $size));
         }
       }
     }
   }
 
-  .g-column {
+  .column {
     -ms-flex-preferred-size: 0;
     flex-basis: 0;
     -ms-flex-positive: 1;
@@ -112,7 +112,7 @@ $max-size: list.nth($column-sizes, $size-length);
     @each $size in $column-sizes {
       &.size-#{$size} {
         flex: 0 0 auto;
-        width: percentage($size / $max-size);
+        width: percentage(calc($size / $max-size));
       }
     }
 
@@ -121,7 +121,7 @@ $max-size: list.nth($column-sizes, $size-length);
         @media (min-width: $width) {
           &.size-#{$screen}-#{$size} {
             flex: 0 0 auto;
-            width: percentage($size / $max-size);
+            width: percentage(calc($size / $max-size));
           }
         }
       }
@@ -129,7 +129,7 @@ $max-size: list.nth($column-sizes, $size-length);
 
     @each $size in $column-sizes {
       &.has-offset-#{$size} {
-        margin-left: percentage($size / $max-size);
+        margin-left: percentage(calc($size / $max-size));
       }
     }
 
@@ -137,7 +137,7 @@ $max-size: list.nth($column-sizes, $size-length);
       @each $size in $column-sizes {
         @media screen and (min-width: $width) {
           &.has-offset-#{$screen}-#{$size} {
-            margin-left: percentage($size / $max-size);
+            margin-left: percentage(calc($size / $max-size));
           }
         }
       }
