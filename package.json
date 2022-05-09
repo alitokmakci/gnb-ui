@@ -1,0 +1,33 @@
+{
+  "name": "gnb-ui",
+  "version": "0.0.0",
+  "description": "Modern and beautiful looking component designs",
+  "main": "src/scss/index.scss",
+  "scripts": {
+    "watch": "npm run build-full -- --watch",
+    "build-full": "sass src/scss/index.scss:dist/gnb.css",
+    "build-min": "sass src/scss/index.scss:dist/gnb.min.css --style compressed",
+    "build": "npm run build-full & npm run build-min"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alitokmakci/gnb-ui.git"
+  },
+  "keywords": [
+    "css",
+    "sass",
+    "scss",
+    "responsive",
+    "framework",
+    "ui"
+  ],
+  "author": {
+    "name": "Ali Tokmakcı",
+    "email": "alitokmakci@outlook.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alitokmakci/gnb-ui/issues"
+  },
+  "homepage": "https://github.com/alitokmakci/gnb-ui#readme"
+}
