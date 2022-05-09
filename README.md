@@ -56,12 +56,12 @@ Utilities:
 
 - [x] Sizing
 - [x] Backgrounds
-- [ ] Displays
+- [x] Displays
 - [ ] Headings
 - [ ] Typographies
 - [ ] Alignments
 
-Components must be redesigned for responsive design:
+Components and utilities must be redesigned for responsive design:
 
 - [ ] Navbar
 - [ ] Sidebar
@@ -71,7 +71,7 @@ Components must be redesigned for responsive design:
 - [ ] Footer
 - [x] Grid Design
 - [ ] Sizing
-- [ ] Display
+- [x] Display
 - [ ] Typography
 - [ ] Backgrounds
 - [ ] Alignments
