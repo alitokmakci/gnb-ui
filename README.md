@@ -38,7 +38,7 @@ Components:
 - [x] Sidebar
 - [x] Modal
 - [x] Dropdown
-- [ ] Pagination
+- [x] Pagination
 - [x] Spinner
 - [ ] Collapse -v1
 - [ ] Breadcrumb -v1
