@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../dist/gnb.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <button class="btn primary" id="default_modal_button">
+        Toggle Default Modal
+      </button>
+    </div>
+
+    <div class="modal" id="default_modal"></div>
+
+    <script>
+      document
+        .querySelector("#default_modal_button")
+        .addEventListener("click", () => {
+          document.querySelector("#default_modal").classList.add("open");
+        });
+    </script>
+  </body>
+</html>

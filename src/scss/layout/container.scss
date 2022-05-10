@@ -1,5 +1,5 @@
-$gutter-x: 24px;
-$gutter-y: 0;
+$container-gutter-x: $gutter-x;
+$container-gutter-y: $gutter-y;
 $sm-width: 540px;
 $md-width: 720px;
 $lg-width: 960px;
@@ -13,9 +13,9 @@ $xxl-width: 1320px;
   --xl-width: #{$xl-width};
   --xxl-width: #{$xxl-width};
 
-  padding-right: $gutter-x;
-  padding-left: $gutter-x;
-  margin: $gutter-y auto;
+  padding-right: $container-gutter-x;
+  padding-left: $container-gutter-x;
+  margin: $container-gutter-y auto;
   max-width: 100%;
 
   @each $screen, $width in $breakpoints {

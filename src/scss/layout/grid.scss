@@ -1,17 +1,19 @@
 @use "sass:list";
 
 $column-sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
-$gaps: (5, 10, 15, 20, 25, 30, 40, 50, 75, 100);
+$gaps: (0, 5, 10, 15, 20, 25, 30, 40, 50, 75, 100);
 $size-length: list.length($column-sizes);
 $max-size: list.nth($column-sizes, $size-length);
+$grid-gutter-x: $gutter-x;
+$grid-gutter-y: $gutter-y;
 
 .row {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -#{$gutter-x};
-  margin-left: -#{$gutter-x};
+  margin-right: -#{$grid-gutter-x};
+  margin-left: -#{$grid-gutter-x};
 
   @each $gap in $gaps {
     &.has-gap-x-#{$gap},
@@ -92,9 +94,9 @@ $max-size: list.nth($column-sizes, $size-length);
     max-width: 100%;
     position: relative;
     width: 100%;
-    padding-right: $gutter-x;
-    padding-left: $gutter-x;
-    margin-top: $gutter-y;
+    padding-right: $grid-gutter-x;
+    padding-left: $grid-gutter-x;
+    margin-top: $grid-gutter-y;
 
     &.content-width {
       flex: 0 0 auto;
