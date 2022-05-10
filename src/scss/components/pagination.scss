@@ -1,0 +1,166 @@
+$pagination-button-font-color: $font-color;
+$pagination-button-background-color: $gray-2;
+$pagination-button-hover-background-color: $gray-1;
+$pagination-button-border-radius: 12px;
+$pagination-button-width: 36px;
+$pagination-button-height: $pagination-button-width;
+$pagination-button-padding: 0;
+$pagination-button-border: 0;
+$pagination-button-margin: 0 2px;
+$pagination-button-font-size: 0.9rem;
+$pagination-button-active-background-color: $pagination-button-hover-background-color;
+$pagination-dots-font-size: 1.1rem;
+$pagination-dots-letter-spacing: 2px;
+
+.pagination {
+  display: inline-flex;
+  align-items: center;
+
+  @each $color, $value in $colors {
+    &.active-#{$color} {
+      .pagination-btn.active {
+        background-color: $value;
+        color: get-contrast($value);
+      }
+    }
+
+    &.active-flat-#{$color} {
+      .pagination-btn.active {
+        background-color: tint($value, 85%);
+        color: $value;
+      }
+    }
+
+    &.no-gap {
+      &.#{$color} {
+        background-color: $value;
+
+        .pagination-dots {
+          color: get-contrast($value);
+        }
+      }
+    }
+
+    &.#{$color} {
+      .pagination-btn {
+        background-color: $value;
+        color: get-contrast($value);
+
+        &:hover {
+          background-color: tint($value, 45%);
+          color: $white;
+        }
+
+        &.prev::after,
+        &.next::after {
+          border-color: get-contrast($value);
+        }
+
+        &.active {
+          background-color: tint($value, 45%);
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &.circle .pagination-btn {
+    border-radius: 50%;
+  }
+
+  &.square .pagination-btn {
+    border-radius: 0;
+  }
+
+  &.no-gap {
+    background-color: $pagination-button-background-color;
+    border-radius: $pagination-button-border-radius;
+
+    .pagination-btn,
+    .pagination-dots {
+      margin: 0;
+    }
+  }
+
+  .pagination-btn {
+    width: $pagination-button-width;
+    height: $pagination-button-height;
+    border-radius: $pagination-button-border-radius;
+    padding: $pagination-button-padding;
+    background: $pagination-button-background-color;
+    margin: $pagination-button-margin;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: $pagination-button-font-size;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    color: $pagination-button-font-color;
+    position: relative;
+    border: $pagination-button-border;
+    user-select: none;
+
+    &:hover {
+      background-color: $pagination-button-hover-background-color;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+
+    &.disabled {
+      opacity: 0.4;
+      pointer-events: none;
+    }
+
+    &.active {
+      background-color: $pagination-button-active-background-color;
+      color: get-contrast($pagination-button-active-background-color);
+    }
+
+    &.prev::after,
+    &.next::after {
+      content: "";
+      height: 6px;
+      width: 6px;
+      border-bottom: 1.5px solid;
+      border-left: 1.5px solid;
+      border-color: $pagination-button-font-color;
+    }
+
+    &.prev::after {
+      transform: rotate(45deg);
+    }
+
+    &.next::after {
+      transform: rotate(225deg);
+    }
+  }
+
+  .pagination-dots {
+    width: $pagination-button-width;
+    height: $pagination-button-height;
+    margin: $pagination-button-margin;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-size: $pagination-dots-font-size;
+    letter-spacing: $pagination-dots-letter-spacing;
+    cursor: pointer;
+    border-radius: $pagination-button-border-radius;
+    background-color: transparent !important;
+  }
+}

@@ -25,8 +25,8 @@ Form Elements:
 - [x] Checkbox
 - [x] Switch
 - [x] Radio
-- [ ] Upload
-- [ ] Slider
+- [ ] Upload - v1
+- [ ] Slider - v1
 
 Components:
 
@@ -40,8 +40,8 @@ Components:
 - [x] Dropdown
 - [ ] Pagination
 - [x] Spinner
-- [ ] Collapse
-- [ ] Breadcrumb
+- [ ] Collapse -v1
+- [ ] Breadcrumb -v1
 - [x] Toast
 
 Layout:
