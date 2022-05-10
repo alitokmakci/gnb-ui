@@ -33,7 +33,7 @@ Components:
 - [x] Card
 - [x] Navbar
 - [ ] Tabs
-- [ ] Alert
+- [x] Alert
 - [x] Avatar
 - [x] Sidebar
 - [x] Modal
@@ -48,7 +48,7 @@ Layout:
 
 - [ ] App Layout
 - [x] Container
-- [ ] Hero
+- [x] Hero
 - [x] Section
 - [ ] Footer
 - [x] Grid Design

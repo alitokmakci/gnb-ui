@@ -34,7 +34,7 @@ $modal-fade-in-animation: true;
     display: -ms-flexbox;
     display: flex;
     @if ($modal-fade-in-animation) {
-      animation: fade-in .7s ease;
+      animation: fade-in 0.7s ease;
     }
   }
 
@@ -55,9 +55,11 @@ $modal-fade-in-animation: true;
       }
 
       &::after {
-        @include make-loading-spinner($loading-modal-spinner-diameter,
-        $loading-modal-spinner-width,
-        $loading-modal-spinner-color);
+        @include make-loading-spinner(
+          $loading-modal-spinner-diameter,
+          $loading-modal-spinner-width,
+          $loading-modal-spinner-color
+        );
         z-index: 2;
       }
     }
@@ -174,56 +176,7 @@ $modal-fade-in-animation: true;
     }
 
     .close {
-      position: absolute;
-      top: -6px;
-      right: -6px;
-      padding: 0;
-      margin: 0;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
-      justify-content: center;
-      background: inherit;
-      border-radius: 12px;
-      -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
-      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
-      -webkit-transition: all 0.25s ease;
-      transition: all 0.25s ease;
-      z-index: 200;
-      border: 0;
-      width: 34px;
-      height: 34px;
-      cursor: pointer;
-
-      &::after {
-        content: "";
-        width: 14px;
-        height: 2px;
-        background-color: rgba($modal-font-color, 0.65);
-        transform: rotate(45deg);
-        position: absolute;
-      }
-
-      &::before {
-        content: "";
-        width: 14px;
-        height: 2px;
-        background-color: rgba($modal-font-color, 0.65);
-        transform: rotate(-45deg);
-        position: absolute;
-      }
-
-      &:hover {
-        -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
-        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
-        -webkit-transform: translate(-2px, 2px);
-        transform: translate(-2px, 2px);
-      }
+      @include make-close-button($modal-font-color, -6px, -6px);
     }
 
     .modal-header {

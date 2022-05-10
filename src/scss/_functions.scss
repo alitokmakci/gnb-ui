@@ -1,23 +1,99 @@
-@function get-contrast ($color) {
-	@return if(lightness($color) < 65%, $white, $font-color);
+@function get-contrast($color) {
+  @return if(lightness($color) < 65%, $white, $font-color);
 }
 
-@function tint ($color, $amount) {
-	@return mix(white, $color, $amount);
+@function tint($color, $amount) {
+  @return mix(white, $color, $amount);
 }
 
-@mixin make-loading-spinner ($diameter, $width, $color) {
-	content: "";
-	position: absolute;
-	width: $diameter;
-	height: $diameter;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-	border: $width solid transparent;
-	border-top-color: $color;
-	border-radius: 50%;
-	animation: loading-spinner 1s ease infinite;
+@mixin make-loading-spinner($diameter, $width, $color) {
+  content: "";
+  position: absolute;
+  width: $diameter;
+  height: $diameter;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: $width solid transparent;
+  border-top-color: $color;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
+}
+
+@mixin make-close-button(
+  $color,
+  $top,
+  $right: auto,
+  $left: auto,
+  $bottom: auto,
+  $rotate: false
+) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: inherit;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 200;
+  border: 0;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 14px;
+    height: 2px;
+    background-color: rgba($color, 0.65);
+    transform: rotate(45deg);
+    position: absolute;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+
+  &::before {
+    content: "";
+    width: 14px;
+    height: 2px;
+    background-color: rgba($color, 0.65);
+    transform: rotate(-45deg);
+    position: absolute;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+
+  &:hover {
+    -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+    -webkit-transform: translate(-2px, 2px);
+    transform: translate(-2px, 2px);
+
+    @if ($rotate) {
+      &::after {
+        transform: rotate(0);
+      }
+
+      &::before {
+        transform: rotate(0);
+      }
+    }
+  }
 }
