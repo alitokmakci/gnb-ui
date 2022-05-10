@@ -39,3 +39,21 @@ figure {
   margin: 0;
   padding: 0;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  display: block;
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $scrollbar-color;
+  border-radius: 5px;
+}

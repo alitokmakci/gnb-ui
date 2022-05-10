@@ -1,0 +1,539 @@
+$sidebar-reduced-width: 50px;
+$sidebar-footer-has-divider: true;
+$sidebar-width: 260px;
+$sidebar-default-background-color: $white;
+$sidebar-default-font-color: $font-color;
+$sidebar-footer-divider-color: $sidebar-default-font-color;
+$sidebar-menu-scrollbar-color: $gray-1;
+$sidebar-z-index: 21000;
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  max-width: $sidebar-width;
+  width: calc(100% - 50px);
+  height: 100%;
+  border-radius: 0 15px 15px 0;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  z-index: $sidebar-z-index;
+  background: $sidebar-default-background-color;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  color: $sidebar-default-font-color;
+  -webkit-box-shadow: 0 0 25px 0 rgba($white, 0.05);
+  box-shadow: 0 0 25px 0 rgba($white, 0.05);
+  overflow: hidden;
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: get-contrast($value);
+
+      .sidebar-menu {
+        .sidebar-item.active {
+          &::before {
+            background-color: get-contrast($value) !important;
+          }
+        }
+
+        .sidebar-group {
+          .group-content::after {
+            border-color: get-contrast($value);
+          }
+        }
+
+        .sidebar-group.open .group-menu::before {
+          background-color: tint(get-contrast($value), 70%) !important;
+        }
+      }
+
+      .sidebar-footer::before {
+        border-color: rgba(get-contrast($value), 0.15);
+      }
+    }
+
+    &.active-font-#{$color} {
+      .sidebar-menu {
+        .sidebar-item.active {
+          color: $value !important;
+
+          &::before {
+            background-color: $value !important;
+          }
+        }
+
+        .sidebar-group.open .group-menu::before {
+          background-color: tint($value, 70%) !important;
+        }
+      }
+    }
+  }
+
+  &.closed {
+    -webkit-transform: translate(-150%);
+    transform: translate(-150%);
+  }
+
+  &.square {
+    border-radius: 0 !important;
+  }
+
+  &.hide-scroll {
+    .sidebar-menu::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  .sidebar-brand {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    padding: 25px 0;
+    min-height: 80px;
+    user-select: none;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+  }
+
+  .sidebar-menu {
+    overflow-x: hidden;
+    width: 100%;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    &::-webkit-scrollbar-thumb {
+      background: $sidebar-menu-scrollbar-color;
+    }
+
+    .sidebar-item {
+      width: 100%;
+      padding: 15px 16px 14px;
+      text-align: left;
+      background: transparent;
+      font-weight: 700;
+      opacity: 0.7;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      position: relative;
+      border: 0;
+      cursor: pointer;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      z-index: $sidebar-z-index + 10;
+      font-size: 0.85rem;
+      min-height: 50px;
+      min-width: $sidebar-width;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &.active {
+        opacity: 1;
+        padding-left: 24px;
+
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          left: -4px;
+          top: 0;
+          width: 10px;
+          height: 100%;
+          background: $sidebar-default-font-color;
+          border-radius: 0 20px 20px 0;
+          -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+          z-index: $sidebar-z-index + 10;
+        }
+      }
+
+      &.has-icon {
+        .sidebar-item-icon {
+          min-width: 40px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          font-size: 1rem;
+          z-index: $sidebar-z-index + 50;
+        }
+      }
+    }
+
+    .sidebar-group {
+      padding: 0;
+      width: 100%;
+      min-width: $sidebar-width;
+      position: relative;
+      -webkit-transition: all 0.25s ease;
+      transition: all 0.25s ease;
+
+      .group-content {
+        width: 100%;
+        padding: 15px 16px 14px;
+        text-align: left;
+        background: transparent;
+        font-weight: 700;
+        opacity: 0.7;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        position: relative;
+        border: 0;
+        cursor: pointer;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        z-index: $sidebar-z-index + 10;
+        font-size: 0.85rem;
+        min-height: 50px;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        &::after {
+          display: inline-block;
+          content: "";
+          width: 6px;
+          height: 6px;
+          position: absolute;
+          right: 26px;
+          border-top: 1.5px solid $sidebar-default-font-color;
+          border-right: 1.5px solid $sidebar-default-font-color;
+          transform: rotate(45deg);
+          -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+        }
+
+        .group-title {
+          pointer-events: none;
+        }
+      }
+
+      &.open {
+        .group-content {
+          opacity: 1;
+
+          &::after {
+            transform: rotate(135deg);
+          }
+        }
+
+        .group-menu {
+          height: calc(100% - 50px);
+
+          &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            left: -4px;
+            top: 0;
+            width: 10px;
+            height: 100%;
+            background: $sidebar-default-font-color;
+            border-radius: 0 20px 20px 0;
+            -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+            z-index: $sidebar-z-index + 60;
+          }
+        }
+      }
+
+      &.has-icon {
+        .group-content {
+          .group-icon {
+            min-width: 40px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            font-size: 1rem;
+            z-index: $sidebar-z-index + 50;
+          }
+        }
+      }
+
+      .group-menu {
+        width: 100%;
+        overflow: hidden;
+        -webkit-transition: all 0.25s ease;
+        transition: all 0.25s ease;
+        position: relative;
+        height: 0;
+        min-height: 0;
+
+        .menu-item {
+          width: 100%;
+          padding: 15px 16px 14px 24px;
+          text-align: left;
+          background: transparent;
+          font-weight: 700;
+          opacity: 0.7;
+          -webkit-transition: all 0.25s ease;
+          transition: all 0.25s ease;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          position: relative;
+          border: 0;
+          cursor: pointer;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          z-index: $sidebar-z-index + 10;
+          font-size: 0.85rem;
+          min-height: 50px;
+          min-width: $sidebar-width;
+
+          &:hover {
+            opacity: 1;
+          }
+
+          &.has-icon {
+            .menu-item-icon {
+              min-width: 40px;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              font-size: 1rem;
+              z-index: $sidebar-z-index + 50;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+
+    @if ($sidebar-footer-has-divider) {
+      &::before {
+        content: "";
+        width: calc($sidebar-width - 20px);
+        margin-left: auto;
+        margin-right: auto;
+        height: 1px;
+        border-top: 1px solid rgba($sidebar-footer-divider-color, 0.15);
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+
+  &.reduced {
+    width: $sidebar-reduced-width;
+
+    .sidebar-brand {
+      white-space: nowrap;
+      font-size: 0.6rem;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .sidebar-footer {
+      padding: 10px 0 !important;
+    }
+
+    .sidebar-item {
+      width: $sidebar-reduced-width;
+      padding: 0 !important;
+
+      &.active::before {
+        left: -6px;
+      }
+
+      .sidebar-item-icon {
+        width: $sidebar-reduced-width;
+      }
+    }
+
+    .sidebar-group {
+      .group-content {
+        width: $sidebar-reduced-width;
+        padding: 0 !important;
+
+        &::after {
+          display: none;
+        }
+
+        .group-icon {
+          min-width: $sidebar-reduced-width !important;
+        }
+      }
+
+      &.open {
+        .group-menu {
+          padding-left: 8px;
+          &::before {
+            left: -6px;
+          }
+        }
+      }
+
+      .menu-item {
+        width: $sidebar-reduced-width;
+        padding: 0 !important;
+
+        &.active::before {
+          left: -6px;
+        }
+
+        .menu-item-icon {
+          width: $sidebar-reduced-width;
+        }
+      }
+    }
+
+    &:hover {
+      width: $sidebar-width;
+
+      .sidebar-brand {
+        white-space: nowrap;
+        font-size: initial;
+      }
+
+      .sidebar-footer {
+        padding: 10px !important;
+      }
+
+      .sidebar-item {
+        width: $sidebar-width;
+        padding: 15px 16px 14px !important;
+
+        &.active::before {
+          left: -4px;
+        }
+
+        .sidebar-item-icon {
+          width: initial;
+        }
+      }
+
+      .sidebar-group {
+        .group-content {
+          width: $sidebar-width;
+          padding: 15px 16px 14px !important;
+
+          &::after {
+            display: inline-block;
+          }
+
+          .group-icon {
+            min-width: 40px !important;
+          }
+        }
+
+        &.open {
+          .group-menu {
+            padding-left: 24px !important;
+            &::before {
+              left: -4px;
+            }
+          }
+        }
+
+        .menu-item {
+          width: $sidebar-reduced-width;
+          padding: 0 !important;
+
+          &.active::before {
+            left: -6px;
+          }
+
+          .menu-item-icon {
+            width: $sidebar-reduced-width;
+          }
+        }
+      }
+    }
+  }
+}

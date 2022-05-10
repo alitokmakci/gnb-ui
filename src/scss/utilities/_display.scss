@@ -13,14 +13,6 @@ $display-options: (flex, block, inline, inline-flex, inline-block, grid, none);
 }
 
 @each $screen, $size in $breakpoints {
-  @media (min-width: $size) {
-    .#{$screen}-flex {
-      display: flex !important;
-    }
-  }
-}
-
-@each $screen, $size in $breakpoints {
   @each $display in $display-options {
     @if ($display != none) {
       @media (min-width: $size) {
@@ -34,6 +26,26 @@ $display-options: (flex, block, inline, inline-flex, inline-block, grid, none);
           display: $display !important;
         }
       }
+    }
+  }
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.wrap {
+  flex-wrap: wrap !important;
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: $size) {
+    .#{$screen}-justify-between {
+      justify-content: space-between !important;
+    }
+
+    .#{$screen}-wrap {
+      flex-wrap: wrap !important;
     }
   }
 }
