@@ -35,8 +35,8 @@ $max-size: list.nth($column-sizes, $size-length);
     }
 
     @each $screen, $width in $breakpoints {
-      &.has-gap-x-#{$screen}-#{$gap},
-      &.has-gap-#{$screen}-#{$gap} {
+      &.#{$screen}-has-gap-x-#{$gap},
+      &.#{$screen}-has-gap-#{$gap} {
         @media screen and (min-width: $width) {
           .column {
             padding-left: $gap * 0.5px;
@@ -47,8 +47,8 @@ $max-size: list.nth($column-sizes, $size-length);
     }
 
     @each $screen, $width in $breakpoints {
-      &.has-gap-y-#{$screen}-#{$gap},
-      &.has-gap-#{$screen}-#{$gap} {
+      &.#{$screen}-has-gap-y-#{$gap},
+      &.#{$screen}-has-gap-#{$gap} {
         @media screen and (min-width: $width) {
           .column {
             margin-top: $gap * 1px;
@@ -119,7 +119,7 @@ $max-size: list.nth($column-sizes, $size-length);
     @each $screen, $width in $breakpoints {
       @each $size in $column-sizes {
         @media (min-width: $width) {
-          &.size-#{$screen}-#{$size} {
+          &.#{$screen}-size-#{$size} {
             flex: 0 0 auto;
             width: percentage(calc($size / $max-size));
           }
@@ -136,7 +136,7 @@ $max-size: list.nth($column-sizes, $size-length);
     @each $screen, $width in $breakpoints {
       @each $size in $column-sizes {
         @media screen and (min-width: $width) {
-          &.has-offset-#{$screen}-#{$size} {
+          &.#{$screen}-has-offset-#{$size} {
             margin-left: percentage(calc($size / $max-size));
           }
         }

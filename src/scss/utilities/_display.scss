@@ -30,8 +30,44 @@ $display-options: (flex, block, inline, inline-flex, inline-block, grid, none);
   }
 }
 
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
 .justify-between {
   justify-content: space-between !important;
+}
+
+.justify-around {
+  justify-content: space-around !important;
+}
+
+.justify-evenly {
+  justify-content: space-evenly !important;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-end {
+  justify-content: flex-end !important;
+}
+
+.justify-center {
+  justify-content: center !important;
 }
 
 .wrap {
@@ -42,6 +78,42 @@ $display-options: (flex, block, inline, inline-flex, inline-block, grid, none);
   @media (min-width: $size) {
     .#{$screen}-justify-between {
       justify-content: space-between !important;
+    }
+
+    .#{$screen}-justify-around {
+      justify-content: space-around !important;
+    }
+
+    .#{$screen}-justify-evenly {
+      justify-content: space-evenly !important;
+    }
+
+    .#{$screen}-justify-start {
+      justify-content: flex-start !important;
+    }
+
+    .#{$screen}-justify-end {
+      justify-content: flex-end !important;
+    }
+
+    .#{$screen}-justify-center {
+      justify-content: center !important;
+    }
+
+    .#{$screen}-flex-row {
+      flex-direction: row !important;
+    }
+
+    .#{$screen}-flex-column {
+      flex-direction: column !important;
+    }
+
+    .#{$screen}-flex-row-reverse {
+      flex-direction: row-reverse !important;
+    }
+
+    .#{$screen}-flex-column-reverse {
+      flex-direction: column-reverse !important;
     }
 
     .#{$screen}-wrap {

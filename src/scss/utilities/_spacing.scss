@@ -1,5 +1,5 @@
 $spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100);
-$sides: (top, bottom, left, right, x, y);
+$sides: (top, bottom, left, right);
 
 @each $space in $spaceamounts {
   .p-#{$space} {
@@ -13,33 +13,55 @@ $sides: (top, bottom, left, right, x, y);
 
 @each $space in $spaceamounts {
   @each $side in $sides {
-    @if $side == x {
-      .m#{$side}-#{$space} {
-        margin-right: #{$space}px !important;
-        margin-left: #{$space}px !important;
-      }
-
-      .p#{$side}-#{$space} {
-        padding-right: #{$space}px !important;
-        padding-left: #{$space}px !important;
-      }
-    } @else if $side == y {
-      .m#{$side}-#{$space} {
-        margin-top: #{$space}px !important;
-        margin-bottom: #{$space}px !important;
-      }
-
-      .p#{$side}-#{$space} {
-        padding-top: #{$space}px !important;
-        padding-bottom: #{$space}px !important;
-      }
-    } @else {
-      .m#{str-slice($side, 0, 1)}-#{$space} {
+    @if $side == top or $side == bottom {
+      .m#{str-slice($side, 0 ,1)}-#{$space},
+      .my-#{$space} {
         margin-#{$side}: #{$space}px !important;
       }
 
-      .p#{str-slice($side, 0, 1)}-#{$space} {
+      .p#{str-slice($side, 0 ,1)}-#{$space},
+      .py-#{$space} {
         padding-#{$side}: #{$space}px !important;
+      }
+    } @else {
+      .m#{str-slice($side, 0 ,1)}-#{$space},
+      .mx-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p#{str-slice($side, 0 ,1)}-#{$space},
+      .px-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: $size) {
+    @each $space in $spaceamounts {
+      @each $side in $sides {
+        @if $side == top or $side == bottom {
+          .#{$screen}-m#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-my-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+          }
+
+          .#{$screen}-p#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-py-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+          }
+        } @else {
+          .#{$screen}-m#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-mx-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+          }
+
+          .#{$screen}-p#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-px-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+          }
+        }
       }
     }
   }

@@ -57,6 +57,7 @@ Utilities:
 - [x] Sizing
 - [x] Backgrounds
 - [x] Displays
+- [x] Spacing
 - [ ] Headings
 - [ ] Typographies
 - [ ] Alignments
@@ -72,6 +73,7 @@ Components and utilities must be redesigned for responsive design:
 - [x] Grid Design
 - [ ] Sizing
 - [x] Display
+- [x] Spacing
 - [ ] Typography
 - [ ] Backgrounds
 - [ ] Alignments
