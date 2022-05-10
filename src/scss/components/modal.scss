@@ -6,6 +6,7 @@ $loading-modal-spinner-diameter: 50px;
 $loading-modal-spinner-width: 3px;
 $loading-modal-spinner-color: $font-color;
 $modal-scrollbar-color: $gray-1;
+$modal-fade-in-animation: true;
 
 .modal {
   background: rgba(0, 0, 0, 0.2);
@@ -32,6 +33,9 @@ $modal-scrollbar-color: $gray-1;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    @if ($modal-fade-in-animation) {
+      animation: fade-in .7s ease;
+    }
   }
 
   &.loading {
@@ -51,19 +55,9 @@ $modal-scrollbar-color: $gray-1;
       }
 
       &::after {
-        content: "";
-        position: absolute;
-        width: $loading-modal-spinner-diameter;
-        height: $loading-modal-spinner-diameter;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        border: $loading-modal-spinner-width solid transparent;
-        border-top-color: $loading-modal-spinner-color;
-        border-radius: 50%;
-        animation: loading-spinner 1s ease infinite;
+        @include make-loading-spinner($loading-modal-spinner-diameter,
+        $loading-modal-spinner-width,
+        $loading-modal-spinner-color);
         z-index: 2;
       }
     }

@@ -101,6 +101,22 @@ ul {
     transform: scale(1);
   }
 }
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
 .p-0 {
   padding: 0px !important;
 }
@@ -7411,10 +7427,11 @@ ul {
   justify-content: center;
   width: 100%;
   padding: 25px 0;
-  min-height: 80px;
   user-select: none;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  min-height: 80px;
+  max-height: 120px;
 }
 .sidebar .sidebar-menu {
   overflow-x: hidden;
@@ -8141,6 +8158,7 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  animation: fade-in 0.7s ease;
 }
 .modal.loading .modal-content {
   position: relative;

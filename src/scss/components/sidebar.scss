@@ -6,6 +6,9 @@ $sidebar-default-font-color: $font-color;
 $sidebar-footer-divider-color: $sidebar-default-font-color;
 $sidebar-menu-scrollbar-color: $gray-1;
 $sidebar-z-index: 21000;
+$sidebar-brand-min-height: 80px;
+$sidebar-brand-max-height: 120px;
+$sidebar-item-font-weight: 700;
 
 .sidebar {
   position: absolute;
@@ -110,10 +113,11 @@ $sidebar-z-index: 21000;
     justify-content: center;
     width: 100%;
     padding: 25px 0;
-    min-height: 80px;
     user-select: none;
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
+    min-height: $sidebar-brand-min-height;
+    max-height: $sidebar-brand-max-height;
   }
 
   .sidebar-menu {
@@ -146,7 +150,7 @@ $sidebar-z-index: 21000;
       padding: 15px 16px 14px;
       text-align: left;
       background: transparent;
-      font-weight: 700;
+      font-weight: $sidebar-item-font-weight;
       opacity: 0.7;
       -webkit-transition: all 0.25s ease;
       transition: all 0.25s ease;
@@ -225,7 +229,7 @@ $sidebar-z-index: 21000;
         padding: 15px 16px 14px;
         text-align: left;
         background: transparent;
-        font-weight: 700;
+        font-weight: $sidebar-item-font-weight;
         opacity: 0.7;
         -webkit-transition: all 0.25s ease;
         transition: all 0.25s ease;
@@ -333,7 +337,7 @@ $sidebar-z-index: 21000;
           padding: 15px 16px 14px 24px;
           text-align: left;
           background: transparent;
-          font-weight: 700;
+          font-weight: $sidebar-item-font-weight;
           opacity: 0.7;
           -webkit-transition: all 0.25s ease;
           transition: all 0.25s ease;

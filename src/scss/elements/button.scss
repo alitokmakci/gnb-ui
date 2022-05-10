@@ -1,6 +1,6 @@
 $button-box-shadow-active: true;
-$button-default-font-color: $font-color;
-$button-default-background-color: $white;
+$button-font-color: $font-color;
+$button-background-color: $white;
 $button-border-width: 2px;
 $button-padding: 6px 10px;
 $button-font-size: 0.8rem;
@@ -20,352 +20,343 @@ $mini-button-font-size: 0.6rem;
 $mini-button-border-radius: 7px;
 $icon-button-padding: 6px;
 $icon-button-font-size: 16px;
-$bordered-button-default-font-color: $button-default-background-color;
-$bordered-button-default-border-color: $button-default-background-color;
+$bordered-button-font-color: $button-background-color;
+$bordered-button-border-color: $button-background-color;
 $bordered-button-hovered-border-color-alpha: 0.5;
 $floating-button-translate-size: -3px;
 $flat-button-background-alpha: $flat-color-alpha;
-$flat-button-default-background-color: tint(
-  $button-default-background-color,
-  percentage(1 - $flat-button-background-alpha)
+$flat-button-background-color: tint(
+				$button-background-color,
+				percentage(1 - $flat-button-background-alpha)
 );
-$flat-button-default-font-color: $button-default-background-color;
+$flat-button-font-color: $button-background-color;
 $flat-button-hovered-background-alpha: 0.25;
-$link-button-default-background-color: $button-default-background-color;
-$link-button-default-font-color: $button-default-font-color;
+$link-button-background-color: $button-background-color;
+$link-button-font-color: $button-font-color;
 $link-button-background-alpha: 0.1;
 $loading-button-spinner-diameter: 16px;
 $loading-button-spinner-width: 3px;
-$loading-button-spinner-color: $button-default-font-color;
+$loading-button-spinner-color: $button-font-color;
 
 .btn {
-  padding: 6px 10px;
-  display: inline-flex;
-  -webkit-box-align: center;
-  align-items: center;
-  justify-content: center;
-  -webkit-box-pack: center;
-  transition: all 0.25s ease-in-out;
-  user-select: none;
-  font-size: $button-font-size;
-  border-radius: $button-border-radius;
-  cursor: pointer;
-  background-color: $button-default-background-color;
-  color: $button-default-font-color;
-  border: $button-border-width solid transparent;
-  background-position: center;
+	padding: 6px 10px;
+	display: inline-flex;
+	-webkit-box-align: center;
+	align-items: center;
+	justify-content: center;
+	-webkit-box-pack: center;
+	transition: all 0.25s ease-in-out;
+	user-select: none;
+	font-size: $button-font-size;
+	border-radius: $button-border-radius;
+	cursor: pointer;
+	background-color: $button-background-color;
+	color: $button-font-color;
+	border: $button-border-width solid transparent;
+	background-position: center;
 
-  &:hover {
-    transform: translateY(-3px);
-    @if ($button-box-shadow-active) {
-      box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
-    }
-  }
+	&:hover {
+		transform: translateY(-3px);
+		@if ($button-box-shadow-active) {
+			box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
+		}
+	}
 
-  &:active {
-    background-color: tint($white, 75%);
-    transform: translateY(0);
-    background-size: 100%;
-    transition: background 0s;
-  }
+	&:active {
+		background-color: tint($white, 75%);
+		transform: translateY(0);
+		background-size: 100%;
+		transition: background 0s;
+	}
 
-  &:disabled {
-    pointer-events: none;
-    opacity: $disabled-button-opacity;
-  }
+	&:disabled {
+		pointer-events: none;
+		opacity: $disabled-button-opacity;
+	}
 
-  &.pill {
-    border-radius: 99999px;
-  }
+	&.pill {
+		border-radius: 99999px;
+	}
 
-  &.square {
-    border-radius: 0;
-  }
+	&.square {
+		border-radius: 0;
+	}
 
-  &.block {
-    display: block;
-    width: 100%;
-  }
+	&.block {
+		display: block;
+		width: 100%;
+	}
 
-  &.xl {
-    padding: $xl-button-padding;
-    font-size: $xl-button-font-size;
-    border-radius: $xl-button-border-radius;
-  }
+	&.xl {
+		padding: $xl-button-padding;
+		font-size: $xl-button-font-size;
+		border-radius: $xl-button-border-radius;
+	}
 
-  &.lg {
-    padding: $lg-button-padding;
-    font-size: $lg-button-font-size;
-    border-radius: $lg-button-border-radius;
-  }
+	&.lg {
+		padding: $lg-button-padding;
+		font-size: $lg-button-font-size;
+		border-radius: $lg-button-border-radius;
+	}
 
-  &.sm {
-    padding: $sm-button-padding;
-    font-size: $sm-button-font-size;
-    border-radius: $sm-button-border-radius;
-  }
+	&.sm {
+		padding: $sm-button-padding;
+		font-size: $sm-button-font-size;
+		border-radius: $sm-button-border-radius;
+	}
 
-  &.mini {
-    padding: $mini-button-padding;
-    font-size: $mini-button-font-size;
-    border-radius: $mini-button-border-radius;
-  }
+	&.mini {
+		padding: $mini-button-padding;
+		font-size: $mini-button-font-size;
+		border-radius: $mini-button-border-radius;
+	}
 
-  &.icon {
-    padding: $icon-button-padding;
-    font-size: $icon-button-font-size;
-  }
+	&.icon {
+		padding: $icon-button-padding;
+		font-size: $icon-button-font-size;
+	}
 
-  &.no-float {
-    transform: none;
+	&.no-float {
+		transform: none;
 
-    &:hover {
-      transform: none;
-    }
-  }
+		&:hover {
+			transform: none;
+		}
+	}
 
-  &.bordered {
-    background-color: transparent;
-    color: $bordered-button-default-font-color;
-    border-color: $bordered-button-default-border-color;
-    transition: border-color 0.25s ease, background-color 0.25s ease,
-      color 0.25s ease;
+	&.bordered {
+		background-color: transparent;
+		color: $bordered-button-font-color;
+		border-color: $bordered-button-border-color;
+		transition: border-color 0.25s ease, background-color 0.25s ease,
+		color 0.25s ease;
 
-    &:hover {
-      transform: none;
-      box-shadow: none !important;
-    }
+		&:hover {
+			transform: none;
+			box-shadow: none !important;
+		}
 
-    &:active {
-      transform: none;
-      box-shadow: none;
-      color: $button-default-font-color;
-      background-color: $button-default-background-color;
-    }
-  }
+		&:active {
+			transform: none;
+			box-shadow: none;
+			color: $button-font-color;
+			background-color: $button-background-color;
+		}
+	}
 
-  &.flat {
-    background-color: $flat-button-default-background-color;
-    color: $flat-button-default-font-color;
-    transition: background 0.5s ease, color 0.6s ease;
+	&.flat {
+		background-color: $flat-button-background-color;
+		color: $flat-button-font-color;
+		transition: background 0.5s ease, color 0.6s ease;
 
-    &:hover {
-      background: tint(
-        $flat-button-default-font-color,
-        percentage(1 - $flat-button-hovered-background-alpha)
-      );
-      transform: none;
-      box-shadow: none;
-    }
+		&:hover {
+			background: tint(
+							$flat-button-font-color,
+							percentage(1 - $flat-button-hovered-background-alpha)
+			);
+			transform: none;
+			box-shadow: none;
+		}
 
-    &:active {
-      color: $button-default-font-color;
-      background: $button-default-background-color;
-      background-size: 100%;
-      transition: background 0.5s ease;
-      transform: none;
-      box-shadow: none;
-    }
-  }
+		&:active {
+			color: $button-font-color;
+			background: $button-background-color;
+			background-size: 100%;
+			transition: background 0.5s ease;
+			transform: none;
+			box-shadow: none;
+		}
+	}
 
-  &.floating {
-    transform: translateY($floating-button-translate-size);
-    box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+	&.floating {
+		transform: translateY($floating-button-translate-size);
+		box-shadow: 0 10px 20px -10px rgba(0, 0, 0, 0.1);
+		transition: transform 0.3s ease-in-out;
 
-    &:hover {
-      transform: translateY($floating-button-translate-size);
-    }
+		&:hover {
+			transform: translateY($floating-button-translate-size);
+		}
 
-    &:active {
-      transform: none;
-    }
-  }
+		&:active {
+			transform: none;
+		}
+	}
 
-  &.link {
-    position: relative;
-    background-color: transparent;
-    color: $link-button-default-font-color;
-    border-color: transparent;
-    transition: background 0.5s ease, color 0.6s ease;
+	&.link {
+		position: relative;
+		background-color: transparent;
+		color: $link-button-font-color;
+		border-color: transparent;
+		transition: background 0.5s ease, color 0.6s ease;
 
-    &:before {
-      content: "";
-      background: tint(
-        $button-default-background-color,
-        percentage(1 - $link-button-background-alpha)
-      );
-      border-color: tint(
-        $button-default-background-color,
-        percentage(1 - $link-button-background-alpha)
-      );
-      position: absolute;
-      bottom: -2px;
-      left: -2px;
-      top: -2px;
-      right: -2px;
-      border-radius: inherit;
-      pointer-events: none;
-      transition: all 0.25s ease;
-      z-index: -1;
-      transform: scale(0.5);
-      opacity: 0;
-      box-sizing: border-box;
-    }
+		&:before {
+			content: "";
+			background: tint(
+							$button-background-color,
+							percentage(1 - $link-button-background-alpha)
+			);
+			border-color: tint(
+							$button-background-color,
+							percentage(1 - $link-button-background-alpha)
+			);
+			position: absolute;
+			bottom: -2px;
+			left: -2px;
+			top: -2px;
+			right: -2px;
+			border-radius: inherit;
+			pointer-events: none;
+			transition: all 0.25s ease;
+			z-index: -1;
+			transform: scale(0.5);
+			opacity: 0;
+			box-sizing: border-box;
+		}
 
-    &:hover {
-      transform: translateY(0);
-      box-shadow: none;
-      color: $link-button-default-font-color;
+		&:hover {
+			transform: translateY(0);
+			box-shadow: none;
+			color: $link-button-font-color;
 
-      &:before {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
+			&:before {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
 
-    &:active {
-      transform: none;
-      box-shadow: none;
-      color: $link-button-default-font-color;
-      background: $link-button-default-background-color;
-      background-size: 100%;
-      transition: background 0s;
-    }
-  }
+		&:active {
+			transform: none;
+			box-shadow: none;
+			color: $link-button-font-color;
+			background: $link-button-background-color;
+			background-size: 100%;
+			transition: background 0s;
+		}
+	}
 
-  &.loading {
-    position: relative;
-    color: transparent !important;
-    pointer-events: none;
+	&.loading {
+		position: relative;
+		color: transparent !important;
+		pointer-events: none;
 
-    &::after {
-      content: "";
-      position: absolute;
-      width: $loading-button-spinner-diameter;
-      height: $loading-button-spinner-diameter;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      margin: auto;
-      border: $loading-button-spinner-width solid transparent;
-      border-top-color: $loading-button-spinner-color;
-      border-radius: 50%;
-      animation: loading-spinner 1s ease infinite;
-    }
-  }
+		&::after {
+			@include make-loading-spinner($loading-button-spinner-diameter,
+					$loading-button-spinner-width,
+					$loading-button-spinner-color
+			);
+		}
+	}
 
-  @each $color, $value in $colors {
-    &.#{$color} {
-      background-color: $value;
-      color: get-contrast($value);
+	@each $color, $value in $colors {
+		&.#{$color} {
+			background-color: $value;
+			color: get-contrast($value);
 
-      &:hover,
-      &:active {
-        @if ($button-box-shadow-active) {
-          box-shadow: 0 10px 20px -10px $value;
-        }
-      }
+			&:hover,
+			&:active {
+				@if ($button-box-shadow-active) {
+					box-shadow: 0 10px 20px -10px $value;
+				}
+			}
 
-      &.flat {
-        background-color: tint(
-          $value,
-          percentage(1 - $flat-button-background-alpha)
-        );
-        color: $value;
-        transition: background 0.5s ease, color 0.6s ease;
+			&.flat {
+				background-color: tint(
+								$value,
+								percentage(1 - $flat-button-background-alpha)
+				);
+				color: $value;
+				transition: background 0.5s ease, color 0.6s ease;
 
-        &:hover {
-          background: tint(
-            $flat-button-default-font-color,
-            percentage(1 - $flat-button-hovered-background-alpha)
-          );
-          transform: none;
-          box-shadow: none;
-        }
+				&:hover {
+					background: tint(
+									$flat-button-font-color,
+									percentage(1 - $flat-button-hovered-background-alpha)
+					);
+					transform: none;
+					box-shadow: none;
+				}
 
-        &:active {
-          color: get-contrast($value);
-          background: $value;
-          background-size: 100%;
-          transition: background 0s;
-          transform: none;
-          box-shadow: none;
-        }
-      }
+				&:active {
+					color: get-contrast($value);
+					background: $value;
+					background-size: 100%;
+					transition: background 0s;
+					transform: none;
+					box-shadow: none;
+				}
+			}
 
-      &.bordered {
-        background-color: transparent;
-        color: $value;
-        border-color: $value;
+			&.bordered {
+				background-color: transparent;
+				color: $value;
+				border-color: $value;
 
-        &:hover {
-          border-color: tint(
-            $value,
-            percentage(1- $bordered-button-hovered-border-color-alpha)
-          );
-        }
+				&:hover {
+					border-color: tint(
+									$value,
+									percentage(1- $bordered-button-hovered-border-color-alpha)
+					);
+				}
 
-        &:active {
-          color: get-contrast($value);
-          background-color: $value;
-        }
-      }
+				&:active {
+					color: get-contrast($value);
+					background-color: $value;
+				}
+			}
 
-      &.link {
-        background-color: transparent;
-        color: $value;
+			&.link {
+				background-color: transparent;
+				color: $value;
 
-        &:before {
-          background: tint(
-            $value,
-            percentage(1 - $link-button-background-alpha)
-          );
-          border-color: tint(
-            $value,
-            percentage(1 - $link-button-background-alpha)
-          );
-        }
+				&:before {
+					background: tint(
+									$value,
+									percentage(1 - $link-button-background-alpha)
+					);
+					border-color: tint(
+									$value,
+									percentage(1 - $link-button-background-alpha)
+					);
+				}
 
-        &:hover {
-          box-shadow: none;
-        }
+				&:hover {
+					box-shadow: none;
+				}
 
-        &:active {
-          transform: none;
-          color: get-contrast($value);
-          background: $value;
-        }
-      }
+				&:active {
+					transform: none;
+					color: get-contrast($value);
+					background: $value;
+				}
+			}
 
-      &.floating {
-        box-shadow: 0 10px 20px -10px $value;
-      }
+			&.floating {
+				box-shadow: 0 10px 20px -10px $value;
+			}
 
-      &.loading {
-        &::after {
-          border-top-color: get-contrast($value);
-        }
-      }
-    }
-  }
+			&.loading {
+				&::after {
+					border-top-color: get-contrast($value);
+				}
+			}
+		}
+	}
 }
 
 .btn-group {
-  display: flex;
+	display: flex;
 
-  .btn:first-child {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-  }
+	.btn:first-child {
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
 
-  .btn:not(:first-child, :last-child) {
-    border-radius: 0;
-  }
+	.btn:not(:first-child, :last-child) {
+		border-radius: 0;
+	}
 
-  .btn:last-child {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-  }
+	.btn:last-child {
+		border-top-left-radius: 0;
+		border-bottom-left-radius: 0;
+	}
 }

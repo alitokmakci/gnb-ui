@@ -36,7 +36,7 @@ Components:
 - [ ] Alert
 - [x] Avatar
 - [x] Sidebar
-- [ ] Modal
+- [x] Modal
 - [x] Dropdown
 - [ ] Pagination
 - [x] Spinner
@@ -46,6 +46,7 @@ Components:
 
 Layout:
 
+- [ ] App Layout
 - [x] Container
 - [ ] Hero
 - [x] Section
@@ -61,11 +62,18 @@ Utilities:
 - [ ] Headings
 - [ ] Typographies
 - [ ] Alignments
+- [ ] Flexbox
+- [ ] Borders
+- [ ] Opacity
+- [ ] Overflow
+- [ ] Visibility
+- [ ] Interactions
 
 Components and utilities must be redesigned for responsive design:
 
 - [ ] Navbar
 - [ ] Sidebar
+- [ ] App Layout
 - [x] Container
 - [ ] Hero
 - [x] Section
@@ -77,7 +85,13 @@ Components and utilities must be redesigned for responsive design:
 - [ ] Typography
 - [ ] Backgrounds
 - [ ] Alignments
+- [ ] Flexbox
+- [ ] Borders
+- [ ] Opacity
+- [ ] Overflow
+- [ ] Visibility
+- [ ] Interactions
 
 ## ⚠️ ALERT!!
 
-This project is still in **progress**. Do not forget to check the status of the project in the future.
+This project is still in **progress** and **not stable**. Do not forget to check the status of the project in the future.
