@@ -35,7 +35,7 @@ Components:
 - [ ] Tabs
 - [ ] Alert
 - [x] Avatar
-- [ ] Sidebar
+- [x] Sidebar
 - [ ] Modal
 - [x] Dropdown
 - [ ] Pagination
