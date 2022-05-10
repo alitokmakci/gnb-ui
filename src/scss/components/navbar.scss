@@ -32,7 +32,7 @@ $navbar-z-index: 9000;
       color: get-contrast($value);
 
       &.shadow {
-        box-shadow: 0 5px 20px 0 rgba($value, 0.25);
+        box-shadow: 0 5px 50px 0 rgba($value, 0.25);
       }
 
       .navbar-item.active::after {

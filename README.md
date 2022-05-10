@@ -46,7 +46,6 @@ Components:
 
 Layout:
 
-- [ ] App Layout
 - [x] Container
 - [x] Hero
 - [x] Section
@@ -73,7 +72,6 @@ Components and utilities must be redesigned for responsive design:
 
 - [ ] Navbar
 - [ ] Sidebar
-- [ ] App Layout
 - [x] Container
 - [ ] Hero
 - [x] Section
