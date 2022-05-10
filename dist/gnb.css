@@ -87,6 +87,20 @@ ul {
     width: 0%;
   }
 }
+@keyframes rebound {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.05);
+  }
+  80% {
+    transform: scale(0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .p-0 {
   padding: 0px !important;
 }
@@ -3956,6 +3970,10 @@ ul {
   height: 100vh !important;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .btn {
   padding: 6px 10px;
   display: inline-flex;
@@ -5274,7 +5292,7 @@ ul {
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding: 7px 13px 7px 10px;
-  width: 200px;
+  min-width: 200px;
   height: 36px;
 }
 .input::placeholder {
@@ -8096,6 +8114,308 @@ ul {
   left: 20px;
   color: inherit;
   z-index: 200001;
+}
+
+.modal {
+  background: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99000;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  display: none;
+}
+.modal.open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.modal.loading .modal-content {
+  position: relative;
+}
+.modal.loading .modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: inherit;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+.modal.loading .modal-content::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid transparent;
+  border-top-color: #2c3e50;
+  border-radius: 50%;
+  animation: loading-spinner 1s ease infinite;
+  z-index: 2;
+}
+.modal.scrollable .modal-content {
+  width: auto !important;
+  min-width: auto !important;
+}
+.modal.scrollable .modal-body {
+  max-height: calc(80vh - 200px);
+  overflow: auto;
+}
+.modal.scrollable .modal-body::-webkit-scrollbar-thumb {
+  background: #e6e9ea;
+}
+.modal.full-screen {
+  padding: 0;
+  overflow: hidden;
+}
+.modal.full-screen .modal-content {
+  width: calc(100% - 30px) !important;
+  height: calc(100% - 30px) !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+.modal.no-padding .modal-content .modal-body {
+  padding: 0;
+  margin-bottom: 0 !important;
+}
+.modal.no-padding .modal-content .modal-body * {
+  border-radius: inherit;
+}
+.modal.blurred {
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
+  backdrop-filter: saturate(180%) blur(15px);
+}
+.modal.square .modal-content {
+  border-radius: 0;
+}
+.modal.square .modal-content .close {
+  border-radius: 0;
+}
+.modal.primary .modal-content {
+  background-color: #1a5cff;
+  color: white;
+}
+.modal.primary .modal-content .close::before,
+.modal.primary .modal-content .close::after {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.modal.primary.flat .modal-content {
+  background-color: #dde7ff;
+  color: #1a5cff;
+}
+.modal.primary.flat .modal-content .close::before,
+.modal.primary.flat .modal-content .close::after {
+  background-color: rgba(26, 92, 255, 0.85);
+}
+.modal.secondary .modal-content {
+  background-color: #7d33ff;
+  color: white;
+}
+.modal.secondary .modal-content .close::before,
+.modal.secondary .modal-content .close::after {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.modal.secondary.flat .modal-content {
+  background-color: #ece0ff;
+  color: #7d33ff;
+}
+.modal.secondary.flat .modal-content .close::before,
+.modal.secondary.flat .modal-content .close::after {
+  background-color: rgba(125, 51, 255, 0.85);
+}
+.modal.success .modal-content {
+  background-color: #46c93a;
+  color: white;
+}
+.modal.success .modal-content .close::before,
+.modal.success .modal-content .close::after {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.modal.success.flat .modal-content {
+  background-color: #e3f7e1;
+  color: #46c93a;
+}
+.modal.success.flat .modal-content .close::before,
+.modal.success.flat .modal-content .close::after {
+  background-color: rgba(70, 201, 58, 0.85);
+}
+.modal.info .modal-content {
+  background-color: #00aff0;
+  color: white;
+}
+.modal.info .modal-content .close::before,
+.modal.info .modal-content .close::after {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.modal.info.flat .modal-content {
+  background-color: #d9f3fd;
+  color: #00aff0;
+}
+.modal.info.flat .modal-content .close::before,
+.modal.info.flat .modal-content .close::after {
+  background-color: rgba(0, 175, 240, 0.85);
+}
+.modal.warning .modal-content {
+  background-color: #ffba00;
+  color: white;
+}
+.modal.warning .modal-content .close::before,
+.modal.warning .modal-content .close::after {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.modal.warning.flat .modal-content {
+  background-color: #fff5d9;
+  color: #ffba00;
+}
+.modal.warning.flat .modal-content .close::before,
+.modal.warning.flat .modal-content .close::after {
+  background-color: rgba(255, 186, 0, 0.85);
+}
+.modal.danger .modal-content {
+  background-color: #ff4757;
+  color: white;
+}
+.modal.danger .modal-content .close::before,
+.modal.danger .modal-content .close::after {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.modal.danger.flat .modal-content {
+  background-color: #ffe3e6;
+  color: #ff4757;
+}
+.modal.danger.flat .modal-content .close::before,
+.modal.danger.flat .modal-content .close::after {
+  background-color: rgba(255, 71, 87, 0.85);
+}
+.modal.dark .modal-content {
+  background-color: black;
+  color: white;
+}
+.modal.dark .modal-content .close::before,
+.modal.dark .modal-content .close::after {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.modal.dark.flat .modal-content {
+  background-color: #d9d9d9;
+  color: black;
+}
+.modal.dark.flat .modal-content .close::before,
+.modal.dark.flat .modal-content .close::after {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+.modal.prevent-close:active .modal-content {
+  -webkit-animation: rebound 0.3s !important;
+  animation: rebound 0.3s !important;
+}
+.modal .modal-content {
+  background: white;
+  color: #2c3e50;
+  position: relative;
+  min-width: 400px;
+  border-radius: 20px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  -webkit-box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: auto;
+}
+@media (max-width: 767px) {
+  .modal .modal-content {
+    min-width: calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
+    margin: auto 10px;
+  }
+}
+.modal .modal-content .close {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background: inherit;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 200;
+  border: 0;
+  width: 34px;
+  height: 34px;
+  cursor: pointer;
+}
+.modal .modal-content .close::after {
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-color: rgba(44, 62, 80, 0.65);
+  transform: rotate(45deg);
+  position: absolute;
+}
+.modal .modal-content .close::before {
+  content: "";
+  width: 14px;
+  height: 2px;
+  background-color: rgba(44, 62, 80, 0.65);
+  transform: rotate(-45deg);
+  position: absolute;
+}
+.modal .modal-content .close:hover {
+  -webkit-box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.05);
+  -webkit-transform: translate(-2px, 2px);
+  transform: translate(-2px, 2px);
+}
+.modal .modal-content .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding: 10px 16px;
+}
+.modal .modal-content .modal-body {
+  padding: 10px 16px;
+  width: 100%;
+  position: relative;
+  border-radius: inherit;
+  margin-bottom: 20px;
+}
+.modal .modal-content .modal-footer {
+  padding: 0 16px 10px;
 }
 
 .container {

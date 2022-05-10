@@ -1,6 +1,6 @@
 $input-background-color: $gray-2;
 $placeholder-opacity: 0.4;
-$input-width: 200px;
+$input-min-width: 200px;
 $input-border-radius: 12px;
 
 .input-icon {
@@ -31,7 +31,7 @@ $input-border-radius: 12px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   padding: 7px 13px 7px 10px;
-  width: $input-width;
+  min-width: $input-min-width;
   height: 36px;
 
   &::placeholder {
