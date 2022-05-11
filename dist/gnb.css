@@ -117,6 +117,83 @@ ul {
     opacity: 0;
   }
 }
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+@media (min-width: 576px) {
+  .sm-float-left {
+    float: left !important;
+  }
+
+  .sm-float-right {
+    float: right !important;
+  }
+
+  .sm-float-none {
+    float: none !important;
+  }
+}
+@media (min-width: 768px) {
+  .md-float-left {
+    float: left !important;
+  }
+
+  .md-float-right {
+    float: right !important;
+  }
+
+  .md-float-none {
+    float: none !important;
+  }
+}
+@media (min-width: 992px) {
+  .lg-float-left {
+    float: left !important;
+  }
+
+  .lg-float-right {
+    float: right !important;
+  }
+
+  .lg-float-none {
+    float: none !important;
+  }
+}
+@media (min-width: 1200px) {
+  .xl-float-left {
+    float: left !important;
+  }
+
+  .xl-float-right {
+    float: right !important;
+  }
+
+  .xl-float-none {
+    float: none !important;
+  }
+}
+@media (min-width: 1600px) {
+  .xxl-float-left {
+    float: left !important;
+  }
+
+  .xxl-float-right {
+    float: right !important;
+  }
+
+  .xxl-float-none {
+    float: none !important;
+  }
+}
 .p-0 {
   padding: 0px !important;
 }

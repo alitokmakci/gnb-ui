@@ -1,0 +1,27 @@
+.float-left {
+  float: left !important;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.float-none {
+  float: none !important;
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: $size) {
+    .#{$screen}-float-left {
+      float: left !important;
+    }
+
+    .#{$screen}-float-right {
+      float: right !important;
+    }
+
+    .#{$screen}-float-none {
+      float: none !important;
+    }
+  }
+}
