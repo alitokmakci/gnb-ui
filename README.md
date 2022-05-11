@@ -65,7 +65,7 @@ Utilities:
 - [x] Alignments
 - [x] Flexbox
 - [x] Borders
-- [ ] Opacity
+- [x] Opacity
 - [ ] Overflow
 - [ ] Visibility
 - [x] Interactions
@@ -86,7 +86,6 @@ Components and utilities must be redesigned for responsive design:
 - [x] Backgrounds
 - [x] Alignments
 - [x] Flexbox
-- [ ] Opacity
 - [ ] Overflow
 - [ ] Visibility
 
