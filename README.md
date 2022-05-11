@@ -33,7 +33,7 @@ Components:
 
 - [x] Card
 - [x] Navbar
-- [ ] Tabs
+- [ ] Tabs - v1
 - [x] Alert
 - [x] Avatar
 - [x] Sidebar
@@ -61,7 +61,7 @@ Utilities:
 - [x] Displays
 - [x] Spacing
 - [x] Sizing
-- [ ] Headings
+- [x] Headings
 - [x] Typography
 - [x] Shadows
 - [x] Alignments
