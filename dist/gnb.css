@@ -3432,8 +3432,52 @@ ul {
 }
 
 .bg-gray-3 {
-  background-color: #f9fcfd !important;
+  background-color: #6c757d !important;
   color: #2c3e50 !important;
+}
+
+.text-primary {
+  color: #1a5cff !important;
+}
+
+.text-secondary {
+  color: #7d33ff !important;
+}
+
+.text-success {
+  color: #46c93a !important;
+}
+
+.text-info {
+  color: #00aff0 !important;
+}
+
+.text-warning {
+  color: #ffba00 !important;
+}
+
+.text-danger {
+  color: #ff4757 !important;
+}
+
+.text-dark {
+  color: black !important;
+}
+
+.text-white {
+  color: white !important;
+}
+
+.text-gray {
+  color: #e6e9ea !important;
+}
+
+.text-gray-2 {
+  color: #f4f7f8 !important;
+}
+
+.text-gray-3 {
+  color: #6c757d !important;
 }
 
 .flex {
@@ -4293,7 +4337,7 @@ ul {
 }
 
 .border-gray-3 {
-  border-color: #f9fcfd !important;
+  border-color: #6c757d !important;
 }
 
 .btn {
@@ -5045,7 +5089,7 @@ ul {
 }
 .progress .progressbar {
   height: 100%;
-  background-color: #f9fcfd;
+  background-color: #f4f7f8;
   text-align: center;
   display: flex;
   align-items: center;

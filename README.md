@@ -56,8 +56,10 @@ Utilities:
 
 - [x] Sizing
 - [x] Backgrounds
+- [x] Colors
 - [x] Displays
 - [x] Spacing
+- [ ] Sizing
 - [ ] Headings
 - [ ] Typographies
 - [ ] Alignments
@@ -73,7 +75,7 @@ Components and utilities must be redesigned for responsive design:
 - [ ] Navbar
 - [ ] Sidebar
 - [x] Container
-- [ ] Hero
+- [x] Hero
 - [x] Section
 - [x] Footer
 - [x] Grid Design
