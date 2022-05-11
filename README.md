@@ -66,6 +66,7 @@ Utilities:
 - [x] Flexbox
 - [x] Borders
 - [x] Opacity
+- [x] Positioning
 - [x] Overflow
 - [ ] Visibility
 - [x] Interactions
