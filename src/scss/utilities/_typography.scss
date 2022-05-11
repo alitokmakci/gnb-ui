@@ -2,8 +2,10 @@ $font-weights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
 $font-sizes: (
   1: 38px,
   2: 30px,
-  3: 24px 4: 20px,
-  5: 16px 6: 12px,
+  3: 24px,
+  4: 20px,
+  5: 16px,
+  6: 12px,
 );
 
 .text-center {
@@ -16,6 +18,12 @@ $font-sizes: (
 
 .text-right {
   text-align: right !important;
+}
+
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .text-wrap {
@@ -79,14 +87,49 @@ $font-sizes: (
   line-height: 2 !important;
 }
 
+.link {
+  text-decoration: underline !important;
+  color: $font-color;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: rgba($font-color, 0.75);
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      color: $value;
+
+      &:hover {
+        color: rgba($value, 0.75);
+      }
+    }
+  }
+}
+
+.blockquote {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.blockquote-footer {
+  margin-bottom: 1rem;
+  font-size: 0.875em;
+  color: $gray-3;
+
+  &::before {
+    content: "— ";
+  }
+}
+
 @each $weight in $font-weights {
   .fw-#{$weight} {
     font-weight: $weight !important;
   }
 }
 
-@each $size in $font-sizes {
-  .fs-#{$size} {
+@each $name, $size in $font-sizes {
+  .fs-#{$name} {
     font-size: $size !important;
   }
 }
