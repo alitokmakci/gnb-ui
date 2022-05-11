@@ -1,3 +1,133 @@
+$font-weights: (100, 200, 300, 400, 500, 600, 700, 800, 900);
+$font-sizes: (
+  1: 38px,
+  2: 30px,
+  3: 24px 4: 20px,
+  5: 16px 6: 12px,
+);
+
 .text-center {
-  text-align: center;
+  text-align: center !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+.text-italic {
+  font-style: italic !important;
+}
+
+.text-normal {
+  font-style: normal !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
+}
+
+.text-linethrough {
+  text-decoration: line-through !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.line-height-1 {
+  line-height: 1 !important;
+}
+
+.line-height-sm {
+  line-height: 1.25 !important;
+}
+
+.line-height-base {
+  line-height: 1.5 !important;
+}
+
+.line-height-lg {
+  line-height: 2 !important;
+}
+
+@each $weight in $font-weights {
+  .fw-#{$weight} {
+    font-weight: $weight !important;
+  }
+}
+
+@each $size in $font-sizes {
+  .fs-#{$size} {
+    font-size: $size !important;
+  }
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: $size) {
+    .#{$screen}-text-center {
+      text-align: center !important;
+    }
+
+    .#{$screen}-text-left {
+      text-align: left !important;
+    }
+
+    .#{$screen}-text-right {
+      text-align: right !important;
+    }
+
+    .#{$screen}-text-wrap {
+      white-space: normal !important;
+    }
+
+    .#{$screen}-text-nowrap {
+      white-space: nowrap !important;
+    }
+
+    .#{$screen}-text-break {
+      word-wrap: break-word !important;
+      word-break: break-word !important;
+    }
+
+    .#{$screen}-text-lowercase {
+      text-transform: lowercase !important;
+    }
+
+    .#{$screen}-text-uppercase {
+      text-transform: uppercase !important;
+    }
+
+    .#{$screen}-text-capitalize {
+      text-transform: capitalize !important;
+    }
+  }
 }
