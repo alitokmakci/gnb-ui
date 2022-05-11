@@ -3,6 +3,11 @@
     background-color: $value !important;
     color: get-contrast($value) !important;
   }
+
+  .bg-#{$color}-flat {
+    background-color: tint($value, 85%) !important;
+    color: $value !important;
+  }
 }
 
 .bg-white {

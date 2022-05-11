@@ -1,0 +1,9 @@
+$footer-background: $gray-2;
+$footer-padding: 3rem 1.5rem;
+$footer-text-align: center;
+
+.footer {
+  background-color: $footer-background;
+  padding: $footer-padding;
+  text-align: $footer-text-align;
+}

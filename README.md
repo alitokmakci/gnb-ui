@@ -49,7 +49,7 @@ Layout:
 - [x] Container
 - [x] Hero
 - [x] Section
-- [ ] Footer
+- [x] Footer
 - [x] Grid Design
 
 Utilities:
@@ -75,13 +75,13 @@ Components and utilities must be redesigned for responsive design:
 - [x] Container
 - [ ] Hero
 - [x] Section
-- [ ] Footer
+- [x] Footer
 - [x] Grid Design
 - [ ] Sizing
 - [x] Display
 - [x] Spacing
 - [ ] Typography
-- [ ] Backgrounds
+- [x] Backgrounds
 - [ ] Alignments
 - [ ] Flexbox
 - [ ] Borders
