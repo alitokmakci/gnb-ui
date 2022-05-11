@@ -63,7 +63,7 @@ Utilities:
 - [ ] Headings
 - [ ] Typographies
 - [ ] Alignments
-- [ ] Flexbox
+- [x] Flexbox
 - [x] Borders
 - [ ] Opacity
 - [ ] Overflow
@@ -85,7 +85,7 @@ Components and utilities must be redesigned for responsive design:
 - [ ] Typography
 - [x] Backgrounds
 - [ ] Alignments
-- [ ] Flexbox
+- [x] Flexbox
 - [ ] Opacity
 - [ ] Overflow
 - [ ] Visibility

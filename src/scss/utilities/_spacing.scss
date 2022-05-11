@@ -11,8 +11,20 @@ $spacing-sides: (top, bottom, left, right);
   }
 }
 
-@each $space in $spaceamounts {
-  @each $side in $spacing-sides {
+@each $side in $spacing-sides {
+  @if $side == top or $side == bottom {
+    .m#{str-slice($side, 0 ,1)}-auto,
+    .my-auto {
+      margin-#{$side}: auto !important;
+    }
+  } @else {
+    .m#{str-slice($side, 0 ,1)}-auto,
+    .mx-auto {
+      margin-#{$side}: auto !important;
+    }
+  }
+
+  @each $space in $spaceamounts {
     @if $side == top or $side == bottom {
       .m#{str-slice($side, 0 ,1)}-#{$space},
       .my-#{$space} {
