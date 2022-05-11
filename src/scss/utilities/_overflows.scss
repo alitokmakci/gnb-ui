@@ -1,0 +1,35 @@
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: $size) {
+    .#{$screen}-overflow-hidden {
+      overflow: hidden !important;
+    }
+
+    .#{$screen}-overflow-scroll {
+      overflow: scroll !important;
+    }
+
+    .#{$screen}-overflow-auto {
+      overflow: auto !important;
+    }
+
+    .#{$screen}-overflow-visible {
+      overflow: visible !important;
+    }
+  }
+}

@@ -5231,6 +5231,107 @@ ul {
   border-color: #6c757d !important;
 }
 
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+@media (min-width: 576px) {
+  .sm-overflow-hidden {
+    overflow: hidden !important;
+  }
+
+  .sm-overflow-scroll {
+    overflow: scroll !important;
+  }
+
+  .sm-overflow-auto {
+    overflow: auto !important;
+  }
+
+  .sm-overflow-visible {
+    overflow: visible !important;
+  }
+}
+@media (min-width: 768px) {
+  .md-overflow-hidden {
+    overflow: hidden !important;
+  }
+
+  .md-overflow-scroll {
+    overflow: scroll !important;
+  }
+
+  .md-overflow-auto {
+    overflow: auto !important;
+  }
+
+  .md-overflow-visible {
+    overflow: visible !important;
+  }
+}
+@media (min-width: 992px) {
+  .lg-overflow-hidden {
+    overflow: hidden !important;
+  }
+
+  .lg-overflow-scroll {
+    overflow: scroll !important;
+  }
+
+  .lg-overflow-auto {
+    overflow: auto !important;
+  }
+
+  .lg-overflow-visible {
+    overflow: visible !important;
+  }
+}
+@media (min-width: 1200px) {
+  .xl-overflow-hidden {
+    overflow: hidden !important;
+  }
+
+  .xl-overflow-scroll {
+    overflow: scroll !important;
+  }
+
+  .xl-overflow-auto {
+    overflow: auto !important;
+  }
+
+  .xl-overflow-visible {
+    overflow: visible !important;
+  }
+}
+@media (min-width: 1600px) {
+  .xxl-overflow-hidden {
+    overflow: hidden !important;
+  }
+
+  .xxl-overflow-scroll {
+    overflow: scroll !important;
+  }
+
+  .xxl-overflow-auto {
+    overflow: auto !important;
+  }
+
+  .xxl-overflow-visible {
+    overflow: visible !important;
+  }
+}
 .btn {
   padding: 6px 10px;
   display: inline-flex;
