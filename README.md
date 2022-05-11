@@ -59,7 +59,7 @@ Utilities:
 - [x] Colors
 - [x] Displays
 - [x] Spacing
-- [ ] Sizing
+- [x] Sizing
 - [ ] Headings
 - [ ] Typographies
 - [x] Shadows
@@ -81,7 +81,6 @@ Components and utilities must be redesigned for responsive design:
 - [x] Section
 - [x] Footer
 - [x] Grid Design
-- [ ] Sizing
 - [x] Display
 - [x] Spacing
 - [ ] Typography
