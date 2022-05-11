@@ -71,14 +71,14 @@ $grid-gutter-y: $gutter-y;
   @each $size in $column-sizes {
     @if ($size == 1) {
       &.has-#{$size}-column {
-        .g-column {
+        .column {
           flex: 0 0 auto;
           width: percentage(calc(1 / $size));
         }
       }
     } @else {
       &.has-#{$size}-columns {
-        .g-column {
+        .column {
           flex: 0 0 auto;
           width: percentage(calc(1 / $size));
         }

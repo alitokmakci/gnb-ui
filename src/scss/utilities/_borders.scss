@@ -1,0 +1,83 @@
+$border-sides: (top, bottom, left, right);
+$border-widths: (1, 2, 3, 4, 5);
+$border-radius-sizes: (0, 1, 2, 3, 4, 5);
+
+.border {
+  border: 1px solid $gray-1;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.border-radius-full {
+  border-radius: 50% !important;
+}
+
+.border-radius-pill {
+  border-radius: 99999px !important;
+}
+
+@each $size in $border-radius-sizes {
+  .border-radius-#{$size} {
+    border-radius: calc($size * 4px) !important;
+  }
+
+  .border-radius-top-#{$size} {
+    border-top-left-radius: calc($size * 4px) !important;
+    border-top-right-radius: calc($size * 4px) !important;
+  }
+
+  .border-radius-bottom-#{$size} {
+    border-bottom-left-radius: calc($size * 4px) !important;
+    border-bottom-right-radius: calc($size * 4px) !important;
+  }
+
+  .border-radius-left-#{$size} {
+    border-bottom-left-radius: calc($size * 4px) !important;
+    border-top-left-radius: calc($size * 4px) !important;
+  }
+
+  .border-radius-right-#{$size} {
+    border-bottom-right-radius: calc($size * 4px) !important;
+    border-top-right-radius: calc($size * 4px) !important;
+  }
+}
+
+@each $width in $border-widths {
+  .border-#{$width} {
+    border-width: calc($width * 1px) !important;
+  }
+}
+
+@each $side in $border-sides {
+  .border-#{$side} {
+    border-#{$side}: 1px solid $gray-1;
+  }
+
+  .no-border-#{$side} {
+    border-#{$side}: 0 !important;
+  }
+}
+
+@each $color, $value in $colors {
+  .border-#{$color} {
+    border-color: $value !important;
+  }
+}
+
+.border-white {
+  border-color: $white !important;
+}
+
+.border-gray {
+  border-color: $gray-1 !important;
+}
+
+.border-gray-2 {
+  border-color: $gray-2 !important;
+}
+
+.border-gray-3 {
+  border-color: $gray-3 !important;
+}

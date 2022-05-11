@@ -4040,6 +4040,262 @@ ul {
   text-align: center;
 }
 
+.border {
+  border: 1px solid #e6e9ea;
+}
+
+.no-border {
+  border: 0 !important;
+}
+
+.border-radius-full {
+  border-radius: 50% !important;
+}
+
+.border-radius-pill {
+  border-radius: 99999px !important;
+}
+
+.border-radius-0 {
+  border-radius: 0px !important;
+}
+
+.border-radius-top-0 {
+  border-top-left-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.border-radius-bottom-0 {
+  border-bottom-left-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.border-radius-left-0 {
+  border-bottom-left-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+}
+
+.border-radius-right-0 {
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}
+
+.border-radius-1 {
+  border-radius: 4px !important;
+}
+
+.border-radius-top-1 {
+  border-top-left-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+}
+
+.border-radius-bottom-1 {
+  border-bottom-left-radius: 4px !important;
+  border-bottom-right-radius: 4px !important;
+}
+
+.border-radius-left-1 {
+  border-bottom-left-radius: 4px !important;
+  border-top-left-radius: 4px !important;
+}
+
+.border-radius-right-1 {
+  border-bottom-right-radius: 4px !important;
+  border-top-right-radius: 4px !important;
+}
+
+.border-radius-2 {
+  border-radius: 8px !important;
+}
+
+.border-radius-top-2 {
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+.border-radius-bottom-2 {
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+.border-radius-left-2 {
+  border-bottom-left-radius: 8px !important;
+  border-top-left-radius: 8px !important;
+}
+
+.border-radius-right-2 {
+  border-bottom-right-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+.border-radius-3 {
+  border-radius: 12px !important;
+}
+
+.border-radius-top-3 {
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+.border-radius-bottom-3 {
+  border-bottom-left-radius: 12px !important;
+  border-bottom-right-radius: 12px !important;
+}
+
+.border-radius-left-3 {
+  border-bottom-left-radius: 12px !important;
+  border-top-left-radius: 12px !important;
+}
+
+.border-radius-right-3 {
+  border-bottom-right-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+}
+
+.border-radius-4 {
+  border-radius: 16px !important;
+}
+
+.border-radius-top-4 {
+  border-top-left-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+}
+
+.border-radius-bottom-4 {
+  border-bottom-left-radius: 16px !important;
+  border-bottom-right-radius: 16px !important;
+}
+
+.border-radius-left-4 {
+  border-bottom-left-radius: 16px !important;
+  border-top-left-radius: 16px !important;
+}
+
+.border-radius-right-4 {
+  border-bottom-right-radius: 16px !important;
+  border-top-right-radius: 16px !important;
+}
+
+.border-radius-5 {
+  border-radius: 20px !important;
+}
+
+.border-radius-top-5 {
+  border-top-left-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}
+
+.border-radius-bottom-5 {
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+}
+
+.border-radius-left-5 {
+  border-bottom-left-radius: 20px !important;
+  border-top-left-radius: 20px !important;
+}
+
+.border-radius-right-5 {
+  border-bottom-right-radius: 20px !important;
+  border-top-right-radius: 20px !important;
+}
+
+.border-1 {
+  border-width: 1px !important;
+}
+
+.border-2 {
+  border-width: 2px !important;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.border-4 {
+  border-width: 4px !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+.border-top {
+  border-top: 1px solid #e6e9ea;
+}
+
+.no-border-top {
+  border-top: 0 !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #e6e9ea;
+}
+
+.no-border-bottom {
+  border-bottom: 0 !important;
+}
+
+.border-left {
+  border-left: 1px solid #e6e9ea;
+}
+
+.no-border-left {
+  border-left: 0 !important;
+}
+
+.border-right {
+  border-right: 1px solid #e6e9ea;
+}
+
+.no-border-right {
+  border-right: 0 !important;
+}
+
+.border-primary {
+  border-color: #1a5cff !important;
+}
+
+.border-secondary {
+  border-color: #7d33ff !important;
+}
+
+.border-success {
+  border-color: #46c93a !important;
+}
+
+.border-info {
+  border-color: #00aff0 !important;
+}
+
+.border-warning {
+  border-color: #ffba00 !important;
+}
+
+.border-danger {
+  border-color: #ff4757 !important;
+}
+
+.border-dark {
+  border-color: black !important;
+}
+
+.border-white {
+  border-color: white !important;
+}
+
+.border-gray {
+  border-color: #e6e9ea !important;
+}
+
+.border-gray-2 {
+  border-color: #f4f7f8 !important;
+}
+
+.border-gray-3 {
+  border-color: #f9fcfd !important;
+}
+
 .btn {
   padding: 6px 10px;
   display: inline-flex;
@@ -10108,51 +10364,51 @@ ul {
 .row.no-gap .column {
   padding: 0;
 }
-.row.has-1-column .g-column {
+.row.has-1-column .column {
   flex: 0 0 auto;
   width: 100%;
 }
-.row.has-2-columns .g-column {
+.row.has-2-columns .column {
   flex: 0 0 auto;
   width: 50%;
 }
-.row.has-3-columns .g-column {
+.row.has-3-columns .column {
   flex: 0 0 auto;
   width: 33.3333333333%;
 }
-.row.has-4-columns .g-column {
+.row.has-4-columns .column {
   flex: 0 0 auto;
   width: 25%;
 }
-.row.has-5-columns .g-column {
+.row.has-5-columns .column {
   flex: 0 0 auto;
   width: 20%;
 }
-.row.has-6-columns .g-column {
+.row.has-6-columns .column {
   flex: 0 0 auto;
   width: 16.6666666667%;
 }
-.row.has-7-columns .g-column {
+.row.has-7-columns .column {
   flex: 0 0 auto;
   width: 14.2857142857%;
 }
-.row.has-8-columns .g-column {
+.row.has-8-columns .column {
   flex: 0 0 auto;
   width: 12.5%;
 }
-.row.has-9-columns .g-column {
+.row.has-9-columns .column {
   flex: 0 0 auto;
   width: 11.1111111111%;
 }
-.row.has-10-columns .g-column {
+.row.has-10-columns .column {
   flex: 0 0 auto;
   width: 10%;
 }
-.row.has-11-columns .g-column {
+.row.has-11-columns .column {
   flex: 0 0 auto;
   width: 9.0909090909%;
 }
-.row.has-12-columns .g-column {
+.row.has-12-columns .column {
   flex: 0 0 auto;
   width: 8.3333333333%;
 }
