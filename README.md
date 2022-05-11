@@ -68,7 +68,7 @@ Utilities:
 - [ ] Opacity
 - [ ] Overflow
 - [ ] Visibility
-- [ ] Interactions
+- [x] Interactions
 
 Components and utilities must be redesigned for responsive design:
 
@@ -89,7 +89,6 @@ Components and utilities must be redesigned for responsive design:
 - [ ] Opacity
 - [ ] Overflow
 - [ ] Visibility
-- [ ] Interactions
 
 ## ⚠️ ALERT!!
 
