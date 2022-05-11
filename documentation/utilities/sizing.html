@@ -8,6 +8,61 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container"></div>
+    <div class="container">
+      <div class="w-auto p-20" style="background-color: #eee">
+        Width Auto .w-auto
+      </div>
+      <div class="w-25 p-20" style="background-color: #eee">
+        Width 25% .w-25
+      </div>
+      <div class="w-50 p-20" style="background-color: #eee">
+        Width 50% .w-50
+      </div>
+      <div class="w-75 p-20" style="background-color: #eee">
+        Width 75% .w-75
+      </div>
+      <div class="w-100 p-20" style="background-color: #eee">
+        Width 100% .w-100
+      </div>
+      <div class="w-auto p-20" style="background-color: #eee">
+        Width auto .w-auto
+      </div>
+    </div>
+
+    <div class="container mt-20">
+      <div class="bg-primary" style="height: 100px">
+        <div class="h-25 inline-block bg-gray" style="width: 120px">
+          Height 25%
+        </div>
+        <div class="h-50 inline-block bg-gray" style="width: 120px">
+          Height 50%
+        </div>
+        <div class="h-75 inline-block bg-gray" style="width: 120px">
+          Height 75%
+        </div>
+        <div class="h-100 inline-block bg-gray" style="width: 120px">
+          Height 100%
+        </div>
+        <div class="h-auto inline-block bg-gray" style="width: 120px">
+          Height auto
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-20">
+      <div class="bg-primary" style="height: 100px">
+        <div
+          class="max-h-100 inline-block bg-gray"
+          style="width: 120px; height: 500px"
+        >
+          Max Height 100%
+        </div>
+      </div>
+    </div>
+
+    <div class="min-w-screen bg-warning inline-block">Min-width 100vw</div>
+    <div class="min-h-screen bg-success inline-block">Min-height 100vh</div>
+    <div class="w-screen bg-warning inline-block">Width 100vw</div>
+    <div class="h-screen bg-success inline-block">Height 100vh</div>
   </body>
 </html>

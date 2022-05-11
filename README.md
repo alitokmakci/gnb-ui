@@ -62,6 +62,7 @@ Utilities:
 - [ ] Sizing
 - [ ] Headings
 - [ ] Typographies
+- [x] Shadows
 - [x] Alignments
 - [x] Flexbox
 - [x] Borders
@@ -74,7 +75,7 @@ Utilities:
 Components and utilities must be redesigned for responsive design:
 
 - [ ] Navbar
-- [ ] Sidebar
+- [x] Sidebar
 - [x] Container
 - [x] Hero
 - [x] Section

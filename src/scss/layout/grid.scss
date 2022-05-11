@@ -1,7 +1,7 @@
 @use "sass:list";
 
 $column-sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
-$gaps: (0, 5, 10, 15, 20, 25, 30, 40, 50, 75, 100);
+$gaps: (5, 10, 15, 20, 25, 30, 40, 50, 75, 100);
 $size-length: list.length($column-sizes);
 $max-size: list.nth($column-sizes, $size-length);
 $grid-gutter-x: $gutter-x;
