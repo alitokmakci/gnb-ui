@@ -1,0 +1,19 @@
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: $size) {
+    .#{$screen}-visible {
+      visibility: visible !important;
+    }
+
+    .#{$screen}-invisible {
+      visibility: hidden !important;
+    }
+  }
+}

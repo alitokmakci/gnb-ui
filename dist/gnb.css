@@ -3804,6 +3804,59 @@ ul {
     display: none !important;
   }
 }
+.visible {
+  visibility: visible !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+@media (min-width: 576px) {
+  .sm-visible {
+    visibility: visible !important;
+  }
+
+  .sm-invisible {
+    visibility: hidden !important;
+  }
+}
+@media (min-width: 768px) {
+  .md-visible {
+    visibility: visible !important;
+  }
+
+  .md-invisible {
+    visibility: hidden !important;
+  }
+}
+@media (min-width: 992px) {
+  .lg-visible {
+    visibility: visible !important;
+  }
+
+  .lg-invisible {
+    visibility: hidden !important;
+  }
+}
+@media (min-width: 1200px) {
+  .xl-visible {
+    visibility: visible !important;
+  }
+
+  .xl-invisible {
+    visibility: hidden !important;
+  }
+}
+@media (min-width: 1600px) {
+  .xxl-visible {
+    visibility: visible !important;
+  }
+
+  .xxl-invisible {
+    visibility: hidden !important;
+  }
+}
 .user-select-all {
   -webkit-user-select: all !important;
   -moz-user-select: all !important;
