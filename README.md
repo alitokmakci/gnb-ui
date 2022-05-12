@@ -75,7 +75,7 @@ Utilities:
 
 Components and utilities must be redesigned for responsive design:
 
-- [ ] Navbar
+- [x] Navbar
 - [x] Sidebar
 - [x] Container
 - [x] Hero

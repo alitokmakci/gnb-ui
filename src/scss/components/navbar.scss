@@ -25,6 +25,7 @@ $navbar-z-index: 9000;
   color: $font-color;
   border-radius: $navbar-border-radius;
   z-index: $navbar-z-index;
+  transition: all 0.4s ease;
 
   @each $color, $value in $colors {
     &.#{$color} {
@@ -54,6 +55,12 @@ $navbar-z-index: 9000;
     align-items: center;
   }
 
+  .navbar-left {
+    .navbar-burger-icon {
+      display: none;
+    }
+  }
+
   .navbar-brand {
     font-size: 1.15rem;
     color: inherit;
@@ -63,11 +70,12 @@ $navbar-z-index: 9000;
   .navbar-item {
     color: inherit;
     padding: 15px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.25s ease, color 0s;
     opacity: 0.7;
     position: relative;
     height: 100%;
+    font-size: 0.9rem;
 
     &:hover {
       opacity: 1;
@@ -105,5 +113,104 @@ $navbar-z-index: 9000;
 
   &.shadow {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: $lg) {
+  .navbar {
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+
+    &.active {
+      min-height: 100%;
+      max-height: 100%;
+    }
+
+    .navbar-left {
+      min-height: $navbar-min-height;
+      align-items: center;
+
+      .navbar-burger-icon {
+        height: $navbar-min-height;
+        width: $navbar-min-height;
+        position: relative;
+        display: flex;
+        margin-left: auto;
+
+        span {
+          background-color: $font-color;
+          display: block;
+          height: 1px;
+          left: calc(50% - 8px);
+          position: absolute;
+          transform-origin: center;
+          transition-duration: 86ms;
+          transition-property: background-color, opacity, transform;
+          transition-timing-function: ease-out;
+          width: 16px;
+
+          &:first-child {
+            top: calc(50% - 6px);
+          }
+
+          &:nth-child(2) {
+            top: calc(50% - 1px);
+          }
+
+          &:nth-child(3) {
+            top: calc(50% + 4px);
+          }
+        }
+      }
+    }
+
+    .navbar-center {
+      flex-direction: column;
+      justify-content: start;
+      align-items: stretch;
+    }
+    .navbar-item.dropdown {
+      display: flex;
+      flex-direction: column;
+      height: $navbar-max-height;
+
+      &.hoverable:hover {
+        height: 100%;
+
+        .dropdown-content {
+          display: block;
+          height: 100%;
+        }
+      }
+
+      :not(.dropdown-content) {
+        height: $navbar-max-height;
+      }
+
+      .dropdown-content {
+        display: block;
+        padding-top: 0;
+        height: 0;
+        position: relative;
+        transform: none !important;
+
+        .dropdown-menu {
+          height: 100%;
+          background-color: transparent;
+          box-shadow: none;
+          padding: 0;
+
+          .dropdown-title {
+            display: none;
+          }
+
+          .dropdown-item {
+            display: flex;
+            align-items: center;
+          }
+        }
+      }
+    }
   }
 }

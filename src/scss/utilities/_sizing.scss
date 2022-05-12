@@ -61,3 +61,71 @@
 .max-h-100 {
   max-height: 100% !important;
 }
+
+@each $screen, $size in $breakpoints {
+  @media screen and (min-width: $size) {
+    .#{$screen}-w-25 {
+      width: 25% !important;
+    }
+
+    .#{$screen}-w-50 {
+      width: 50% !important;
+    }
+
+    .#{$screen}-w-75 {
+      width: 75% !important;
+    }
+
+    .#{$screen}-w-100 {
+      width: 100% !important;
+    }
+
+    .#{$screen}-w-auto {
+      width: auto !important;
+    }
+
+    .#{$screen}-w-screen {
+      width: 100vw !important;
+    }
+
+    .#{$screen}-min-w-screen {
+      min-width: 100vw !important;
+    }
+
+    .#{$screen}-max-w-100 {
+      max-width: 100% !important;
+    }
+
+    .#{$screen}-h-25 {
+      height: 25% !important;
+    }
+
+    .#{$screen}-h-50 {
+      height: 50% !important;
+    }
+
+    .#{$screen}-h-75 {
+      height: 75% !important;
+    }
+
+    .#{$screen}-h-100 {
+      height: 100% !important;
+    }
+
+    .#{$screen}-h-auto {
+      height: auto !important;
+    }
+
+    .#{$screen}-h-screen {
+      height: 100vh !important;
+    }
+
+    .#{$screen}-min-h-screen {
+      min-height: 100vh !important;
+    }
+
+    .#{$screen}-max-h-100 {
+      max-height: 100% !important;
+    }
+  }
+}

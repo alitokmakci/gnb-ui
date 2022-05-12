@@ -1,6 +1,7 @@
 .dropdown {
   display: inline-flex;
   position: relative;
+  z-index: 10000;
 
   .dropdown-content {
     position: absolute;
@@ -15,7 +16,6 @@
     transform: translateY(90%);
     -webkit-transition: all 0.25s ease;
     transition: all 0.25s ease;
-    z-index: 10000;
 
     .dropdown-menu {
       background-color: white;
