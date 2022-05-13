@@ -2,11 +2,11 @@
   "name": "gnb-ui",
   "version": "0.0.0",
   "description": "Modern and beautiful looking component designs",
-  "main": "src/scss/index.scss",
+  "main": "src/index.scss",
   "scripts": {
     "watch": "npm run build-full -- --watch",
-    "build-full": "sass src/scss/index.scss:dist/gnb.css",
-    "build-min": "sass src/scss/index.scss:dist/gnb.min.css --style compressed",
+    "build-full": "sass src/index.scss:dist/gnb.css",
+    "build-min": "sass src/index.scss:dist/gnb.min.css --style compressed",
     "build": "npm run build-full & npm run build-min"
   },
   "repository": {
