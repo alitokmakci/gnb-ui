@@ -1,6 +1,6 @@
 {
   "name": "gnb-ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Modern and beautiful looking component designs",
   "main": "src/index.scss",
   "scripts": {
