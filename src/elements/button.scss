@@ -1,4 +1,3 @@
-$button-box-shadow-active: true;
 $button-font-color: $font-color;
 $button-background-color: $white;
 $button-border-width: 2px;
@@ -29,7 +28,7 @@ $flat-button-background-color: tint(
   $button-background-color,
   percentage(1 - $flat-button-background-alpha)
 );
-$flat-button-font-color: $button-background-color;
+$flat-button-font-color: rgba($font-color, 0.65);
 $flat-button-hovered-background-alpha: 0.25;
 $link-button-background-color: $button-background-color;
 $link-button-font-color: $button-font-color;
@@ -57,9 +56,7 @@ $loading-button-spinner-color: $button-font-color;
 
   &:hover {
     transform: translateY(-3px);
-    @if ($button-box-shadow-active) {
-      box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
-    }
+    box-shadow: 0 8px 25px 0 rgba(0, 0, 0, 0.1);
   }
 
   &:active {
@@ -174,11 +171,12 @@ $loading-button-spinner-color: $button-font-color;
     transition: transform 0.3s ease-in-out;
 
     &:hover {
-      transform: translateY($floating-button-translate-size);
+      transform: translateY($floating-button-translate-size + 1px);
     }
 
     &:active {
       transform: none;
+      box-shadow: none !important;
     }
   }
 
@@ -255,9 +253,7 @@ $loading-button-spinner-color: $button-font-color;
 
       &:hover,
       &:active {
-        @if ($button-box-shadow-active) {
-          box-shadow: 0 10px 20px -10px $value;
-        }
+        box-shadow: 0 10px 20px -10px $value;
       }
 
       &.flat {

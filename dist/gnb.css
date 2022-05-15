@@ -6901,11 +6901,11 @@ blockquote {
 }
 .btn.flat {
   background-color: white;
-  color: white;
+  color: rgba(44, 62, 80, 0.65);
   transition: background 0.5s ease, color 0.6s ease;
 }
 .btn.flat:hover {
-  background: white;
+  background: rgba(226, 228, 231, 0.9125);
   transform: none;
   box-shadow: none;
 }
@@ -6923,10 +6923,11 @@ blockquote {
   transition: transform 0.3s ease-in-out;
 }
 .btn.floating:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 .btn.floating:active {
   transform: none;
+  box-shadow: none !important;
 }
 .btn.link {
   position: relative;
@@ -10093,7 +10094,7 @@ blockquote {
   width: 100%;
   padding: 5px 6px;
 }
-.dropdown.active .dropdown-content, .dropdown.hoverable:hover .dropdown-content {
+.dropdown.open .dropdown-content, .dropdown.hoverable:hover .dropdown-content {
   opacity: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -11504,6 +11505,24 @@ blockquote {
 }
 .sidebar .sidebar-menu .sidebar-group .group-menu .menu-item:hover {
   opacity: 1;
+}
+.sidebar .sidebar-menu .sidebar-group .group-menu .menu-item.active {
+  opacity: 1;
+  padding-left: 24px;
+}
+.sidebar .sidebar-menu .sidebar-group .group-menu .menu-item.active::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: -4px;
+  top: 0;
+  width: 10px;
+  height: 100%;
+  background: #2c3e50;
+  border-radius: 0 20px 20px 0;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  z-index: 21010;
 }
 .sidebar .sidebar-menu .sidebar-group .group-menu .menu-item.has-icon .menu-item-icon {
   min-width: 40px;

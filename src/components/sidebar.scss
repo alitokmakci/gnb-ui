@@ -365,6 +365,26 @@ $sidebar-item-font-weight: 700;
             opacity: 1;
           }
 
+          &.active {
+            opacity: 1;
+            padding-left: 24px;
+
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              left: -4px;
+              top: 0;
+              width: 10px;
+              height: 100%;
+              background: $sidebar-default-font-color;
+              border-radius: 0 20px 20px 0;
+              -webkit-transition: all 0.25s ease;
+              transition: all 0.25s ease;
+              z-index: $sidebar-z-index + 10;
+            }
+          }
+
           &.has-icon {
             .menu-item-icon {
               min-width: 40px;
