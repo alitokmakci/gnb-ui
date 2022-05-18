@@ -1,0 +1,134 @@
+$alert-background-color: $gray-1;
+$alert-font-color: $font-color;
+$alert-font-size: 0.9rem;
+$alert-z-index: 10;
+$alert-padding: 0 20px;
+$alert-border-radius: 0 12px 12px 0;
+$alert-title-font-weight: 600;
+$alert-title-font-size: 1rem;
+$alert-title-padding: 15px 0;
+$alert-icon-font-size: 1.25rem;
+
+.alert {
+  background: tint($alert-background-color, 90%);
+  color: $alert-font-color;
+  width: 100%;
+  padding: $alert-padding;
+  border-radius: $alert-border-radius;
+  position: relative;
+  font-size: $alert-font-size;
+  z-index: $alert-z-index;
+  -webkit-transition: height 0.25s ease;
+  transition: height 0.25s ease;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    background-color: $alert-background-color;
+  }
+
+  &.bordered {
+    border: 1px solid $alert-background-color;
+    background: transparent !important;
+    color: $alert-font-color !important;
+  }
+
+  &.shadow {
+    background: transparent;
+    -webkit-box-shadow: 0 4px 15px 0 rgba($alert-font-color, 0.12);
+    box-shadow: 0 4px 15px 0 rgba($alert-font-color, 0.12);
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background: $value;
+      color: get-contrast($value);
+
+      &::after {
+        background-color: tint($value, 50%);
+      }
+
+      .close::after,
+      .close::before {
+        background-color: $value;
+      }
+
+      &.flat {
+        background: tint($value, 90%);
+        color: $value;
+
+        &::after {
+          background-color: $value;
+        }
+      }
+
+      &.bordered {
+        border-color: $value;
+        color: $value !important;
+
+        &::after {
+          background-color: $value !important;
+        }
+      }
+
+      &.shadow {
+        -webkit-box-shadow: 0 4px 15px 0 rgba($value, 0.12);
+        box-shadow: 0 4px 15px 0 rgba($value, 0.12);
+      }
+
+      &.has-icon {
+        display: flex;
+        align-items: center;
+        .alert-icon {
+          font-size: $alert-icon-font-size;
+        }
+      }
+    }
+  }
+
+  .close {
+    @include make-close-button($alert-font-color, 6px, 6px, auto, auto, true);
+  }
+
+  .alert-content {
+    -webkit-transition: height 0.25s ease;
+    transition: height 0.25s ease;
+    overflow: hidden;
+    padding: 0 15px 20px 15px;
+
+    .alert-title {
+      font-weight: $alert-title-font-weight;
+      font-size: $alert-title-font-size;
+      padding: $alert-title-padding;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+    }
+  }
+
+  .alert-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 0 15px 10px;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}

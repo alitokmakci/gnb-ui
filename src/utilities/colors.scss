@@ -1,0 +1,21 @@
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value !important;
+  }
+}
+
+.text-white {
+  color: $white !important;
+}
+
+.text-gray {
+  color: $gray-1 !important;
+}
+
+.text-gray-2 {
+  color: $gray-2 !important;
+}
+
+.text-gray-3 {
+  color: $gray-3 !important;
+}

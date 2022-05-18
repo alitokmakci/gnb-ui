@@ -1,0 +1,85 @@
+$sizes: (16, 24, 32, 48, 64, 96, 128);
+
+$ratios: (
+  "1by1": 100%,
+  "5by4": 80%,
+  "4by3": 75%,
+  "3by2": 66.6666%,
+  "5by3": 60%,
+  "16by9": 56.25%,
+  "2by1": 50%,
+  "3by1": 33.3333%,
+  "4by5": 125%,
+  "3by4": 133.3333%,
+  "2by3": 150%,
+  "3by5": 166.6666%,
+  "9by16": 177.7777%,
+  "1by2": 200%,
+  "1by3": 300%,
+);
+
+$rounded-image-border-radius: 12px;
+
+.figure {
+  display: block;
+  position: relative;
+
+  img,
+  video {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .rounded {
+    border-radius: $rounded-image-border-radius;
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  @each $size in $sizes {
+    &.size-#{$size} {
+      width: $size * 1px;
+      height: $size * 1px;
+    }
+  }
+
+  @each $name, $ratio in $ratios {
+    &.size-#{$name} {
+      padding-top: $ratio;
+    }
+  }
+
+  &.size-1by1,
+  &.size-5by4,
+  &.size-4by3,
+  &.size-3by2,
+  &.size-5by3,
+  &.size-16by9,
+  &.size-2by1,
+  &.size-3by1,
+  &.size-4by5,
+  &.size-3by4,
+  &.size-2by3,
+  &.size-3by5,
+  &.size-9by16,
+  &.size-1by2,
+  &.size-1by3 {
+    img,
+    video,
+    .has-ratio {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: block;
+      max-width: 100%;
+    }
+  }
+}

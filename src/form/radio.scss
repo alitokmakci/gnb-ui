@@ -1,0 +1,158 @@
+.form-element {
+  .radio-group {
+    display: flex;
+
+    .label {
+      font-size: 0.8rem;
+      transition: all 0.25s ease;
+      margin: 0;
+
+      &:before {
+        content: "";
+        transition: all 0.25s ease;
+        display: flex;
+        border: 2px solid $gray-1;
+        border-radius: 50%;
+        height: 20px;
+        width: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 6px;
+        background-color: white;
+      }
+
+      &:after {
+        transition: all 0.25s ease;
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        font-size: 1.1rem;
+        content: "";
+        opacity: 0;
+        background-color: white;
+        width: 10px;
+        height: 10px;
+        display: block;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.radio {
+  transition: all 0.25s ease;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  z-index: 100;
+  cursor: pointer;
+
+  &:hover ~ .label:before {
+    background-color: $gray-1;
+  }
+
+  &:checked ~ .label {
+    &:after {
+      opacity: 1;
+    }
+
+    &:before {
+      background-color: $gray-1;
+    }
+  }
+
+  &.square {
+    & ~ .label {
+      &:before {
+        border-radius: 4px !important;
+      }
+
+      &::after {
+        border-radius: 2px !important;
+      }
+    }
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      &:checked ~ .label {
+        &:after {
+          background-color: get-contrast($value);
+        }
+
+        &:before {
+          background-color: $value;
+          border-color: $value;
+        }
+      }
+
+      &:checked {
+        &:hover ~ .label {
+          &:before {
+            box-shadow: 0 3px 15px 0 tint($value, 65%);
+          }
+        }
+      }
+
+      &.flat {
+        &:checked ~ .label {
+          &:after {
+            background-color: $value;
+          }
+
+          &:before {
+            background-color: tint($value, 85%);
+            border-color: tint($value, 85%);
+          }
+        }
+
+        &:checked {
+          &:hover ~ .label {
+            &:before {
+              box-shadow: 0 3px 15px 0 tint($value, 65%);
+            }
+          }
+        }
+
+        &:hover ~ .label:before {
+          background-color: tint($value, 75%);
+          border-color: tint($value, 75%);
+        }
+      }
+
+      &.bordered {
+        &:hover ~ .label:before {
+          background-color: transparent;
+          box-shadow: 0 3px 15px 0 tint($value, 65%);
+        }
+
+        &:checked ~ .label {
+          &:after {
+            background-color: $value;
+          }
+
+          &:before {
+            background-color: transparent;
+            border-color: rgba($value, 1);
+          }
+        }
+
+        ~ .label:before {
+          border-color: rgba($value, 1);
+        }
+      }
+
+      &.hover-color {
+        &:not(:checked):hover ~ .label:before {
+          background-color: tint($value, 75%);
+          border-color: tint($value, 75%);
+        }
+      }
+    }
+  }
+}

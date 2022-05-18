@@ -1,0 +1,148 @@
+@use "sass:list";
+
+$column-sizes: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) !default;
+$gaps: (5, 10, 15, 20, 25, 30, 40, 50, 75, 100);
+$size-length: list.length($column-sizes);
+$max-size: list.nth($column-sizes, $size-length);
+$grid-gutter-x: $gutter-x;
+$grid-gutter-y: $gutter-y;
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -#{$grid-gutter-x};
+  margin-left: -#{$grid-gutter-x};
+
+  @each $gap in $gaps {
+    &.has-gap-x-#{$gap},
+    &.has-gap-#{$gap} {
+      margin-right: $gap * -0.5px;
+      margin-left: $gap * -0.5px;
+
+      .column {
+        padding-left: $gap * 0.5px;
+        padding-right: $gap * 0.5px;
+      }
+    }
+
+    &.has-gap-y-#{$gap},
+    &.has-gap-#{$gap} {
+      margin-top: $gap * -1px;
+
+      .column {
+        margin-top: $gap * 1px;
+      }
+    }
+
+    @each $screen, $width in $breakpoints {
+      &.#{$screen}-has-gap-x-#{$gap},
+      &.#{$screen}-has-gap-#{$gap} {
+        @media screen and (min-width: $width) {
+          .column {
+            padding-left: $gap * 0.5px;
+            padding-right: $gap * 0.5px;
+          }
+        }
+      }
+    }
+
+    @each $screen, $width in $breakpoints {
+      &.#{$screen}-has-gap-y-#{$gap},
+      &.#{$screen}-has-gap-#{$gap} {
+        @media screen and (min-width: $width) {
+          .column {
+            margin-top: $gap * 1px;
+          }
+        }
+      }
+    }
+  }
+
+  &.no-gap {
+    margin: 0;
+
+    .column {
+      padding: 0;
+    }
+  }
+
+  @each $size in $column-sizes {
+    @if ($size == 1) {
+      &.has-#{$size}-column {
+        .column {
+          flex: 0 0 auto;
+          width: percentage(calc(1 / $size));
+        }
+      }
+    } @else {
+      &.has-#{$size}-columns {
+        .column {
+          flex: 0 0 auto;
+          width: percentage(calc(1 / $size));
+        }
+      }
+    }
+  }
+
+  .column {
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    position: relative;
+    width: 100%;
+    padding-right: $grid-gutter-x;
+    padding-left: $grid-gutter-x;
+    margin-top: $grid-gutter-y;
+
+    &.content-width {
+      flex: 0 0 auto;
+      width: auto;
+    }
+
+    &.order-first {
+      order: -1 !important;
+    }
+
+    &.order-last {
+      order: $max-size !important;
+    }
+
+    @each $size in $column-sizes {
+      &.size-#{$size} {
+        flex: 0 0 auto;
+        width: percentage(calc($size / $max-size));
+      }
+    }
+
+    @each $screen, $width in $breakpoints {
+      @each $size in $column-sizes {
+        @media (min-width: $width) {
+          &.#{$screen}-size-#{$size} {
+            flex: 0 0 auto;
+            width: percentage(calc($size / $max-size));
+          }
+        }
+      }
+    }
+
+    @each $size in $column-sizes {
+      &.has-offset-#{$size} {
+        margin-left: percentage(calc($size / $max-size));
+      }
+    }
+
+    @each $screen, $width in $breakpoints {
+      @each $size in $column-sizes {
+        @media screen and (min-width: $width) {
+          &.#{$screen}-has-offset-#{$size} {
+            margin-left: percentage(calc($size / $max-size));
+          }
+        }
+      }
+    }
+  }
+}

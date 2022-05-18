@@ -1,0 +1,68 @@
+.spinner {
+  position: relative;
+  display: flex;
+  width: 40px;
+  height: 40px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: $white;
+    border-radius: 50%;
+    animation: loading-spinner 1s ease infinite;
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color}::after {
+      border-top-color: $value;
+    }
+  }
+
+  &.mini {
+    width: 30px;
+    height: 30px;
+
+    &::after {
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  &.sm {
+    width: 35px;
+    height: 35px;
+
+    &::after {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.lg {
+    width: 45px;
+    height: 45px;
+
+    &::after {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &.xl {
+    width: 50px;
+    height: 50px;
+
+    &::after {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}

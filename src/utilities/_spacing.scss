@@ -1,0 +1,88 @@
+$spaceamounts: $sizes;
+$spacing-sides: (top, bottom, left, right);
+
+@each $space in $spaceamounts {
+  .p-#{$space} {
+    padding: #{$space}px !important;
+  }
+
+  .m-#{$space} {
+    margin: #{$space}px !important;
+  }
+
+  @each $side in $spacing-sides {
+    @if $side == top or $side == bottom {
+      .m#{str-slice($side, 0 ,1)}-#{$space},
+      .my-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p#{str-slice($side, 0 ,1)}-#{$space},
+      .py-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    } @else {
+      .m#{str-slice($side, 0 ,1)}-#{$space},
+      .mx-#{$space} {
+        margin-#{$side}: #{$space}px !important;
+      }
+
+      .p#{str-slice($side, 0 ,1)}-#{$space},
+      .px-#{$space} {
+        padding-#{$side}: #{$space}px !important;
+      }
+    }
+  }
+}
+
+@each $side in $spacing-sides {
+  @if $side == top or $side == bottom {
+    .m#{str-slice($side, 0 ,1)}-auto,
+    .my-auto {
+      margin-#{$side}: auto !important;
+    }
+  } @else {
+    .m#{str-slice($side, 0 ,1)}-auto,
+    .mx-auto {
+      margin-#{$side}: auto !important;
+    }
+  }
+}
+
+@each $screen, $size in $breakpoints {
+  @media (min-width: $size) {
+    @each $space in $spaceamounts {
+      .#{$screen}-p-#{$space} {
+        padding: #{$space}px !important;
+      }
+
+      .#{$screen}-m-#{$space} {
+        margin: #{$space}px !important;
+      }
+
+      @each $side in $spacing-sides {
+        @if $side == top or $side == bottom {
+          .#{$screen}-m#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-my-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+          }
+
+          .#{$screen}-p#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-py-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+          }
+        } @else {
+          .#{$screen}-m#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-mx-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+          }
+
+          .#{$screen}-p#{str-slice($side, 0 ,1)}-#{$space},
+          .#{$screen}-px-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+          }
+        }
+      }
+    }
+  }
+}

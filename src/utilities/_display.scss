@@ -1,0 +1,31 @@
+$display-options: (flex, block, inline, inline-flex, inline-block, grid, none);
+
+@each $display in $display-options {
+  @if ($display != none) {
+    .#{$display} {
+      display: $display !important;
+    }
+  } @else {
+    .hidden {
+      display: $display !important;
+    }
+  }
+}
+
+@each $screen, $size in $breakpoints {
+  @each $display in $display-options {
+    @if ($display != none) {
+      @media (min-width: $size) {
+        .#{$screen}-#{$display} {
+          display: $display !important;
+        }
+      }
+    } @else {
+      @media (min-width: $size) {
+        .#{$screen}-hidden {
+          display: $display !important;
+        }
+      }
+    }
+  }
+}

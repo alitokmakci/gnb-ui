@@ -1,0 +1,130 @@
+.switch {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+
+  &.mini {
+    & + label {
+      width: 30px;
+      height: 15px;
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: 7px;
+      height: 7px;
+      border-radius: 12px;
+    }
+
+    & + label:active:after {
+      width: 20px;
+    }
+  }
+
+  &.sm {
+    & + label {
+      width: 40px;
+      height: 20px;
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 22px;
+    }
+
+    & + label:active:after {
+      width: 30px;
+    }
+  }
+
+  &.lg {
+    & + label {
+      width: 70px;
+      height: 35px;
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: 27px;
+      height: 27px;
+    }
+
+    & + label:active:after {
+      width: 60px;
+    }
+  }
+
+  &.xl {
+    & + label {
+      width: 80px;
+      height: 40px;
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: 32px;
+      height: 32px;
+      border-radius: 32px;
+    }
+
+    & + label:active:after {
+      width: 70px;
+    }
+  }
+
+  & + label {
+    cursor: pointer;
+    width: 50px;
+    height: 25px;
+    background: $gray-1;
+    display: block;
+    border-radius: 200px;
+    position: relative;
+    transition: all 0.3s;
+  }
+
+  & + label:after {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 17px;
+    height: 17px;
+    background: #fff;
+    border-radius: 27px;
+    transition: 0.3s;
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      &:checked + label {
+        background: $value;
+      }
+    }
+  }
+
+  &:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%);
+  }
+
+  & + label:active:after {
+    width: 40px;
+  }
+
+  &.square {
+    & + label {
+      border-radius: 4px;
+    }
+
+    & + label:after {
+      border-radius: 2px;
+    }
+  }
+}

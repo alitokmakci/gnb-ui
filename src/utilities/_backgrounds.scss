@@ -1,0 +1,31 @@
+@each $color, $value in $colors {
+  .bg-#{$color} {
+    background-color: $value !important;
+    color: get-contrast($value) !important;
+  }
+
+  .bg-#{$color}-flat {
+    background-color: tint($value, 85%) !important;
+    color: $value !important;
+  }
+}
+
+.bg-white {
+  background-color: white !important;
+  color: $font-color !important;
+}
+
+.bg-gray {
+  background-color: $gray-1 !important;
+  color: $font-color !important;
+}
+
+.bg-gray-2 {
+  background-color: $gray-2 !important;
+  color: $font-color !important;
+}
+
+.bg-gray-3 {
+  background-color: $gray-3 !important;
+  color: $font-color !important;
+}

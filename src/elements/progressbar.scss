@@ -1,0 +1,52 @@
+$progress-border-radius: 18px;
+$progress-height: 5px;
+$progress-background: $gray-1;
+$progressbar-background: $white;
+$progressbar-font-size: 0.75rem;
+$progressbar-font-weight: 500;
+$progressbar-font-line-height: 1;
+$infinite-animation-duration: 1.5s;
+
+.progress {
+  width: 100%;
+  height: $progress-height;
+  border-radius: $progress-border-radius;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  background-color: $progress-background;
+
+  .progressbar {
+    height: 100%;
+    background-color: $progressbar-background;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: $progressbar-font-line-height;
+    font-size: $progressbar-font-size;
+    font-weight: $progressbar-font-weight;
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: tint($value, 85%);
+
+      .progressbar {
+        background-color: $value;
+        color: get-contrast($value);
+      }
+    }
+  }
+
+  &.infinite {
+    .progressbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      animation: infinite-progress $infinite-animation-duration linear infinite;
+    }
+  }
+}

@@ -1,0 +1,126 @@
+$tooltip-default-background-color: $font-color;
+$tooltip-default-font-color: $white;
+$tooltip-border-radius: 12px;
+$tooltip-padding: 0.5rem 1rem;
+$tooltip-font-size: 0.75rem;
+$tooltip-z-index: 1020;
+$flat-tooltip-background-alpha: $flat-color-alpha;
+
+.has-tooltip {
+  position: relative;
+
+  &:hover {
+    .tooltip {
+      display: block;
+    }
+  }
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  background-color: $tooltip-default-background-color;
+  color: $tooltip-default-font-color;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  border-radius: $tooltip-border-radius;
+  text-overflow: ellipsis;
+  white-space: pre;
+  font-size: $tooltip-font-size;
+  z-index: $tooltip-z-index;
+  padding: $tooltip-font-size;
+  border: none;
+
+  &:after {
+    position: absolute;
+    content: "";
+    border-style: solid;
+    border-width: 6px;
+    bottom: 0;
+    right: auto;
+    left: 50%;
+    border-color: $tooltip-default-background-color transparent transparent
+      transparent;
+    transform: translate(-50%, 90%);
+    z-index: $tooltip-z-index;
+  }
+
+  &.always-active {
+    display: block !important;
+  }
+
+  &.bottom {
+    transform: translate(-50%, 110%);
+
+    &:after {
+      transform: translate(-50%, -310%);
+      border-color: transparent transparent $tooltip-default-background-color
+        transparent;
+    }
+  }
+
+  &.right {
+    left: auto;
+    top: 50%;
+    transform: translate(90%, -50%);
+
+    &:after {
+      bottom: inherit;
+      top: 50%;
+      left: 0;
+      border-color: transparent $tooltip-default-background-color transparent
+        transparent;
+      transform: translate(-90%, -50%);
+      border-width: 8px;
+    }
+  }
+
+  &.left {
+    left: auto;
+    top: 50%;
+    transform: translate(-90%, -50%);
+
+    &:after {
+      bottom: inherit;
+      top: 50%;
+      left: inherit;
+      right: 0;
+      border-color: transparent transparent transparent
+        $tooltip-default-background-color;
+      transform: translate(90%, -50%);
+      border-width: 8px;
+    }
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: get-contrast($value);
+
+      &::after {
+        border-color: $value transparent transparent transparent;
+      }
+
+      &.flat {
+        background-color: tint(
+          $value,
+          percentage(1-$flat-tooltip-background-alpha)
+        );
+        color: $value;
+
+        &::after {
+          border-color: tint(
+              $value,
+              percentage(1-$flat-tooltip-background-alpha)
+            )
+            transparent
+            transparent
+            transparent;
+        }
+      }
+    }
+  }
+}

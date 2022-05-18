@@ -1,0 +1,128 @@
+$tag-font-color: $font-color;
+$tag-padding: 4px 7px;
+$tag-border-radius: 7px;
+$tag-font-weight: 700;
+$tag-font-size: 0.6rem;
+$tag-background-color: tint(white, 85%);
+$tag-lg-font-size: 0.7rem;
+$tag-lg-border-radius: 8px;
+$tag-lg-padding: 6px 9px;
+$tag-xl-font-size: 0.8rem;
+$tag-xl-border-radius: 9px;
+$tag-xl-padding: 8px 11px;
+$tag-close-button-height: 12px;
+$tag-close-button-width: $tag-close-button-height;
+$tag-close-button-margin: 4px;
+
+.tag {
+  display: inline-flex;
+  font-size: $tag-font-size;
+  border-radius: $tag-border-radius;
+  padding: $tag-padding;
+  color: $font-color;
+  background-color: tint(white, 85%);
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+  font-weight: $tag-font-weight;
+  align-items: center;
+
+  &.lg {
+    font-size: $tag-lg-font-size;
+    border-radius: $tag-lg-border-radius;
+    padding: $tag-lg-padding;
+  }
+
+  &.xl {
+    font-size: $tag-xl-font-size;
+    border-radius: $tag-xl-border-radius;
+    padding: $tag-xl-padding;
+  }
+
+  @each $color, $value in $colors {
+    &.#{$color} {
+      background-color: $value;
+      color: get-contrast($value);
+
+      @if ($color == "dark") {
+        .close {
+          background-color: rgba($white, 0.3);
+        }
+      }
+
+      &.flat {
+        background-color: tint($value, 85%);
+        color: $value;
+
+        .close {
+          background-color: tint($value, 30%) !important;
+        }
+      }
+    }
+  }
+
+  .close {
+    user-select: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: rgba($dark, 0.3);
+    border: none;
+    border-radius: 9999px;
+    cursor: pointer;
+    pointer-events: auto;
+    display: inline-block;
+    flex-grow: 0;
+    flex-shrink: 0;
+    font-size: 0;
+    height: $tag-close-button-height;
+    max-height: $tag-close-button-height;
+    max-width: $tag-close-button-width;
+    min-height: $tag-close-button-height;
+    min-width: $tag-close-button-width;
+    width: $tag-close-button-width;
+    outline: 0;
+    position: relative;
+    vertical-align: top;
+    margin-left: $tag-close-button-margin;
+
+    &:before,
+    &:after {
+      background-color: #fff;
+      content: "";
+      display: block;
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform-origin: center center;
+    }
+
+    &:before {
+      height: 1px;
+      width: 50%;
+    }
+
+    &:after {
+      height: 50%;
+      width: 1px;
+    }
+  }
+}
+
+.tag-group {
+  display: inline-flex;
+
+  .tag:first-child {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .tag:not(:first-child, :last-child) {
+    border-radius: 0;
+  }
+
+  .tag:last-child {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
