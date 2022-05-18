@@ -9326,8 +9326,8 @@ blockquote {
   background-color: #1a5cff !important;
 }
 .alert.primary.shadow {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(26, 92, 255, 0.12);
-  box-shadow: 0 4px 15px 0 rgba(26, 92, 255, 0.12);
+  -webkit-box-shadow: 0 8px 15px 0 rgba(26, 92, 255, 0.36);
+  box-shadow: 0 8px 15px 0 rgba(26, 92, 255, 0.36);
 }
 .alert.primary.has-icon {
   display: flex;
@@ -9362,8 +9362,8 @@ blockquote {
   background-color: #7d33ff !important;
 }
 .alert.secondary.shadow {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(125, 51, 255, 0.12);
-  box-shadow: 0 4px 15px 0 rgba(125, 51, 255, 0.12);
+  -webkit-box-shadow: 0 8px 15px 0 rgba(125, 51, 255, 0.36);
+  box-shadow: 0 8px 15px 0 rgba(125, 51, 255, 0.36);
 }
 .alert.secondary.has-icon {
   display: flex;
@@ -9398,8 +9398,8 @@ blockquote {
   background-color: #46c93a !important;
 }
 .alert.success.shadow {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(70, 201, 58, 0.12);
-  box-shadow: 0 4px 15px 0 rgba(70, 201, 58, 0.12);
+  -webkit-box-shadow: 0 8px 15px 0 rgba(70, 201, 58, 0.36);
+  box-shadow: 0 8px 15px 0 rgba(70, 201, 58, 0.36);
 }
 .alert.success.has-icon {
   display: flex;
@@ -9434,8 +9434,8 @@ blockquote {
   background-color: #00aff0 !important;
 }
 .alert.info.shadow {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(0, 175, 240, 0.12);
-  box-shadow: 0 4px 15px 0 rgba(0, 175, 240, 0.12);
+  -webkit-box-shadow: 0 8px 15px 0 rgba(0, 175, 240, 0.36);
+  box-shadow: 0 8px 15px 0 rgba(0, 175, 240, 0.36);
 }
 .alert.info.has-icon {
   display: flex;
@@ -9470,8 +9470,8 @@ blockquote {
   background-color: #ffba00 !important;
 }
 .alert.warning.shadow {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(255, 186, 0, 0.12);
-  box-shadow: 0 4px 15px 0 rgba(255, 186, 0, 0.12);
+  -webkit-box-shadow: 0 8px 15px 0 rgba(255, 186, 0, 0.36);
+  box-shadow: 0 8px 15px 0 rgba(255, 186, 0, 0.36);
 }
 .alert.warning.has-icon {
   display: flex;
@@ -9506,8 +9506,8 @@ blockquote {
   background-color: #ff4757 !important;
 }
 .alert.danger.shadow {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(255, 71, 87, 0.12);
-  box-shadow: 0 4px 15px 0 rgba(255, 71, 87, 0.12);
+  -webkit-box-shadow: 0 8px 15px 0 rgba(255, 71, 87, 0.36);
+  box-shadow: 0 8px 15px 0 rgba(255, 71, 87, 0.36);
 }
 .alert.danger.has-icon {
   display: flex;
@@ -9542,8 +9542,8 @@ blockquote {
   background-color: black !important;
 }
 .alert.dark.shadow {
-  -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.12);
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.36);
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, 0.36);
 }
 .alert.dark.has-icon {
   display: flex;
