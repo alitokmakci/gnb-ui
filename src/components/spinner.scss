@@ -1,8 +1,14 @@
+$spinner-diameter: 25px;
+$mini-spinner-diameter: 15px;
+$sm-spinner-diameter: 20px;
+$lg-spinner-diameter: 30px;
+$xl-spinner-diameter: 35px;
+
 .spinner {
   position: relative;
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: calc($spinner-diameter + 15px);
+  height: calc($spinner-diameter + 15px);
 
   &::after {
     content: "";
@@ -11,8 +17,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 25px;
-    height: 25px;
+    width: $spinner-diameter;
+    height: $spinner-diameter;
     margin: auto;
     border: 4px solid transparent;
     border-top-color: $white;
@@ -27,42 +33,42 @@
   }
 
   &.mini {
-    width: 30px;
-    height: 30px;
+    width: calc($mini-spinner-diameter + 15px);;
+    height: calc($mini-spinner-diameter + 15px);;
 
     &::after {
-      width: 15px;
-      height: 15px;
+      width: $mini-spinner-diameter;
+      height: $mini-spinner-diameter;
     }
   }
 
   &.sm {
-    width: 35px;
-    height: 35px;
+    width: calc($sm-spinner-diameter + 15px);;
+    height: calc($sm-spinner-diameter + 15px);;
 
     &::after {
-      width: 20px;
-      height: 20px;
+      width: $sm-spinner-diameter;
+      height: $sm-spinner-diameter;
     }
   }
 
   &.lg {
-    width: 45px;
-    height: 45px;
+    width: calc($lg-spinner-diameter + 15px);;
+    height: calc($lg-spinner-diameter + 15px);;
 
     &::after {
-      width: 30px;
-      height: 30px;
+      width: $lg-spinner-diameter;
+      height: $lg-spinner-diameter;
     }
   }
 
   &.xl {
-    width: 50px;
-    height: 50px;
+    width: calc($xl-spinner-diameter + 15px);;
+    height: calc($xl-spinner-diameter + 15px);;
 
     &::after {
-      width: 35px;
-      height: 35px;
+      width: $xl-spinner-diameter;
+      height: $xl-spinner-diameter;
     }
   }
 }
