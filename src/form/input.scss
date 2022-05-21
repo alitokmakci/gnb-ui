@@ -1,6 +1,6 @@
 $input-background-color: $gray-2;
 $input-height: 36px;
-$placeholder-opacity: 0.4;
+$input-placeholder-opacity: 0.4;
 $input-min-width: 200px;
 $input-border-radius: 12px;
 $input-icon-box-width: $input-height;
@@ -34,7 +34,7 @@ $input-padding: 7px 13px 7px 10px;
   height: $input-height;
 
   &::placeholder {
-    opacity: $placeholder-opacity;
+    opacity: $input-placeholder-opacity;
   }
 
   &:focus,

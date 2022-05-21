@@ -1,5 +1,5 @@
 $textarea-background-color: $gray-2;
-$placeholder-opacity: 0.4;
+$textarea-placeholder-opacity: 0.4;
 $textarea-min-width: 200px;
 $textarea-border-radius: 12px;
 
@@ -14,7 +14,7 @@ $textarea-border-radius: 12px;
   transition: all 0.25s ease;
 
   &::placeholder {
-    opacity: $placeholder-opacity;
+    opacity: $textarea-placeholder-opacity;
   }
 
   &:focus,
