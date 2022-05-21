@@ -79,6 +79,7 @@
     img {
       width: 100%;
       display: block;
+      object-fit: cover;
     }
   }
 
@@ -144,6 +145,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-height: 250px;
 
     &:hover {
       -webkit-transform: scale(1.04);
@@ -206,6 +208,7 @@
       border-radius: 0 0 20px 20px;
       -webkit-transition: all 0.25s ease;
       transition: all 0.25s ease;
+      width: 100%;
     }
   }
 

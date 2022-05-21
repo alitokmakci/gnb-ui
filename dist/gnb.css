@@ -9880,6 +9880,7 @@ blockquote {
 .card .card-img img {
   width: 100%;
   display: block;
+  object-fit: cover;
 }
 .card .card-content {
   font-size: 0.85rem;
@@ -9930,6 +9931,7 @@ blockquote {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  max-height: 250px;
 }
 .card.type-3:hover {
   -webkit-transform: scale(1.04);
@@ -9980,6 +9982,7 @@ blockquote {
   border-radius: 0 0 20px 20px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
+  width: 100%;
 }
 .card.type-5 {
   -webkit-box-shadow: none;
