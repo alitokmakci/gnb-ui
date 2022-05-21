@@ -9187,7 +9187,7 @@ blockquote {
   background-color: #f4f7f8;
   border-radius: 12px;
   padding: 7px 13px 7px 10px;
-  min-width: 200px;
+  min-width: 210px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 }
@@ -11021,7 +11021,7 @@ blockquote {
   transform: scale(0.9);
 }
 .pagination .pagination-btn.disabled {
-  opacity: 0.4;
+  opacity: 0.2;
   pointer-events: none;
 }
 .pagination .pagination-btn.active {

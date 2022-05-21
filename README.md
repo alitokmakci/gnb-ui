@@ -1,4 +1,4 @@
-![downloads](https://img.shields.io/npm/dt/gnb-ui) ![license](https://img.shields.io/npm/l/gnb-ui) ![issues](https://img.shields.io/github/issues/alitokmakci/gnb-ui) ![version](https://img.shields.io/github/package-json/v/alitokmakci/gnb-ui)
+![downloads](https://img.shields.io/npm/dt/gnb-ui) ![license](https://img.shields.io/npm/l/gnb-ui) ![issues](https://img.shields.io/github/issues/alitokmakci/gnb-ui) ![version](https://img.shields.io/github/package-json/v/alitokmakci/gnb-ui) [![](https://data.jsdelivr.com/v1/package/npm/gnb-ui/badge)](https://www.jsdelivr.com/package/npm/gnb-ui)
 
 # [GNB UI](https://gnbdesign.online)
 
@@ -24,7 +24,7 @@ yarn add gnb-ui
 
 ### CDN
 
-[https://www.jsdelivr.com/package/npm/gnb-ui](https://www.jsdelivr.com/package/npm/gnb-ui)
+[https://www.jsdelivr.com/package/npm/gnb-ui](https://www.jsdelivr.com/package/npm/gnb-ui?path=dist)
 
 ### NO JAVASCRIPT INCLUDED
 

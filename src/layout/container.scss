@@ -1,17 +1,17 @@
 $container-gutter-x: $gutter-x;
 $container-gutter-y: $gutter-y;
-$sm-width: 540px;
-$md-width: 720px;
-$lg-width: 960px;
-$xl-width: 1140px;
-$xxl-width: 1320px;
+$container-sm-width: 540px;
+$container-md-width: 720px;
+$container-lg-width: 960px;
+$container-xl-width: 1140px;
+$container-xxl-width: 1320px;
 
 .container {
-  --sm-width: #{$sm-width};
-  --md-width: #{$md-width};
-  --lg-width: #{$lg-width};
-  --xl-width: #{$xl-width};
-  --xxl-width: #{$xxl-width};
+  --sm-width: #{$container-sm-width};
+  --md-width: #{$container-md-width};
+  --lg-width: #{$container-lg-width};
+  --xl-width: #{$container-xl-width};
+  --xxl-width: #{$container-xxl-width};
 
   padding-right: $container-gutter-x;
   padding-left: $container-gutter-x;
