@@ -1,5 +1,5 @@
 $form-element-margin: 0.75rem;
-$horizontal-layout-label-margin: 6px;
+$horizontal-layout-label-right-margin: 6px;
 
 .form-element {
   display: flex;
@@ -7,13 +7,19 @@ $horizontal-layout-label-margin: 6px;
   margin-bottom: $form-element-margin;
   position: relative;
 
+  .label {
+    font-size: 0.75rem;
+    margin-left: 10px;
+    margin-bottom: 2px;
+  }
+
   &.horizontal {
     flex-direction: row;
 
     .label {
       margin-bottom: 0;
       margin-left: 0;
-      margin-right: $horizontal-layout-label-margin;
+      margin-right: $horizontal-layout-label-right-margin;
       display: flex;
       align-items: center;
     }

@@ -1,6 +1,6 @@
 $textarea-background-color: $gray-2;
 $placeholder-opacity: 0.4;
-$textarea-width: 200px;
+$textarea-min-width: 200px;
 $textarea-border-radius: 12px;
 
 .textarea {
@@ -9,7 +9,7 @@ $textarea-border-radius: 12px;
   background-color: $textarea-background-color;
   border-radius: $textarea-border-radius;
   padding: 7px 13px 7px 10px;
-  width: $textarea-width;
+  min-width: $textarea-min-width;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
 

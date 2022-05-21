@@ -1,90 +1,28 @@
+$switch-width: 50px;
+$switch-border-radius: 200px;
+$switch-indicator-width: 17px;
+$switch-background-color: $gray-1;
+$switch-checked-background-color: $gray-3;
+$switch-indicator-color: $white;
+$switch-indicator-height: $switch-indicator-width;
+$switch-indicator-border-radius: 27px;
+$mini-switch-width: 30px;
+$sm-switch-width: 40px;
+$lg-switch-width: 70px;
+$xl-switch-width: 80px;
+
 .switch {
   height: 0;
   width: 0;
   visibility: hidden;
 
-  &.mini {
-    & + label {
-      width: 30px;
-      height: 15px;
-    }
-
-    & + label:after {
-      top: 4px;
-      left: 4px;
-      width: 7px;
-      height: 7px;
-      border-radius: 12px;
-    }
-
-    & + label:active:after {
-      width: 20px;
-    }
-  }
-
-  &.sm {
-    & + label {
-      width: 40px;
-      height: 20px;
-    }
-
-    & + label:after {
-      top: 4px;
-      left: 4px;
-      width: 12px;
-      height: 12px;
-      border-radius: 22px;
-    }
-
-    & + label:active:after {
-      width: 30px;
-    }
-  }
-
-  &.lg {
-    & + label {
-      width: 70px;
-      height: 35px;
-    }
-
-    & + label:after {
-      top: 4px;
-      left: 4px;
-      width: 27px;
-      height: 27px;
-    }
-
-    & + label:active:after {
-      width: 60px;
-    }
-  }
-
-  &.xl {
-    & + label {
-      width: 80px;
-      height: 40px;
-    }
-
-    & + label:after {
-      top: 4px;
-      left: 4px;
-      width: 32px;
-      height: 32px;
-      border-radius: 32px;
-    }
-
-    & + label:active:after {
-      width: 70px;
-    }
-  }
-
   & + label {
     cursor: pointer;
-    width: 50px;
-    height: 25px;
-    background: $gray-1;
+    width: $switch-width;
+    height: calc($switch-width / 2);
+    background: $switch-background-color;
     display: block;
-    border-radius: 200px;
+    border-radius: $switch-border-radius;
     position: relative;
     transition: all 0.3s;
   }
@@ -94,11 +32,96 @@
     position: absolute;
     top: 4px;
     left: 4px;
-    width: 17px;
-    height: 17px;
-    background: #fff;
-    border-radius: 27px;
+    width: $switch-indicator-width;
+    height: $switch-indicator-height;
+    background: $switch-indicator-color;
+    border-radius: $switch-indicator-border-radius;
     transition: 0.3s;
+  }
+
+  &:checked + label {
+    background: $switch-checked-background-color;
+  }
+
+  &:checked + label:after {
+    left: calc(100% - 5px) !important;
+    transform: translateX(-100%);
+  }
+
+  & + label:active:after {
+    width: calc($switch-width - 10px);
+  }
+
+  &.mini {
+    & + label {
+      width: $mini-switch-width;
+      height: calc($mini-switch-width / 2);
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: calc(($mini-switch-width / 2) - 8px);
+      height: calc(($mini-switch-width / 2) - 8px);
+    }
+
+    & + label:active:after {
+      width: calc($mini-switch-width - 10px);
+    }
+  }
+
+  &.sm {
+    & + label {
+      width: $sm-switch-width;
+      height: calc($sm-switch-width / 2);
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: calc(($sm-switch-width / 2) - 8px);
+      height: calc(($sm-switch-width / 2) - 8px);
+    }
+
+    & + label:active:after {
+      width: calc($sm-switch-width - 10px);
+    }
+  }
+
+  &.lg {
+    & + label {
+      width: $lg-switch-width;
+      height: calc($lg-switch-width / 2);
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: calc(($lg-switch-width / 2) - 8px);
+      height: calc(($lg-switch-width / 2) - 8px);
+    }
+
+    & + label:active:after {
+      width: calc($lg-switch-width - 10px);
+    }
+  }
+
+  &.xl {
+    & + label {
+      width: $xl-switch-width;
+      height: calc($xl-switch-width / 2);
+    }
+
+    & + label:after {
+      top: 4px;
+      left: 4px;
+      width: calc(($xl-switch-width / 2) - 8px);
+      height: calc(($xl-switch-width / 2) - 8px);
+    }
+
+    & + label:active:after {
+      width: calc($xl-switch-width - 10px);
+    }
   }
 
   @each $color, $value in $colors {
@@ -107,15 +130,6 @@
         background: $value;
       }
     }
-  }
-
-  &:checked + label:after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
-  }
-
-  & + label:active:after {
-    width: 40px;
   }
 
   &.square {

@@ -1,9 +1,40 @@
+$avatar-font-color: $font-color;
+$avatar-background-color: $white;
+$avatar-width: 50px;
+$avatar-height: $avatar-width;
+$avatar-border-radius: 35%;
+$avatar-content-font-weight: 500;
+$avatar-content-border-radius: 7px;
+$avatar-content-min-width: 18px;
+$avatar-content-min-height: $avatar-content-min-width;
+$avatar-badge-width: 13px;
+$avatar-badge-height: $avatar-badge-width;
+$avatar-badge-background-color: $gray-1;
+$avatar-badge-width-z-index: 200;
+$avatar-badge-font-size: 0.6rem;
+$avatar-badge-font-weight: 700;
+$avatar-badge-font-color: $font-color;
+$avatar-badge-border-width: 2px;
+$avatar-badge-border-color: $white;
+$mini-avatar-width: 30px;
+$mini-avatar-height: $mini-avatar-width;
+$mini-avatar-font-size: 0.7rem;
+$sm-avatar-width: 40px;
+$sm-avatar-height: $sm-avatar-width;
+$sm-avatar-font-size: 0.8rem;
+$lg-avatar-width: 60px;
+$lg-avatar-height: $lg-avatar-width;
+$lg-avatar-font-size: 1.5rem;
+$xl-avatar-width: 70px;
+$xl-avatar-height: $xl-avatar-width;
+$xl-avatar-font-size: 2rem;
+
 .avatar {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  color: $font-color;
-  border-radius: 35%;
+  width: $avatar-width;
+  height: $avatar-height;
+  background-color: $avatar-background-color;
+  color: $avatar-font-color;
+  border-radius: $avatar-border-radius;
   margin: 5px;
   display: inline-block;
   position: relative;
@@ -15,7 +46,7 @@
     align-items: center;
     justify-content: center;
     user-select: none;
-    font-weight: 500;
+    font-weight: $avatar-content-font-weight;
   }
 
   .avatar-image {
@@ -27,17 +58,17 @@
 
   .avatar-badge {
     position: absolute;
-    width: 13px;
-    height: 13px;
+    width: $avatar-badge-width;
+    height: $avatar-badge-height;
     border-radius: 50%;
-    background-color: $gray-1;
-    z-index: 200;
+    background-color: $avatar-badge-background-color;
+    z-index: $avatar-badge-width-z-index;
     top: -4px;
     right: -4px;
-    font-size: 0.6rem;
-    font-weight: 700;
-    border: 2px solid $white;
-    color: $font-color;
+    font-size: $avatar-badge-font-size;
+    font-weight: $avatar-badge-font-weight;
+    border: $avatar-badge-border-width solid $avatar-badge-border-color;
+    color: $avatar-badge-font-color;
 
     @each $color, $value in $colors {
       &.#{$color} {
@@ -66,14 +97,14 @@
     &.has-content {
       width: auto;
       height: auto;
-      border-radius: 7px;
-      min-width: 18px;
+      border-radius: $avatar-content-border-radius;
+      min-width: $avatar-content-min-width;
       display: flex;
       align-items: center;
       justify-content: center;
       line-height: 0.9rem;
       padding: 0 3px;
-      min-height: 18px;
+      min-height: $avatar-content-min-height;
       font-size: 0.6rem;
       font-weight: 700;
     }
@@ -95,39 +126,39 @@
   }
 
   &.mini {
-    width: 30px;
-    height: 30px;
+    width: $mini-avatar-width;
+    height: $mini-avatar-height;
 
     .avatar-content {
-      font-size: 0.7rem;
+      font-size: $mini-avatar-font-size;
     }
   }
 
   &.sm {
-    width: 40px;
-    height: 40px;
+    width: $sm-avatar-width;
+    height: $sm-avatar-height;
 
     .avatar-content {
-      font-size: 0.8rem;
+      font-size: $sm-avatar-font-size;
     }
   }
 
   &.lg {
-    width: 60px;
-    height: 60px;
+    width: $lg-avatar-width;
+    height: $lg-avatar-height;
 
     .avatar-content {
-      font-size: 1.5rem;
+      font-size: $lg-avatar-font-size;
       font-weight: 400;
     }
   }
 
   &.xl {
-    width: 70px;
-    height: 70px;
+    width: $xl-avatar-width;
+    height: $xl-avatar-height;
 
     .avatar-content {
-      font-size: 2rem;
+      font-size: $xl-avatar-font-size;
       font-weight: 400;
     }
   }

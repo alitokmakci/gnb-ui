@@ -1,10 +1,17 @@
+$select-padding: 7px 30px 7px 13px;
+$select-border-radius: 12px;
+$select-border-width:2px;
+$select-min-width: 200px;
+$select-option-background-color: $white;
+$select-option-font-color: $font-color;
+
 .select {
-  padding: 7px 30px 7px 13px;
-  border: 2px solid transparent;
-  border-radius: 12px;
+  padding: $select-padding;
+  border: $select-border-width solid transparent;
+  border-radius: $select-border-radius;
   background-color: $gray-2;
   color: $font-color;
-  width: 200px;
+  min-width: $select-min-width;
 
   @each $color, $value in $colors {
     &.#{$color} {
@@ -24,8 +31,8 @@
   }
 
   option {
-    background-color: white;
-    color: $font-color;
+    background-color: $select-option-background-color;
+    color: $select-option-font-color;
   }
 
   &.square {

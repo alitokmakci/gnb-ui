@@ -1,3 +1,9 @@
+$radio-width: 20px;
+$radio-height: $radio-width;
+$radio-border-width: 2px;
+$radio-border-color: $gray-1;
+$radio-label-margin: 6px;
+
 .form-element {
   .radio-group {
     display: flex;
@@ -11,13 +17,13 @@
         content: "";
         transition: all 0.25s ease;
         display: flex;
-        border: 2px solid $gray-1;
+        border: $radio-border-width solid $radio-border-color;
         border-radius: 50%;
-        height: 20px;
-        width: 20px;
+        height: $radio-height;
+        width: $radio-width;
         align-items: center;
         justify-content: center;
-        margin-right: 6px;
+        margin-right: $radio-label-margin;
         background-color: white;
       }
 

@@ -1,7 +1,12 @@
 $input-background-color: $gray-2;
+$input-height: 36px;
 $placeholder-opacity: 0.4;
 $input-min-width: 200px;
 $input-border-radius: 12px;
+$input-icon-box-width: $input-height;
+$input-icon-box-height: $input-icon-box-width;
+$input-border-width: 2px;
+$input-padding: 7px 13px 7px 10px;
 
 .input-icon {
   position: absolute;
@@ -11,28 +16,22 @@ $input-border-radius: 12px;
   justify-content: center;
   background-color: $input-background-color;
   border-radius: $input-border-radius;
-  width: 36px;
-  height: 36px;
+  width: $input-icon-box-width;
+  height: $input-icon-box-height;
   transition: all 0.25s ease;
   color: inherit;
 }
 
-.label {
-  font-size: 0.75rem;
-  margin-left: 10px;
-  margin-bottom: 2px;
-}
-
 .input {
-  border: 2px solid transparent;
+  border: $input-border-width solid transparent;
   background: $input-background-color;
   color: $font-color;
   border-radius: $input-border-radius;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
-  padding: 7px 13px 7px 10px;
+  padding: $input-padding;
   min-width: $input-min-width;
-  height: 36px;
+  height: $input-height;
 
   &::placeholder {
     opacity: $placeholder-opacity;
