@@ -10115,7 +10115,7 @@ blockquote {
   display: -ms-flexbox;
   display: flex;
 }
-.dropdown .has-carret::after {
+.dropdown .has-caret::after {
   content: "";
   width: 0px;
   height: 0px;
@@ -10143,7 +10143,7 @@ blockquote {
 .dropdown.to-up .dropdown-content .dropdown-menu {
   border-radius: 18px 18px 18px 5px;
 }
-.dropdown.to-up .has-carret::after {
+.dropdown.to-up .has-caret::after {
   content: "";
   width: 0px;
   height: 0px;
