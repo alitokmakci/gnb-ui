@@ -90,6 +90,13 @@ $modal-fade-in-animation: true;
       height: calc(100% - 30px) !important;
       max-width: none !important;
       max-height: none !important;
+
+      .modal-footer {
+        position: absolute;
+        right: 0;
+        left: 0;
+        bottom: 0;
+      }
     }
   }
 
